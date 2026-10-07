@@ -1,0 +1,10 @@
+{
+  "transactionId": "1046261007111206",
+  "transactionDate": "07-10-2026",
+  "orderId": "PAY-261007-071119-5784",
+  "paymentMethod": "Credit Card - MasterCard",
+  "transactionType": "SALE",
+  "status": "Captured",
+  "currency": "AED",
+  "amount": "351.81"
+}

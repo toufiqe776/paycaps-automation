@@ -1,0 +1,43 @@
+[
+  {
+    "scenarioId": "MDR_TC01",
+    "scenarioName": "Configure Rates for Sb123 Technology with SANDBOXSIMULATOR",
+    "merchantSearch": "sb",
+    "merchantName": "Sb123 technology",
+    "acquirerName": "SANDBOXSIMULATOR",
+    "rates": [
+      {
+        "rowLabel": "Credit Card - Visa",
+        "rowIndex": 0,
+        "schemeName": "Visa",
+        "domesticPercent": "2.00",
+        "internationalPercent": "2.00",
+        "expectedPopupMessage": "MDR rates for Visa updated and activated successfully."
+      },
+      {
+        "rowLabel": "Credit Card - MasterCard",
+        "rowIndex": 1,
+        "schemeName": "MasterCard",
+        "domesticPercent": "2.00",
+        "internationalPercent": "2.00",
+        "expectedPopupMessage": "MDR rates for MasterCard updated and activated successfully."
+      },
+      {
+        "rowLabel": "Debit Card - Visa",
+        "rowIndex": 2,
+        "schemeName": "Visa",
+        "domesticPercent": "2.00",
+        "internationalPercent": "2.00",
+        "expectedPopupMessage": "MDR rates for Visa updated and activated successfully."
+      },
+      {
+        "rowLabel": "Debit Card - MasterCard",
+        "rowIndex": 3,
+        "schemeName": "MasterCard",
+        "domesticPercent": "2.00",
+        "internationalPercent": "2.00",
+        "expectedPopupMessage": "MDR rates for MasterCard updated and activated successfully."
+      }
+    ]
+  }
+]

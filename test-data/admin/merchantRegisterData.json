@@ -1,0 +1,16 @@
+{
+  "businessName": "Sb123 technology",
+  "email": "sbtest1123@yopmail.com",
+  "phone": "7878765654",
+  "industry": "other",
+  "password": "Admin@123",
+  "invalidPassword": "Admin123",
+  "expectedMessages": {
+    "businessName": "Business name is required.",
+    "email": "A valid email address is required.",
+    "phone": "Phone number must contain between 10 and 15 digits.",
+    "industry": "Please select an Industry Category for the merchant.",
+    "password": "Password must be 8-32 characters and contain uppercase, lowercase, digit, and special character (!@,_+/=).",
+    "confirmPassword": "Passwords do not match."
+  }
+}

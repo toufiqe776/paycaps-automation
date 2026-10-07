@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Playwright Test Outputs & Caches
+test-results/
+playwright-report/
+blob-report/
+reports/
+screenshots/
+.playwright/
+playwright/.cache/
+
+# Auth & Sessions
+auth/*.json
+auth/
+.auth/
+playwright/.auth/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.kilo/
+.playwright-mcp/.kilo/ 
+.playwright-mcp/ 
+auth/ 
+.env 

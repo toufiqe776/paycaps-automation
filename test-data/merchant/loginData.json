@@ -1,0 +1,12 @@
+[
+    {
+        "email": "crmtestmerchant2@yopmail.com",
+        "password": "Test@1234",
+        "expected": "success"
+    },
+    {
+        "email": "invalid@test.com",
+        "password": "Wrong@123",
+        "expected": "failure"
+    }
+]

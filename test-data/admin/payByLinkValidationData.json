@@ -1,0 +1,536 @@
+[
+  {
+    "testCase": "PBL-001 - Successful Payment",
+    "category": "Positive",
+    "merchantSearch": "super",
+    "merchantOption": "Super Merchant (supermerchant",
+    "amount": "16.00",
+    "customerEmail": "test@yopmail.com",
+    "customerName": "test user",
+    "phoneNumber": "501234567",
+    "purpose": "testing",
+    "cardNumber": "4111 1100 0000 0211",
+    "expiryDate": "01/34",
+    "cvv": "111",
+    "cardHolderName": "test user",
+    "otp": "111111",
+    "expectedResult": "success",
+    "expectedStatus": "Captured"
+  },
+  {
+    "testCase": "PBL-002 - Merchant Not Selected",
+    "category": "Merchant Validation",
+    "merchantSearch": "",
+    "merchantOption": "",
+    "amount": "16.00",
+    "customerEmail": "test@yopmail.com",
+    "customerName": "test user",
+    "phoneNumber": "501234567",
+    "purpose": "testing",
+    "expectedResult": "validation_error",
+    "expectedMessage": "Please select a merchant"
+  },
+  {
+    "testCase": "PBL-003 - Merchant Search With No Matching Result",
+    "category": "Merchant Validation",
+    "merchantSearch": "merchantnotfound123",
+    "merchantOption": "",
+    "expectedResult": "no_matching_merchant"
+  },
+  {
+    "testCase": "PBL-004 - Merchant Typed But Not Selected",
+    "category": "Merchant Validation",
+    "merchantSearch": "super",
+    "merchantOption": "",
+    "amount": "16.00",
+    "customerEmail": "test@yopmail.com",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-005 - Valid Amount",
+    "category": "Amount Validation",
+    "amount": "16.00",
+    "expectedResult": "accepted"
+  },
+  {
+    "testCase": "PBL-006 - Amount Empty",
+    "category": "Amount Validation",
+    "amount": "",
+    "expectedResult": "validation_error",
+    "expectedMessage": "Amount is required"
+  },
+  {
+    "testCase": "PBL-007 - Amount Zero",
+    "category": "Amount Validation",
+    "amount": "0",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-008 - Negative Amount",
+    "category": "Amount Validation",
+    "amount": "-10.00",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-009 - Amount With Alphabet",
+    "category": "Amount Validation",
+    "amount": "abc",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-010 - Amount With Special Characters",
+    "category": "Amount Validation",
+    "amount": "@#$%",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-011 - Amount With Multiple Decimal Points",
+    "category": "Amount Validation",
+    "amount": "10.25.50",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-012 - Amount With More Than Two Decimal Places",
+    "category": "Amount Validation",
+    "amount": "10.999",
+    "expectedResult": "validation_error_or_rounding"
+  },
+  {
+    "testCase": "PBL-013 - Amount With Leading and Trailing Spaces",
+    "category": "Amount Validation",
+    "amount": " 16.00 ",
+    "expectedResult": "trim_or_validation_error"
+  },
+  {
+    "testCase": "PBL-014 - Very Large Amount",
+    "category": "Amount Boundary",
+    "amount": "999999999999.99",
+    "expectedResult": "maximum_limit_validation"
+  },
+  {
+    "testCase": "PBL-015 - Valid Customer Email",
+    "category": "Email Validation",
+    "customerEmail": "test@yopmail.com",
+    "expectedResult": "accepted"
+  },
+  {
+    "testCase": "PBL-016 - Email Empty",
+    "category": "Email Validation",
+    "customerEmail": "",
+    "expectedResult": "validation_error_if_required"
+  },
+  {
+    "testCase": "PBL-017 - Email Missing At Symbol",
+    "category": "Email Validation",
+    "customerEmail": "testyopmail.com",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-018 - Email Missing Domain",
+    "category": "Email Validation",
+    "customerEmail": "test@",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-019 - Email Missing Username",
+    "category": "Email Validation",
+    "customerEmail": "@yopmail.com",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-020 - Email With Spaces",
+    "category": "Email Validation",
+    "customerEmail": "test user@yopmail.com",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-021 - Email With Multiple At Symbols",
+    "category": "Email Validation",
+    "customerEmail": "test@@yopmail.com",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-022 - Email With Plus Alias",
+    "category": "Email Validation",
+    "customerEmail": "test+qa@yopmail.com",
+    "expectedResult": "accepted_if_supported"
+  },
+  {
+    "testCase": "PBL-023 - Email With Uppercase Characters",
+    "category": "Email Validation",
+    "customerEmail": "TEST@YOPMAIL.COM",
+    "expectedResult": "accepted"
+  },
+  {
+    "testCase": "PBL-024 - Valid Customer Name",
+    "category": "Name Validation",
+    "customerName": "test user",
+    "expectedResult": "accepted"
+  },
+  {
+    "testCase": "PBL-025 - Customer Name Empty",
+    "category": "Name Validation",
+    "customerName": "",
+    "expectedResult": "validation_error_if_required"
+  },
+  {
+    "testCase": "PBL-026 - Customer Name With Numbers",
+    "category": "Name Validation",
+    "customerName": "test123",
+    "expectedResult": "verify_allowed_characters"
+  },
+  {
+    "testCase": "PBL-027 - Customer Name With Special Characters",
+    "category": "Name Validation",
+    "customerName": "@#$%",
+    "expectedResult": "verify_allowed_characters"
+  },
+  {
+    "testCase": "PBL-028 - Customer Name With Leading and Trailing Spaces",
+    "category": "Name Validation",
+    "customerName": "  test user  ",
+    "expectedResult": "trim_or_validation_error"
+  },
+  {
+    "testCase": "PBL-029 - Very Long Customer Name",
+    "category": "Name Boundary",
+    "customerName": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
+    "expectedResult": "maximum_length_validation"
+  },
+  {
+    "testCase": "PBL-030 - Valid Phone Number",
+    "category": "Phone Validation",
+    "phoneNumber": "501234567",
+    "expectedResult": "accepted_if_valid_for_selected_country"
+  },
+  {
+    "testCase": "PBL-031 - Phone Number Empty",
+    "category": "Phone Validation",
+    "phoneNumber": "",
+    "expectedResult": "validation_error_if_required"
+  },
+  {
+    "testCase": "PBL-032 - Phone Number With Alphabets",
+    "category": "Phone Validation",
+    "phoneNumber": "abcde1234",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-033 - Phone Number With Special Characters",
+    "category": "Phone Validation",
+    "phoneNumber": "@#$%^&*",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-034 - Phone Number Too Short",
+    "category": "Phone Boundary",
+    "phoneNumber": "123",
+    "expectedResult": "minimum_length_validation"
+  },
+  {
+    "testCase": "PBL-035 - Phone Number Too Long",
+    "category": "Phone Boundary",
+    "phoneNumber": "12345678901234567890",
+    "expectedResult": "maximum_length_validation"
+  },
+  {
+    "testCase": "PBL-036 - Phone Number With Spaces",
+    "category": "Phone Validation",
+    "phoneNumber": "501 234 567",
+    "expectedResult": "trim_or_format_validation"
+  },
+  {
+    "testCase": "PBL-037 - Valid Purpose",
+    "category": "Purpose Validation",
+    "purpose": "testing",
+    "expectedResult": "accepted"
+  },
+  {
+    "testCase": "PBL-038 - Purpose Empty",
+    "category": "Purpose Validation",
+    "purpose": "",
+    "expectedResult": "accepted_if_optional"
+  },
+  {
+    "testCase": "PBL-039 - Purpose With Special Characters",
+    "category": "Purpose Validation",
+    "purpose": "QA Testing @ PayCaps #1",
+    "expectedResult": "verify_allowed_characters"
+  },
+  {
+    "testCase": "PBL-040 - Purpose With HTML Script Input",
+    "category": "Security Validation",
+    "purpose": "<script>alert(1)</script>",
+    "expectedResult": "input_sanitized_or_rejected"
+  },
+  {
+    "testCase": "PBL-041 - Purpose With SQL Injection Pattern",
+    "category": "Security Validation",
+    "purpose": "' OR '1'='1",
+    "expectedResult": "handled_as_plain_text_or_rejected"
+  },
+  {
+    "testCase": "PBL-042 - Purpose Exceeds Maximum Length",
+    "category": "Purpose Boundary",
+    "purpose": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
+    "expectedResult": "maximum_length_validation"
+  },
+  {
+    "testCase": "PBL-043 - Valid Card Number",
+    "category": "Card Validation",
+    "cardNumber": "4111 1100 0000 0211",
+    "expectedResult": "accepted_in_sandbox"
+  },
+  {
+    "testCase": "PBL-044 - Card Number Empty",
+    "category": "Card Validation",
+    "cardNumber": "",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-045 - Card Number Too Short",
+    "category": "Card Validation",
+    "cardNumber": "411111",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-046 - Card Number With Alphabets",
+    "category": "Card Validation",
+    "cardNumber": "4111abcd00000211",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-047 - Card Number With Special Characters",
+    "category": "Card Validation",
+    "cardNumber": "4111@1111#0000",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-048 - Card Number With Invalid Checksum",
+    "category": "Card Validation",
+    "cardNumber": "4111111111111112",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-049 - Card Number With Spaces",
+    "category": "Card Validation",
+    "cardNumber": "4111 1111 1111 1111",
+    "expectedResult": "format_handled_and_card_validated"
+  },
+  {
+    "testCase": "PBL-050 - Expiry Date Empty",
+    "category": "Expiry Validation",
+    "expiryDate": "",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-051 - Expiry Date Invalid Format",
+    "category": "Expiry Validation",
+    "expiryDate": "0134",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-052 - Expiry Month Zero",
+    "category": "Expiry Validation",
+    "expiryDate": "00/34",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-053 - Expiry Month Greater Than Twelve",
+    "category": "Expiry Validation",
+    "expiryDate": "13/34",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-054 - Expired Card",
+    "category": "Expiry Validation",
+    "expiryDate": "01/20",
+    "expectedResult": "expired_card_error"
+  },
+  {
+    "testCase": "PBL-055 - Valid Future Expiry",
+    "category": "Expiry Validation",
+    "expiryDate": "01/34",
+    "expectedResult": "accepted_in_sandbox"
+  },
+  {
+    "testCase": "PBL-056 - CVV Empty",
+    "category": "CVV Validation",
+    "cvv": "",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-057 - CVV Too Short",
+    "category": "CVV Validation",
+    "cvv": "1",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-058 - CVV With Alphabets",
+    "category": "CVV Validation",
+    "cvv": "abc",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-059 - CVV With Special Characters",
+    "category": "CVV Validation",
+    "cvv": "@#1",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-060 - CVV With Excess Digits",
+    "category": "CVV Validation",
+    "cvv": "12345",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-061 - Cardholder Name Empty",
+    "category": "Cardholder Validation",
+    "cardHolderName": "",
+    "expectedResult": "validation_error_if_required"
+  },
+  {
+    "testCase": "PBL-062 - Cardholder Name With Numbers",
+    "category": "Cardholder Validation",
+    "cardHolderName": "user123",
+    "expectedResult": "verify_allowed_characters"
+  },
+  {
+    "testCase": "PBL-063 - Cardholder Name With Special Characters",
+    "category": "Cardholder Validation",
+    "cardHolderName": "@#$%",
+    "expectedResult": "verify_allowed_characters"
+  },
+  {
+    "testCase": "PBL-064 - OTP Empty",
+    "category": "OTP Validation",
+    "otp": "",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-065 - OTP With Invalid Digits",
+    "category": "OTP Validation",
+    "otp": "000000",
+    "expectedResult": "authentication_failure_or_sandbox_defined_result"
+  },
+  {
+    "testCase": "PBL-066 - OTP Too Short",
+    "category": "OTP Validation",
+    "otp": "111",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-067 - OTP With Alphabets",
+    "category": "OTP Validation",
+    "otp": "abcdef",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-068 - OTP With Special Characters",
+    "category": "OTP Validation",
+    "otp": "11@111",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-069 - OTP With Excess Digits",
+    "category": "OTP Validation",
+    "otp": "11111111",
+    "expectedResult": "validation_error"
+  },
+  {
+    "testCase": "PBL-070 - OTP Retry After Incorrect OTP",
+    "category": "OTP Validation",
+    "otp": "000000",
+    "expectedResult": "retry_or_block_as_configured"
+  },
+  {
+    "testCase": "PBL-071 - Generate Link With Double Click",
+    "category": "Link Generation",
+    "expectedResult": "only_one_link_or_duplicate_prevention"
+  },
+  {
+    "testCase": "PBL-072 - Generate Link With Network Interruption",
+    "category": "Link Generation",
+    "expectedResult": "clear_error_and_no_duplicate_transaction"
+  },
+  {
+    "testCase": "PBL-073 - Open Generated Link",
+    "category": "Link Behavior",
+    "expectedResult": "payment_page_opens"
+  },
+  {
+    "testCase": "PBL-074 - Open Invalid Link",
+    "category": "Link Behavior",
+    "expectedResult": "invalid_link_error"
+  },
+  {
+    "testCase": "PBL-075 - Open Expired Link",
+    "category": "Link Behavior",
+    "expectedResult": "expired_link_error"
+  },
+  {
+    "testCase": "PBL-076 - Reuse Already Paid Link",
+    "category": "Link Behavior",
+    "expectedResult": "already_paid_or_reuse_blocked"
+  },
+  {
+    "testCase": "PBL-077 - Refresh Payment Page",
+    "category": "Link Behavior",
+    "expectedResult": "state_handled_without_duplicate_payment"
+  },
+  {
+    "testCase": "PBL-078 - Close Payment Page Before Payment",
+    "category": "Link Behavior",
+    "expectedResult": "payment_remains_unpaid"
+  },
+  {
+    "testCase": "PBL-079 - Verify Captured Payment Status",
+    "category": "Payment Status",
+    "expectedResult": "Captured"
+  },
+  {
+    "testCase": "PBL-080 - Verify Failed Payment Status",
+    "category": "Payment Status",
+    "expectedResult": "Failed_or_configured_failure_status"
+  },
+  {
+    "testCase": "PBL-081 - Verify Payment Amount in Report",
+    "category": "Report Validation",
+    "amount": "16.00",
+    "expectedResult": "report_amount_matches_payment"
+  },
+  {
+    "testCase": "PBL-082 - Verify Merchant in Report",
+    "category": "Report Validation",
+    "merchantOption": "Super Merchant (supermerchant",
+    "expectedResult": "report_merchant_matches_payment"
+  },
+  {
+    "testCase": "PBL-083 - Verify Customer Email in Report",
+    "category": "Report Validation",
+    "customerEmail": "test@yopmail.com",
+    "expectedResult": "report_email_matches_payment"
+  },
+  {
+    "testCase": "PBL-084 - Verify Duplicate Payment Prevention",
+    "category": "Payment Integrity",
+    "expectedResult": "no_duplicate_capture"
+  },
+  {
+    "testCase": "PBL-085 - Verify Amount Tampering",
+    "category": "Security",
+    "amount": "16.00",
+    "tamperedAmount": "1.00",
+    "expectedResult": "server_side_amount_integrity_enforced"
+  },
+  {
+    "testCase": "PBL-086 - Verify Merchant Tampering",
+    "category": "Security",
+    "expectedResult": "server_side_merchant_authorization_enforced"
+  },
+  {
+    "testCase": "PBL-087 - Verify Unauthorized Link Access",
+    "category": "Security",
+    "expectedResult": "unauthorized_access_blocked"
+  }
+]

@@ -1,0 +1,720 @@
+Open the PayCaps application and perform a complete QA exploration of the application.
+
+Application URL:
+https://sandbox.paycaps.com/crm/login
+
+IMPORTANT LOGIN INSTRUCTION:
+
+1. Open the URL.
+2. Do NOT enter, guess, generate, bypass, or automate the Email, Password, or CAPTCHA.
+3. Stop at the login page and wait for me to manually enter:
+
+   * Email
+   * Password
+   * CAPTCHA
+4. After I complete the login and the application is accessible, continue the exploration automatically.
+5. Do not bypass CAPTCHA, authentication, authorization, or any security mechanism.
+
+==================================================
+PHASE 1 – APPLICATION DISCOVERY
+===============================
+
+After successful login, first understand the complete application structure.
+
+Explore:
+
+* Main navigation
+* Sidebar/menu
+* Dashboard
+* All visible modules
+* All sub-modules
+* User/profile menus
+* Settings
+* Reports
+* Admin functionality
+* Merchant functionality
+* Payment functionality
+* Any other accessible functionality
+
+Do NOT stop after checking only the dashboard.
+
+Open every meaningful menu and submenu that is accessible to the logged-in user.
+
+For every module record:
+
+* Module name
+* Sub-module name
+* Purpose
+* Available actions
+* Forms
+* Tables
+* Buttons
+* Filters
+* Search
+* Sort
+* Pagination
+* Dropdowns
+* Tabs
+* Links
+* Statuses
+* Validation messages
+* Success messages
+* Error messages
+* Confirmation dialogs
+* Download/export functionality
+
+Do not invent functionality that is not observed.
+
+==================================================
+PHASE 2 – ADMIN PANEL
+=====================
+
+If Admin functionality is available, explore it completely.
+
+Cover:
+
+1. Dashboard
+2. Merchant Management
+3. User Registration
+4. Merchant Creation
+5. Merchant Details
+6. Merchant Edit
+7. Merchant Search
+8. Merchant Filters
+9. Merchant Status
+10. Sub-users
+11. Roles
+12. Permissions
+13. Pay By Link
+14. Invoice
+15. Payment-related functionality
+16. Reports
+17. Analytics
+18. Fraud Prevention
+19. Chargeback
+20. Simulator
+21. Settings
+22. Profile
+23. Change Password
+24. Any other available Admin functionality
+
+For every form test:
+
+* Mandatory fields
+* Optional fields
+* Valid values
+* Invalid values
+* Empty values
+* Boundary values
+* Minimum length
+* Maximum length
+* Special characters
+* Spaces
+* Duplicate values
+* Invalid email
+* Invalid phone
+* Invalid amount
+* Invalid date
+* Invalid dropdown selection
+* Field dependency
+* Error messages
+* Save/Cancel/Reset behavior
+
+==================================================
+PHASE 3 – MERCHANT PANEL
+========================
+
+If Merchant Panel functionality is available, explore it completely.
+
+Cover:
+
+* Dashboard
+* Sales
+* Failed Payments
+* Refunds
+* Summary
+* Settlement
+* Payment Reports
+* Merchant visibility
+* POS
+* Batch
+* Invoice
+* Pay By Link
+* Profile
+* Settings
+* Change Password
+* Any other accessible functionality
+
+Check:
+
+* Search
+* Filters
+* Date range
+* Status filters
+* Payment type
+* Acquirer
+* Currency
+* Pagination
+* Sorting
+* Export/download
+* Empty results
+* Large result sets
+* Incorrect filters
+* Reset filters
+
+==================================================
+PHASE 4 – PAY BY LINK
+=====================
+
+Explore the complete Pay By Link lifecycle.
+
+Test and document:
+
+Create Pay By Link
+→ Select payment type
+→ Select merchant
+→ Select currency
+→ Enter amount
+→ Customer details
+→ Phone number
+→ Expiry
+→ Purpose
+→ Optional settings
+→ Continue
+→ Review
+→ Generate Link
+→ Link Created
+→ Copy
+→ Share
+→ QR Download
+→ Open Payment Link
+→ Payment Page
+→ Pay Now
+→ Payment processing
+→ Success
+→ Failed
+→ Cancelled
+→ Pending
+→ Payment details
+→ Receipt
+
+Check:
+
+* Valid data
+* Invalid data
+* Missing mandatory data
+* Boundary values
+* Amount validation
+* Currency validation
+* Customer email validation
+* Phone validation
+* Expiry validation
+* Duplicate payment
+* Refresh behavior
+* Back button behavior
+* Cancel behavior
+* Link reuse
+* Expired link
+* Invalid link
+* Payment status
+
+If 2DS/3DS functionality is available, explore:
+
+* 2DS
+* 3DS
+* OTP
+* Authentication
+* Successful authentication
+* Failed authentication
+* Cancelled authentication
+* Timeout
+* Return URL
+* Payment result
+
+Do not assume functionality exists. Document only what is actually observed.
+
+==================================================
+PHASE 5 – INVOICE
+=================
+
+Explore the complete Invoice lifecycle.
+
+Cover:
+
+Create Invoice
+→ Merchant
+→ Customer
+→ Products/items
+→ Quantity
+→ Amount
+→ VAT/tax
+→ Currency
+→ Expiry
+→ Review
+→ Create
+→ Send Email
+→ Open Invoice
+→ Pay Invoice
+→ Payment
+→ Success
+→ Failed
+→ Cancelled
+→ Pending
+→ Invoice Details
+
+Also test:
+
+* Add item
+* Remove item
+* Multiple items
+* Invalid amount
+* Invalid quantity
+* VAT validation
+* Missing customer information
+* Missing product information
+* Duplicate invoice
+* Expired invoice
+* Invoice search
+* Invoice filters
+* Invoice status
+* Invoice details
+* Download/print if available
+
+==================================================
+PHASE 6 – PAYMENT TESTING
+=========================
+
+Explore all payment functionality available in the application.
+
+Cover where applicable:
+
+* Sale
+* Capture
+* Refund
+* Failed payment
+* Cancelled payment
+* Pending payment
+* Successful payment
+* 2DS
+* 3DS
+* OTP
+* Card validation
+* Card type
+* Currency
+* Amount
+* Acquirer
+* Payment status
+* Transaction details
+* Receipt
+* Return URL
+* Status enquiry
+* Webhook-related observable behavior
+
+Check available card/payment methods without inventing unsupported methods.
+
+==================================================
+PHASE 7 – REPORTS & ANALYTICS
+=============================
+
+Explore every report and analytics screen.
+
+Check:
+
+* Date filters
+* Status filters
+* Payment type
+* Merchant filters
+* Acquirer filters
+* Currency
+* Search
+* Sorting
+* Pagination
+* Export
+* CSV
+* JSON
+* Empty results
+* Large datasets
+* Incorrect filters
+* Reset functionality
+* Data consistency
+
+Compare dashboard/report/payment data wherever possible.
+
+==================================================
+PHASE 8 – ROLE & ACCESS CONTROL
+===============================
+
+Identify all roles visible in the application.
+
+For each role document:
+
+* Accessible modules
+* Restricted modules
+* Create permission
+* Edit permission
+* Delete permission
+* View permission
+* Export permission
+* Payment permission
+* Report permission
+* Settings permission
+
+Do not attempt unauthorized access or bypass authorization.
+
+Create a role-permission matrix based only on observed behavior.
+
+==================================================
+PHASE 9 – SECURITY-RELATED FUNCTIONAL TESTING
+=============================================
+
+Perform safe functional security checks.
+
+Check:
+
+* Session timeout
+* Logout
+* Back-button after logout
+* Unauthorized page access
+* Role-based access
+* Input validation
+* Special characters
+* HTML/script input handling
+* URL parameter manipulation where safe
+* Duplicate submission
+* Sensitive information exposure in UI
+* Password field masking
+* CAPTCHA behavior
+
+Do not perform destructive exploitation, brute force, credential attacks, or security bypasses.
+
+If a security concern is observed, record it as an observation/defect candidate with evidence.
+
+==================================================
+PHASE 10 – UI / RESPONSIVE / COMPATIBILITY
+==========================================
+
+Identify UI behavior that should be tested on:
+
+Desktop:
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+
+Mobile/tablet:
+
+* Android Chrome
+* iPhone Safari
+* iPad Safari
+
+Check:
+
+* Responsive layout
+* Sidebar
+* Hamburger menu
+* Tables
+* Dropdowns
+* Date pickers
+* Forms
+* Buttons
+* Modals
+* Horizontal scrolling
+* Text overlap
+* Missing elements
+* Broken layouts
+* Touch interaction
+
+Do not claim a browser/device defect unless it is actually observed or clearly identified as a test candidate.
+
+==================================================
+PHASE 11 – ACCESSIBILITY
+========================
+
+Identify accessibility test candidates.
+
+Check where observable:
+
+* Keyboard navigation
+* Focus
+* Labels
+* Buttons
+* Form controls
+* Error messages
+* Modal behavior
+* Dropdown accessibility
+* Tab order
+* Visible focus
+* Text readability
+* Required field indication
+
+Separate:
+OBSERVED ISSUE
+from
+TEST CANDIDATE
+
+==================================================
+PHASE 12 – NEGATIVE & BOUNDARY TESTING
+======================================
+
+For every important input field create test cases for:
+
+* Empty
+* Null
+* Minimum valid
+* Maximum valid
+* Below minimum
+* Above maximum
+* Invalid format
+* Special characters
+* Spaces
+* Leading/trailing spaces
+* Duplicate value
+* Invalid combination
+* Incorrect dependency
+* Very large value
+* Decimal value
+* Negative value
+* Zero
+* Copy/paste
+* Browser refresh
+* Double click
+* Multiple submission
+
+Only apply relevant cases to each field.
+
+==================================================
+PHASE 13 – END-TO-END BUSINESS FLOWS
+====================================
+
+Identify complete business workflows.
+
+Examples:
+
+Admin Login
+→ Dashboard
+→ Merchant Creation
+→ Merchant Configuration
+→ Pay By Link
+→ Customer Payment
+→ Payment Success
+→ Payment Report
+→ Transaction Details
+
+Another:
+
+Admin
+→ Create Invoice
+→ Send Invoice
+→ Customer Opens Invoice
+→ Customer Pays
+→ 3DS
+→ Payment Success
+→ Invoice Status
+→ Payment Report
+
+Create all meaningful E2E flows discovered during exploration.
+
+==================================================
+PHASE 14 – TEST CASE GENERATION
+===============================
+
+Generate detailed test cases based ONLY on observed functionality.
+
+Each test case must contain:
+
+Test Case ID
+Module
+Sub-module
+Feature
+Test Scenario
+Test Type
+Priority
+Precondition
+Test Data
+Steps
+Expected Result
+Postcondition
+Automation Candidate
+Remarks
+
+Test types should include where applicable:
+
+* Smoke
+* Sanity
+* Functional
+* Regression
+* Integration
+* E2E
+* Positive
+* Negative
+* Boundary
+* Validation
+* UI
+* Responsive
+* Compatibility
+* Accessibility
+* Security-related
+* Role/Permission
+* Data Integrity
+* Error Handling
+* Performance Candidate
+
+Avoid duplicate test cases.
+
+==================================================
+PHASE 15 – DEFECT IDENTIFICATION
+================================
+
+During exploration identify potential defects.
+
+For each observed defect record:
+
+Defect ID
+Module
+Feature
+Title
+Environment
+Precondition
+Steps to Reproduce
+Expected Result
+Actual Result
+Severity
+Priority
+Evidence/Observation
+Reproducibility
+Remarks
+
+Important:
+
+Do NOT classify something as a confirmed defect merely because it looks unusual.
+
+Clearly separate:
+
+1. Confirmed/observed behavior
+2. Potential defect
+3. Test candidate
+4. Assumption
+
+==================================================
+PHASE 16 – DYNAMIC DATA
+=======================
+
+Do NOT hardcode or treat the following as static:
+
+* Transaction IDs
+* Invoice IDs
+* Link IDs
+* Timestamps
+* Dates that change dynamically
+* Generated URLs
+* Session IDs
+* Dynamic table values
+* Dynamic IDs
+
+Record them as dynamic data where appropriate.
+
+==================================================
+PHASE 17 – TEST DATA
+====================
+
+Identify all test data required.
+
+Create categories for:
+
+* Admin credentials
+* Merchant credentials
+* Customer data
+* Email
+* Phone
+* Currency
+* Amount
+* Card data
+* OTP
+* Invoice data
+* Pay By Link data
+* Valid data
+* Invalid data
+* Boundary data
+
+Do not expose or reproduce sensitive credentials unnecessarily.
+
+==================================================
+PHASE 18 – FINAL TEST PLAN
+==========================
+
+After completing exploration, generate a comprehensive QA Test Plan containing:
+
+1. Application Overview
+2. Scope
+3. Out of Scope
+4. Environment
+5. Module List
+6. Sub-module List
+7. Application Navigation Map
+8. Functional Coverage
+9. Admin Test Coverage
+10. Merchant Test Coverage
+11. Pay By Link Test Coverage
+12. Invoice Test Coverage
+13. Payment Test Coverage
+14. Reports Test Coverage
+15. Dashboard Test Coverage
+16. Role & Permission Matrix
+17. Negative Testing
+18. Boundary Testing
+19. Validation Testing
+20. E2E Scenarios
+21. Compatibility Coverage
+22. Responsive Coverage
+23. Accessibility Coverage
+24. Security-related Functional Coverage
+25. Data Integrity Coverage
+26. Error Handling Coverage
+27. Performance Test Candidates
+28. Automation Candidates
+29. Manual Testing Candidates
+30. Test Data Requirements
+31. Dependencies
+32. Risks
+33. Assumptions
+34. Potential Defects
+35. Coverage Summary
+36. Traceability Matrix
+
+==================================================
+IMPORTANT EXPLORATION RULES
+===========================
+
+1. Explore the entire accessible application.
+2. Do not stop after the main dashboard.
+3. Open every meaningful module and submenu.
+4. Explore actual workflows, not just pages.
+5. Do not click headings or decorative text unnecessarily.
+6. Use meaningful user interactions.
+7. Verify results using assertions/observations.
+8. Do not invent features.
+9. Do not invent expected behavior when requirements are unknown.
+10. Do not duplicate test cases.
+11. Separate independent business workflows.
+12. Treat dynamic data as dynamic.
+13. Do not bypass CAPTCHA.
+14. Do not bypass authentication.
+15. Do not attempt destructive security testing.
+16. Do not expose credentials in the final report.
+17. Prioritize payment and financial workflows.
+18. Record actual UI labels and observed behavior.
+19. Record validation messages exactly where useful.
+20. Before finalizing, verify that all accessible modules have been explored.
+
+MOST IMPORTANT:
+
+First perform complete application exploration.
+
+Then build the test plan from the observed application.
+
+Do NOT generate Playwright automation code yet.
+
+The immediate goal is:
+
+COMPLETE APPLICATION EXPLORATION → COMPLETE QA TEST PLAN → DETAILED TEST CASES → E2E FLOWS → COVERAGE MATRIX

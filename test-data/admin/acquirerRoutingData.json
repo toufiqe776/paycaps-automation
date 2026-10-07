@@ -1,0 +1,34 @@
+{
+  "merchant": "Sb123 technology",
+  "acquirer": "SANDBOXSIMULATOR",
+  "routes": [
+    {
+      "testCase": "Credit Card - Authorized Route",
+      "paymentMethod": "Credit Card",
+      "transactionType": "Authorized",
+      "currency": "AED",
+      "apiKey": "1",
+      "txnKey": "1",
+      "password": "1"
+    },
+    {
+      "testCase": "Debit Card - All Auth Route",
+      "paymentMethod": "Debit Card",
+      "currency": "AED",
+      "authenticationType": "ALL",
+      "merchantId": "1",
+      "apiKey": "1",
+      "txnKey": "1",
+      "password": "1"
+    }
+  ],
+  "expectedTableValues": [
+    "Sb123 technology",
+    "SANDBOXSIMULATOR",
+    "Visa,MasterCard",
+    "ALL",
+    "AED",
+    "Credit Card",
+    "Debit Card"
+  ]
+}
