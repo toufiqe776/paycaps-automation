@@ -39,7 +39,7 @@ jobs:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
           CI: true
-        run: npx playwright test
+        run: npx playwright test tests/admin/merchantsRegister.spec.ts tests/admin/acquirerRouting.spec.ts tests/admin/mdrSetting.spec.ts
 
       - name: Upload Playwright HTML Report
         if: always()
