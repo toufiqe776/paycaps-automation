@@ -1,0 +1,258 @@
+- generic [ref=f1e7]:
+  - complementary [ref=f1e8]:
+    - generic "Expand Sidebar" [ref=f1e9] [cursor=pointer]
+    - generic "Expand Sidebar" [ref=f1e13] [cursor=pointer]:
+      - img "SME.QMS Logo" [ref=f1e15]
+    - generic [ref=f1e16]:
+      - generic [ref=f1e17]: Dashboard
+      - generic [ref=f1e25]:
+        - generic [ref=f1e26] [cursor=pointer]: Compliance Score
+        - generic [ref=f1e29] [cursor=pointer]: KPI Trending
+        - generic [ref=f1e33] [cursor=pointer]: APR / PQR Center
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40] [cursor=pointer]: Deviations
+        - generic [ref=f1e43] [cursor=pointer]: Root Cause Analysis (RCA)
+        - generic [ref=f1e48] [cursor=pointer]: Out of Trend (OOT)
+        - generic [ref=f1e52] [cursor=pointer]: Change Control
+        - generic [ref=f1e57] [cursor=pointer]: Out of Specification (OOS)
+        - generic [ref=f1e60] [cursor=pointer]: CAPA Manager
+        - generic [ref=f1e64] [cursor=pointer]: Complaints
+        - generic [ref=f1e67] [cursor=pointer]: Product Recalls
+        - generic [ref=f1e72] [cursor=pointer]: Adverse Events
+        - generic [ref=f1e75] [cursor=pointer]: Effectiveness Checks
+        - generic [ref=f1e80] [cursor=pointer]: Audit
+      - generic [ref=f1e86]:
+        - generic [ref=f1e87] [cursor=pointer]: Sampling
+        - generic [ref=f1e90] [cursor=pointer]: Chemical QC
+        - generic [ref=f1e93] [cursor=pointer]: Microbiology QC
+        - generic [ref=f1e103] [cursor=pointer]: Packaging QC
+        - generic [ref=f1e110] [cursor=pointer]: CoA Management
+        - generic [ref=f1e116] [cursor=pointer]: Lab Incidents (OOS)
+        - generic [ref=f1e119] [cursor=pointer]: Out of Trend (OOT)
+        - generic [ref=f1e123] [cursor=pointer]: Stability Studies
+        - generic [ref=f1e127] [cursor=pointer]: Reference Standards
+        - generic [ref=f1e130] [cursor=pointer]: Env. & Utility Mon.
+        - generic [ref=f1e135] [cursor=pointer]: Instrument & Column Logs
+        - generic [ref=f1e138] [cursor=pointer]: Retention Samples
+      - generic [ref=f1e143]:
+        - generic [ref=f1e144] [cursor=pointer]: Inbound Receipts (RM/PM)
+        - generic [ref=f1e150] [cursor=pointer]: Material Registry
+        - generic [ref=f1e154] [cursor=pointer]: Distribution & Dispatch
+      - generic [ref=f1e160]:
+        - generic [ref=f1e161] [cursor=pointer]: Campaign Management
+        - generic [ref=f1e164] [cursor=pointer]: Active BMRs (Intermediates)
+        - generic [ref=f1e167] [cursor=pointer]: Active BMRs (Final API)
+        - generic [ref=f1e170] [cursor=pointer]: Active BMRs (Recovery)
+        - generic [ref=f1e175] [cursor=pointer]: QA Disposition (Release Log)
+      - generic [ref=f1e182]:
+        - generic [ref=f1e183] [cursor=pointer]: Supplier Master
+        - generic [ref=f1e189] [cursor=pointer]: Vendor Qualification
+        - generic [ref=f1e194] [cursor=pointer]: Supplier Audits
+        - generic [ref=f1e199] [cursor=pointer]: SCAR
+        - generic [ref=f1e204] [cursor=pointer]: Master ASL
+      - generic [ref=f1e208]:
+        - generic [ref=f1e209] [cursor=pointer]: Asset Master
+        - generic [ref=f1e213] [cursor=pointer]: Qualification (IQ/OQ/PQ)
+        - generic [ref=f1e217] [cursor=pointer]: Calibration Standards
+        - generic [ref=f1e220] [cursor=pointer]: Asset Logs
+        - generic [ref=f1e225] [cursor=pointer]: Preventive Maint.
+      - generic [ref=f1e229]:
+        - generic [ref=f1e230] [cursor=pointer]: CSV & IT Compliance
+        - generic [ref=f1e234] [cursor=pointer]: Regulatory Affairs
+        - generic [ref=f1e238] [cursor=pointer]: Inspections & Mgmt Audits
+        - generic [ref=f1e242] [cursor=pointer]: Audit Command Center
+      - generic [ref=f1e247]:
+        - generic [ref=f1e248] [cursor=pointer]: Document Control
+        - generic [ref=f1e252] [cursor=pointer]: Training Matrix
+        - generic [ref=f1e256] [cursor=pointer]: Audit Trail
+      - generic [ref=f1e267]:
+        - generic [ref=f1e268] [cursor=pointer]: Site & Area Master
+        - generic [ref=f1e272] [cursor=pointer]: Master Library
+        - generic [ref=f1e275] [cursor=pointer]: Item Master
+        - generic [ref=f1e280] [cursor=pointer]: Regulatory & Compliance
+        - generic [ref=f1e283] [cursor=pointer]: MBR & BOM
+        - generic [ref=f1e286] [cursor=pointer]: Customer / Sponsor / IP
+        - generic [ref=f1e293] [cursor=pointer]: Workflow Policies
+        - generic [ref=f1e297] [cursor=pointer]: AI Data Migration
+        - generic [ref=f1e303] [cursor=pointer]: User Mgmt & System Admin
+      - generic [ref=f1e308]:
+        - generic [ref=f1e309] [cursor=pointer]: Templates Library
+        - generic [ref=f1e316] [cursor=pointer]: Create New Template
+        - generic [ref=f1e318] [cursor=pointer]: Incident
+        - generic [ref=f1e321] [cursor=pointer]: Laboratory / Analytical System IRA
+        - generic [ref=f1e324] [cursor=pointer]: Manufacturing / Process Control System IRA
+        - generic [ref=f1e327] [cursor=pointer]: IT Infrastructure / Platform IRA
+        - generic [ref=f1e330] [cursor=pointer]: End-User / Small Application IRA
+        - generic [ref=f1e333] [cursor=pointer]: Audit
+        - generic [ref=f1e336] [cursor=pointer]: Effectiveness Check
+        - generic [ref=f1e339] [cursor=pointer]: Risk Assessment
+        - generic [ref=f1e342] [cursor=pointer]: Deviation
+        - generic [ref=f1e345] [cursor=pointer]: CAPA
+        - generic [ref=f1e348] [cursor=pointer]: Product Recall
+        - generic [ref=f1e351] [cursor=pointer]: Adverse Events
+        - generic [ref=f1e354] [cursor=pointer]: Change Control
+        - generic [ref=f1e357] [cursor=pointer]: OOT
+        - generic [ref=f1e360] [cursor=pointer]: OOS
+        - generic [ref=f1e363] [cursor=pointer]: Root Cause Analysis
+        - generic [ref=f1e366] [cursor=pointer]: Annual Product Quality Review
+        - generic [ref=f1e369] [cursor=pointer]: Product Complaint
+        - generic [ref=f1e372] [cursor=pointer]: Enterprise / Business System IRA
+        - generic [ref=f1e375] [cursor=pointer]: Facility / Building System IRA
+        - generic [ref=f1e378] [cursor=pointer]: System Periodic Review
+  - generic [ref=f1e381]:
+    - banner [ref=f1e382]:
+      - generic [ref=f1e383]:
+        - generic [ref=f1e384]:
+          - link "QUALITY RECORDS" [ref=f1e385] [cursor=pointer]:
+            - /url: /quality
+          - generic [ref=f1e388]: DEVIATION LIST
+        - generic [ref=f1e389]:
+          - button "Active Site Context SIT-001 - MOXIFLOXACIN PLANT 1 API (primary)" [ref=f1e391]:
+            - generic [ref=f1e397] [cursor=pointer]:
+              - generic [ref=f1e398]: Active Site Context
+              - generic [ref=f1e400]:
+                - text: SIT-001 - MOXIFLOXACIN PLANT 1
+                - generic [ref=f1e401]: API
+                - generic [ref=f1e402]: (primary)
+          - button "Task Center" [ref=f1e406]
+          - button [ref=f1e411] [cursor=pointer]
+          - button "TUNDEFINED" [ref=f1e416]
+    - main [ref=f1e420]:
+      - generic [ref=f1e421]:
+        - complementary [ref=f1e422]:
+          - generic [ref=f1e423]:
+            - generic [ref=f1e424]:
+              - heading "Records Summary" [level=3] [ref=f1e426]
+              - generic [ref=f1e431]:
+                - generic [ref=f1e432]:
+                  - generic [ref=f1e433]: Total Records
+                  - generic [ref=f1e434]: "3"
+                - generic [ref=f1e435]:
+                  - generic [ref=f1e436]: Open
+                  - generic [ref=f1e437]: "0"
+                - generic [ref=f1e438]:
+                  - generic [ref=f1e439]: Draft
+                  - generic [ref=f1e440]: "2"
+                - generic [ref=f1e441]:
+                  - generic [ref=f1e442]: Closed
+                  - generic [ref=f1e443]: "1"
+            - generic [ref=f1e444]:
+              - button "Status" [expanded] [ref=f1e445]
+              - generic [ref=f1e452]:
+                - button "All Statuses 3" [ref=f1e453]:
+                  - generic [ref=f1e454]: All Statuses
+                  - generic [ref=f1e460]: "3"
+                - button "Draft 2" [ref=f1e461]:
+                  - generic [ref=f1e462]: Draft
+                  - generic [ref=f1e466]: "2"
+                - button "Closed 1" [ref=f1e467]:
+                  - generic [ref=f1e468]: Closed
+                  - generic [ref=f1e473]: "1"
+            - generic [ref=f1e474]:
+              - button "Workflow Stage" [expanded] [ref=f1e475]
+              - generic [ref=f1e482]:
+                - button "All Stages 3" [ref=f1e483]:
+                  - generic [ref=f1e484]: All Stages
+                  - generic [ref=f1e490]: "3"
+                - button "Initiation 2" [ref=f1e491]:
+                  - generic [ref=f1e492]: Initiation
+                  - generic [ref=f1e496]: "2"
+                - button "QA Review 0" [ref=f1e497]:
+                  - generic [ref=f1e498]: QA Review
+                  - generic [ref=f1e502]: "0"
+                - button "RCA & CAPA 0" [ref=f1e503]:
+                  - generic [ref=f1e504]: RCA & CAPA
+                  - generic [ref=f1e508]: "0"
+                - button "Closure 1" [ref=f1e509]:
+                  - generic [ref=f1e510]: Closure
+                  - generic [ref=f1e514]: "1"
+        - main [ref=f1e515]:
+          - generic [ref=f1e517]:
+            - textbox "Search records..." [ref=f1e524]
+            - generic [ref=f1e525]:
+              - generic [ref=f1e526]:
+                - generic [ref=f1e527]:
+                  - generic [ref=f1e528]: Show
+                  - combobox [ref=f1e530] [cursor=pointer]:
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "100"
+                - generic [ref=f1e531]: 1-3 of 3
+              - button "Opening Form..." [disabled] [ref=f1e639]
+          - generic [ref=f1e538]:
+            - generic [ref=f1e546] [cursor=pointer]:
+              - generic [ref=f1e547]:
+                - generic [ref=f1e548]: DEV-026
+                - generic [ref=f1e550]: Draft
+                - generic [ref=f1e552]: System
+              - heading "Untitled Record" [level=4] [ref=f1e555]
+              - generic [ref=f1e556]:
+                - generic [ref=f1e557]: Initiation
+                - generic [ref=f1e560]: Testing Team
+            - generic [ref=f1e574] [cursor=pointer]:
+              - generic [ref=f1e575]:
+                - generic [ref=f1e576]: DEV-025
+                - generic [ref=f1e578]: Draft
+                - generic [ref=f1e580]: System
+              - heading "UNSAVED TEST" [level=4] [ref=f1e583]
+              - generic [ref=f1e584]:
+                - generic [ref=f1e585]: Initiation
+                - generic [ref=f1e588]: Testing Team
+            - generic [ref=f1e602] [cursor=pointer]:
+              - generic [ref=f1e603]:
+                - generic [ref=f1e604]: DEV-024
+                - generic [ref=f1e606]: Closed
+                - generic [ref=f1e608]: System
+              - heading "asdkjbad" [level=4] [ref=f1e611]
+              - generic [ref=f1e612]:
+                - generic [ref=f1e613]: Closure
+                - generic [ref=f1e616]: Testing Team
+  - generic [ref=f1e623]:
+    - generic:
+      - generic:
+        - generic:
+          - button "History"
+          - button "interaction"
+          - button "reasoning"
+          - button "navigator"
+        - generic:
+          - button "Maximize"
+          - button "Close Island"
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - heading "History" [level=3]
+                - generic:
+                  - button
+                  - button "New"
+              - generic:
+                - generic:
+                  - paragraph: No conversations yet
+                  - paragraph: Start a new chat or ask a question
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - paragraph: Quick Prompts
+                - generic:
+                  - button "Compare Schedule M vs ICH Q7"
+                  - button "Check 21 CFR Part 11 Scope"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Hello! I'm your GxP Regulatory Assistant.
+                        - generic:
+                          - button
+    - generic [ref=f1e629]:
+      - generic [ref=f1e631]:
+        - button "Attach files" [ref=f1e632]
+        - button "Open Navigator" [ref=f1e633]
+      - textbox "Type a message or drop files..." [ref=f1e635]
+      - generic [ref=f1e637]:
+        - button "Start Dictation" [ref=f1e638]
+        - button "Submit" [disabled]

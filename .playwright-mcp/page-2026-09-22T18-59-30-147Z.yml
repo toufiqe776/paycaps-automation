@@ -1,0 +1,109 @@
+- generic [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button "Toggle sidebar" [ref=e638] [cursor=pointer]
+        - generic [ref=e59]:
+          - navigation "Breadcrumb" [ref=e639]:
+            - list [ref=e448]:
+              - listitem [ref=e449]:
+                - link "Dashboard" [ref=e640] [cursor=pointer]:
+                  - /url: /dashboard
+              - listitem [aria-hidden] [ref=e451]: ">"
+              - listitem [ref=e452]:
+                - paragraph [ref=e453]: Transactions
+          - generic [ref=e61]:
+            - button "Toggle theme" [ref=e641] [cursor=pointer]
+            - button "User menu" [ref=e642] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary "Main navigation" [ref=e643]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation "Overview" [ref=e644]:
+              - listitem [ref=e77]:
+                - button [ref=e645] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e646] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation "Payments" [ref=e647]:
+              - listitem [ref=e97]:
+                - button [ref=e648] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [ref=e649] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+              - listitem [ref=e114]:
+                - button [ref=e650] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+              - listitem [ref=e125]:
+                - button [ref=e651] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e652] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [ref=e653] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+              - listitem [ref=e149]:
+                - button [ref=e654] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [ref=e655] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation "Account" [ref=e656]:
+              - listitem [ref=e169]:
+                - button [ref=e657] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+              - listitem [ref=e179]:
+                - button [ref=e658] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+              - listitem [ref=e189]:
+                - button [ref=e659] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e454]:
+          - generic [ref=e456]:
+            - generic [ref=e458]:
+              - generic [ref=e463]:
+                - heading "Transactions" [level=6] [ref=e660]
+                - generic [ref=e465]: Search and review payment transactions
+              - button "Date range" [ref=e661] [cursor=pointer]:
+                - paragraph [ref=e472]: Today
+              - generic [ref=e475]:
+                - button "Filters" [active] [ref=e662] [cursor=pointer]
+                - button "More actions" [ref=e663] [cursor=pointer]
+            - table "data table" [ref=e664]:
+              - rowgroup [ref=e490]:
+                - row [ref=e665]:
+                  - columnheader [ref=e666]:
+                    - button "Txn ID" [ref=e667] [cursor=pointer]
+                  - columnheader [ref=e668]:
+                    - button "Txn Date" [ref=e669] [cursor=pointer]
+                  - columnheader [ref=e670]:
+                    - button "Order ID" [ref=e671] [cursor=pointer]
+                  - columnheader [ref=e672]:
+                    - button "Payment Method" [ref=e673] [cursor=pointer]
+                  - columnheader [ref=e674]:
+                    - button "Txn Type" [ref=e675] [cursor=pointer]
+                  - columnheader [ref=e676]:
+                    - button "Status" [ref=e677] [cursor=pointer]
+                  - columnheader [ref=e678]:
+                    - button "Currency" [ref=e679] [cursor=pointer]
+                  - columnheader [ref=e680]:
+                    - button "Amount" [ref=e681] [cursor=pointer]
+              - rowgroup [ref=e517]:
+                - row [ref=e682]:
+                  - cell [ref=e683]:
+                    - generic [ref=e526]:
+                      - heading "No matching transaction records found." [level=6] [ref=e684]
+                      - paragraph [ref=e528]: Try a different date range or filters.
+        - generic [ref=e342]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e344]: "0"

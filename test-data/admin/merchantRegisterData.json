@@ -1,10 +1,11 @@
 {
-  "businessName": "Sb123 technology",
-  "email": "sbtest1123@yopmail.com",
-  "phone": "7878765654",
-  "industry": "other",
-  "password": "Admin@123",
-  "invalidPassword": "Admin123",
+  "industry": "Other",
+  "password": "Password@1234",
+  "invalidPassword": "Password1234",
+  "invalidPhoneNumbers": {
+    "lessThan10": "501234567",
+    "moreThan15": "9715012345678901"
+  },
   "expectedMessages": {
     "businessName": "Business name is required.",
     "email": "A valid email address is required.",

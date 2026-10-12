@@ -1,0 +1,41 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Secure & Scalable Enterprise Payments" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Unlock global card acquisition, instant settlements, fraud prevention suites, and granular role-based member controls tailored for multinational merchant operations.
+      - paragraph [ref=e11]: PCI-DSS Level 1 Compliant Transaction Infrastructure.
+    - generic [ref=e12]: © 2026 PayCaps CRM. All rights reserved.
+  - generic [ref=e18]:
+    - img "PayCaps logo" [ref=e21]
+    - heading "Welcome Back" [level=2] [ref=e22]
+    - paragraph [ref=e23]: Enter credentials to manage your accounts.
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]: Email Address
+        - generic [ref=e27]:
+          - textbox "Email Address" [ref=e28]
+          - group [aria-hidden]:
+            - generic: Email Address
+      - generic [ref=e29]:
+        - generic [ref=e30]: Password
+        - generic [ref=e31]:
+          - textbox "Password" [ref=e32]
+          - button "Show password" [ref=e34] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Password
+      - generic [ref=e37]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: Captcha
+          - generic [ref=e41]:
+            - textbox "Captcha" [ref=e42]:
+              - /placeholder: Code
+            - group [aria-hidden]:
+              - generic: Captcha
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - img "Captcha verification challenge"
+          - generic "Reload captcha" [ref=e45]:
+            - button "Reload captcha" [ref=e46] [cursor=pointer]
+      - link "Forgot Password?" [ref=e50] [cursor=pointer]:
+        - /url: /crm/forgot-password
+      - button "Sign In" [ref=e51] [cursor=pointer]

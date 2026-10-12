@@ -1,23 +1,17 @@
 [
-    {
-        "testCase": "Admin Pay By Link - Successful Payment",
-
-        "merchantSearch": "super",
-        "merchantOption": "Super Merchant (supermerchant",
-
-        "amount": "16.00",
-        "customerEmail": "test@yopmail.com",
-        "customerName": "test user",
-        "phoneNumber": "501234567",
-        "purpose": "testing",
-
-        "cardNumber": "4111 1100 0000 0211",
-        "expiryDate": "01/34",
-        "cvv": "111",
-        "cardHolderName": "test user",
-
-        "otp": "111111",
-
-        "expectedStatus": "Captured"
-    }
+  {
+    "testCase": "Admin Pay By Link - Successful Payment",
+    "merchantSearch": "super",
+    "amount": "10",
+    "customerEmail": "test@yopmail.com",
+    "customerName": "test user",
+    "phoneNumber": "501234567",
+    "purpose": "testing",
+    "cardNumber": "4111 1100 0000 0211",
+    "expiryDate": "01/32",
+    "cvv": "111",
+    "cardHolderName": "test user",
+    "otp": "111111",
+    "expectedStatus": "Captured"
+  }
 ]

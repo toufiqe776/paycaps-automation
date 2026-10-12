@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button "Toggle sidebar" [ref=e57] [cursor=pointer]
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: Dashboard
+          - generic [ref=e61]:
+            - button "Toggle theme" [ref=e62] [cursor=pointer]
+            - button "User menu" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary "Main navigation" [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation "Overview" [ref=e76]:
+              - listitem [ref=e77]:
+                - button [ref=e78] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e85] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation "Payments" [ref=e96]:
+              - listitem [ref=e97]:
+                - button [ref=e98] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [ref=e105] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+              - listitem [ref=e114]:
+                - button [ref=e115] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+              - listitem [ref=e125]:
+                - button [ref=e126] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e133] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [ref=e140] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+              - listitem [ref=e149]:
+                - button [ref=e150] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [ref=e157] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation "Account" [ref=e168]:
+              - listitem [ref=e169]:
+                - button [ref=e170] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+              - listitem [ref=e179]:
+                - button [ref=e180] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+              - listitem [ref=e189]:
+                - button [ref=e190] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e204]:
+          - generic [ref=e206]:
+            - generic [ref=e208]:
+              - generic [ref=e212]:
+                - heading "Dashboard" [level=6] [ref=e213]
+                - generic [ref=e214]: Admin payment overview
+              - button "Date range" [ref=e218] [cursor=pointer]:
+                - paragraph [ref=e221]: Today
+              - generic [ref=e224]:
+                - button "Filters" [ref=e226] [cursor=pointer]
+                - button "More actions" [ref=e231] [cursor=pointer]
+            - generic [ref=e234]:
+              - group "Payment summary" [ref=e235]:
+                - generic [ref=e236]:
+                  - paragraph [ref=e238]: Success
+                  - generic [ref=e242]:
+                    - generic [ref=e243]: "2"
+                    - paragraph [ref=e244]: AED 24.60
+                - generic [ref=e245]:
+                  - paragraph [ref=e247]: Failed
+                  - generic [ref=e251]:
+                    - generic [ref=e252]: "0"
+                    - paragraph [ref=e253]: AED 0.00
+                - generic [ref=e254]:
+                  - paragraph [ref=e256]: Invalid
+                  - generic [ref=e260]:
+                    - generic [ref=e261]: "0"
+                    - paragraph [ref=e262]: AED 0.00
+                - generic [ref=e263]:
+                  - paragraph [ref=e265]: Refund
+                  - generic [ref=e269]:
+                    - generic [ref=e270]: "0"
+                    - paragraph [ref=e271]: AED 0.00
+                - generic [ref=e272]:
+                  - paragraph [ref=e274]: Success rate
+                  - generic [ref=e278]:
+                    - generic [ref=e279]: 100%
+                    - paragraph [ref=e280]: 2 / 2
+              - generic [ref=e282]:
+                - generic [ref=e283]:
+                  - generic [ref=e284]:
+                    - heading "Monthly Transaction" [level=6] [ref=e285]
+                    - text: September 2026
+                  - button "Chart options" [ref=e286] [cursor=pointer]
+                - generic [ref=e291]:
+                  - img [ref=e292]:
+                    - generic [ref=e296]:
+                      - generic [ref=e297]: "1"
+                      - generic [ref=e299]: "4"
+                      - generic [ref=e301]: "7"
+                      - generic [ref=e303]: "10"
+                      - generic [ref=e305]: "13"
+                      - generic [ref=e307]: "16"
+                      - generic [ref=e309]: "19"
+                      - generic [ref=e311]: "22"
+                      - generic [ref=e313]: "25"
+                      - generic [ref=e315]: "28"
+                      - generic [ref=e317]: "31"
+                    - generic [ref=e320]:
+                      - generic [ref=e321]: "0"
+                      - generic [ref=e323]: "1"
+                      - generic [ref=e325]: "2"
+                      - generic [ref=e327]: "3"
+                      - generic [ref=e329]: "4"
+                  - list [ref=e338]:
+                    - listitem [ref=e339]: Total Success
+                    - listitem [ref=e342]: Total Refunded
+                    - listitem [ref=e345]: Total Failed
+        - generic [ref=e348]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e350]: "0"

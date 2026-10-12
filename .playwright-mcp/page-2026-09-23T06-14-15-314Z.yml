@@ -1,0 +1,265 @@
+- generic [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button "Toggle sidebar" [ref=e57] [cursor=pointer]
+        - generic [ref=e59]:
+          - navigation "Breadcrumb" [ref=e353]:
+            - list [ref=e354]:
+              - listitem [ref=e355]:
+                - link "Dashboard" [ref=e356] [cursor=pointer]:
+                  - /url: /dashboard
+              - listitem [aria-hidden] [ref=e357]: ">"
+              - listitem [ref=e358]:
+                - paragraph [ref=e359]: Transactions
+          - generic [ref=e61]:
+            - button "Toggle theme" [ref=e62] [cursor=pointer]
+            - button "User menu" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary "Main navigation" [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation "Overview" [ref=e76]:
+              - listitem [ref=e77]:
+                - button [ref=e78] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e85] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation "Payments" [ref=e96]:
+              - listitem [ref=e97]:
+                - button [ref=e98] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [expanded] [active] [ref=e105] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+                - generic "Payment Reports submenu" [ref=e636]:
+                  - listitem [ref=e637]:
+                    - button [ref=e638] [cursor=pointer]:
+                      - paragraph [ref=e643]: Authorized
+                  - listitem [ref=e644]:
+                    - button [ref=e645] [cursor=pointer]:
+                      - paragraph [ref=e650]: Sale
+                  - listitem [ref=e651]:
+                    - button [ref=e652] [cursor=pointer]:
+                      - paragraph [ref=e657]: Merchant Visibility
+                  - listitem [ref=e658]:
+                    - button [ref=e659] [cursor=pointer]:
+                      - paragraph [ref=e664]: Failed
+                  - listitem [ref=e665]:
+                    - button [ref=e666] [cursor=pointer]:
+                      - paragraph [ref=e671]: Refund
+                  - listitem [ref=e672]:
+                    - button [ref=e673] [cursor=pointer]:
+                      - paragraph [ref=e679]: Risk
+                  - listitem [ref=e680]:
+                    - button [ref=e681] [cursor=pointer]:
+                      - paragraph [ref=e686]: Summary
+                  - listitem [ref=e687]:
+                    - button [ref=e688] [cursor=pointer]:
+                      - paragraph [ref=e693]: Settlements
+              - listitem [ref=e114]:
+                - button [ref=e115] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+              - listitem [ref=e125]:
+                - button [ref=e126] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e133] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [expanded] [ref=e140] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+                - generic "Analytics submenu" [ref=e371]:
+                  - listitem [ref=e372]:
+                    - button [ref=e373] [cursor=pointer]:
+                      - paragraph [ref=e378]: Performance Report
+                  - listitem [ref=e379]:
+                    - button [ref=e380] [cursor=pointer]:
+                      - paragraph [ref=e385]: Weekly Performance Report
+                  - listitem [ref=e386]:
+                    - button [ref=e387] [cursor=pointer]:
+                      - paragraph [ref=e392]: Hourly Performance Report
+              - listitem [ref=e149]:
+                - button [ref=e150] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [expanded] [ref=e157] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+                - generic "Payment Billing submenu" [ref=e398]:
+                  - listitem [ref=e399]:
+                    - button [ref=e400] [cursor=pointer]:
+                      - paragraph [ref=e405]: Acquirer Routing
+                  - listitem [ref=e406]:
+                    - button [ref=e407] [cursor=pointer]:
+                      - paragraph [ref=e412]: VAT / Service Tax
+                  - listitem [ref=e413]:
+                    - button [ref=e414] [cursor=pointer]:
+                      - paragraph [ref=e419]: MDR Setting
+                  - listitem [ref=e420]:
+                    - button [ref=e421] [cursor=pointer]:
+                      - paragraph [ref=e426]: MDR Surcharge Setting
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation "Account" [ref=e168]:
+              - listitem [ref=e169]:
+                - button [expanded] [ref=e170] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+                - generic "Merchants submenu" [ref=e432]:
+                  - listitem [ref=e433]:
+                    - button [ref=e434] [cursor=pointer]:
+                      - paragraph [ref=e439]: User Registration
+                  - listitem [ref=e440]:
+                    - button [ref=e441] [cursor=pointer]:
+                      - paragraph [ref=e446]: Merchant List
+                  - listitem [ref=e447]:
+                    - button [ref=e448] [cursor=pointer]:
+                      - paragraph [ref=e453]: Merchant Sub-Users
+              - listitem [ref=e179]:
+                - button [expanded] [ref=e180] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+                - generic "Reseller Setup submenu" [ref=e459]:
+                  - listitem [ref=e460]:
+                    - button [ref=e461] [cursor=pointer]:
+                      - paragraph [ref=e466]: Reseller Accounts
+                  - listitem [ref=e467]:
+                    - button [ref=e468] [cursor=pointer]:
+                      - paragraph [ref=e473]: Reseller Mapping
+              - listitem [ref=e189]:
+                - button [ref=e190] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e474]:
+          - generic [ref=e476]:
+            - generic [ref=e478]:
+              - generic [ref=e483]:
+                - heading "Transactions" [level=6] [ref=e484]
+                - generic [ref=e485]: Search and review payment transactions
+              - button "Date range" [ref=e489] [cursor=pointer]:
+                - paragraph [ref=e492]: Today
+              - generic [ref=e495]:
+                - button "Filters" [ref=e497] [cursor=pointer]
+                - button "More actions" [ref=e502] [cursor=pointer]
+            - generic [ref=e507]:
+              - table "data table" [ref=e509]:
+                - rowgroup [ref=e510]:
+                  - row [ref=e511]:
+                    - columnheader [ref=e512]:
+                      - button "Txn ID" [ref=e513] [cursor=pointer]
+                    - columnheader [ref=e515]:
+                      - button "Txn Date" [ref=e516] [cursor=pointer]
+                    - columnheader [ref=e519]:
+                      - button "Order ID" [ref=e520] [cursor=pointer]
+                    - columnheader [ref=e522]:
+                      - button "Payment Method" [ref=e523] [cursor=pointer]
+                    - columnheader [ref=e525]:
+                      - button "Txn Type" [ref=e526] [cursor=pointer]
+                    - columnheader [ref=e528]:
+                      - button "Status" [ref=e529] [cursor=pointer]
+                    - columnheader [ref=e531]:
+                      - button "Currency" [ref=e532] [cursor=pointer]
+                    - columnheader [ref=e534]:
+                      - button "Amount" [ref=e535] [cursor=pointer]
+                - rowgroup [ref=e537]:
+                  - row [ref=e538] [cursor=pointer]:
+                    - cell "1036260923100040" [ref=e539]
+                    - cell "23-09-2026" [ref=e540]
+                    - cell "1096260923100015" [ref=e541]
+                    - cell "—" [ref=e542]
+                    - cell "NEWORDER" [ref=e543]
+                    - cell "Pending" [ref=e544]
+                    - cell "AED" [ref=e545]
+                    - cell "1.00" [ref=e546]
+                  - row [ref=e547] [cursor=pointer]:
+                    - cell "1035260923095806" [ref=e548]
+                    - cell "23-09-2026" [ref=e549]
+                    - cell "1094260923095724" [ref=e550]
+                    - cell "Debit Card - Visa" [ref=e551]
+                    - cell "SALE" [ref=e552]
+                    - cell "Captured" [ref=e553]
+                    - cell "AED" [ref=e554]
+                    - cell "12.60" [ref=e555]
+                  - row [ref=e556] [cursor=pointer]:
+                    - cell "1034260923095755" [ref=e557]
+                    - cell "23-09-2026" [ref=e558]
+                    - cell "1094260923095724" [ref=e559]
+                    - cell "Debit Card - Visa" [ref=e560]
+                    - cell "ENROLL" [ref=e561]
+                    - cell "Enrolled" [ref=e562]
+                    - cell "AED" [ref=e563]
+                    - cell "12.60" [ref=e564]
+                  - row [ref=e565] [cursor=pointer]:
+                    - cell "1033260923095745" [ref=e566]
+                    - cell "23-09-2026" [ref=e567]
+                    - cell "1094260923095724" [ref=e568]
+                    - cell "Debit Card - Visa" [ref=e569]
+                    - cell "NEWORDER" [ref=e570]
+                    - cell "Captured" [ref=e571]
+                    - cell "AED" [ref=e572]
+                    - cell "12.60" [ref=e573]
+                  - row [ref=e574] [cursor=pointer]:
+                    - cell "1031260923091906" [ref=e575]
+                    - cell "23-09-2026" [ref=e576]
+                    - cell "1030260923091315" [ref=e577]
+                    - cell "—" [ref=e578]
+                    - cell "NEWORDER" [ref=e579]
+                    - cell "Browser Closed" [ref=e580]
+                    - cell "AED" [ref=e581]
+                    - cell "1.00" [ref=e582]
+                  - row [ref=e583] [cursor=pointer]:
+                    - cell "1029260923090841" [ref=e584]
+                    - cell "23-09-2026" [ref=e585]
+                    - cell "1093260923090829" [ref=e586]
+                    - cell "—" [ref=e587]
+                    - cell "NEWORDER" [ref=e588]
+                    - cell "Pending" [ref=e589]
+                    - cell "AED" [ref=e590]
+                    - cell "1.00" [ref=e591]
+                  - row [ref=e592] [cursor=pointer]:
+                    - cell "1028260923090524" [ref=e593]
+                    - cell "23-09-2026" [ref=e594]
+                    - cell "1091260923090409" [ref=e595]
+                    - cell "Debit Card - Visa" [ref=e596]
+                    - cell "SALE" [ref=e597]
+                    - cell "Captured" [ref=e598]
+                    - cell "AED" [ref=e599]
+                    - cell "12.00" [ref=e600]
+                  - row [ref=e601] [cursor=pointer]:
+                    - cell "1027260923090513" [ref=e602]
+                    - cell "23-09-2026" [ref=e603]
+                    - cell "1091260923090409" [ref=e604]
+                    - cell "Debit Card - Visa" [ref=e605]
+                    - cell "ENROLL" [ref=e606]
+                    - cell "Enrolled" [ref=e607]
+                    - cell "AED" [ref=e608]
+                    - cell "12.00" [ref=e609]
+                  - row [ref=e610] [cursor=pointer]:
+                    - cell "1026260923090448" [ref=e611]
+                    - cell "23-09-2026" [ref=e612]
+                    - cell "1091260923090409" [ref=e613]
+                    - cell "Debit Card - Visa" [ref=e614]
+                    - cell "NEWORDER" [ref=e615]
+                    - cell "Captured" [ref=e616]
+                    - cell "AED" [ref=e617]
+                    - cell "12.00" [ref=e618]
+              - generic [ref=e619]:
+                - generic [ref=e621]:
+                  - paragraph [ref=e622]: "Rows per page:"
+                  - generic [ref=e623]:
+                    - combobox "Rows per page:" [ref=e624] [cursor=pointer]: "10"
+                    - textbox [aria-hidden]: "10"
+                - navigation "pagination navigation" [ref=e625]:
+                  - list [ref=e626]:
+                    - listitem [ref=e627]:
+                      - button "Go to previous page" [disabled]
+                    - listitem [ref=e628]:
+                      - button "page 1" [ref=e629] [cursor=pointer]: "1"
+                    - listitem [ref=e630]:
+                      - button "Go to next page" [disabled]
+        - generic [ref=e348]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e350]: "0"

@@ -1,0 +1,63 @@
+[     675ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:21608
+[   10641ms] [LOG] 🔄 Manual navigation detected from /quality/deviations to /quality/template-records/fd7b92c7-fb46-4ba8-8d24-1dee845901ce. Resetting AI session. @ http://216.48.184.249:5274/src/components/layout/CommandIsland.jsx:828
+[   11371ms] [ERROR] Access to fetch at 'http://216.48.184.249:6002/api/v1/wfpolicy/dynamic-template/rework/fd7b92c7-fb46-4ba8-8d24-1dee845901ce?' from origin 'http://216.48.184.249:5274' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://216.48.184.249:5274/quality/template-records/fd7b92c7-fb46-4ba8-8d24-1dee845901ce:0
+[   11371ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://216.48.184.249:6002/api/v1/wfpolicy/dynamic-template/rework/fd7b92c7-fb46-4ba8-8d24-1dee845901ce?:0
+[   13004ms] [ERROR] Warning: %s: Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead.%s DynamicTemplateAuditPanel 
+    at DynamicTemplateAuditPanel (http://216.48.184.249:5274/src/features/dynamic_template/components/DynamicTemplateAuditPanel.jsx:582:3)
+    at div
+    at DynamicTemplateRecordViewer (http://216.48.184.249:5274/src/features/dynamic_template/core/DynamicTemplateRecordViewer.jsx:70:24)
+    at RenderedRoute (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:6301:26)
+    at Routes (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7150:3)
+    at Suspense
+    at QmsRoutes
+    at RenderedRoute (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:6301:26)
+    at Outlet (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7082:26)
+    at main
+    at div
+    at div
+    at AppLayout (http://216.48.184.249:5274/src/components/layout/AppLayout.jsx:32:20)
+    at PrivateRoute (http://216.48.184.249:5274/src/routes/PrivateRoute.jsx:25:58)
+    at RenderedRoute (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:6301:26)
+    at Routes (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7150:3)
+    at Suspense
+    at AppRoutes (http://216.48.184.249:5274/src/routes/index.jsx:146:20)
+    at div
+    at TourProvider (http://216.48.184.249:5274/src/components/context/TourContext.jsx:25:32)
+    at App (http://216.48.184.249:5274/src/App.jsx:34:20)
+    at Router (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7091:13)
+    at BrowserRouter (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:10287:3)
+    at PersistGate2 (http://216.48.184.249:5274/node_modules/.vite/deps/redux-persist_integration_react.js?v=246095ff:86:5)
+    at Provider (http://216.48.184.249:5274/node_modules/.vite/deps/chunk-APPCR2GX.js?v=246095ff:923:11) @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:520
+[ 1836253ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
+[ 1836391ms] [LOG] session logout @ http://216.48.184.249:5274/src/hooks/useInactivityTimeout.js:87
+[ 1836530ms] [WARNING] ImmutableStateInvariantMiddleware took 48ms, which is more than the warning threshold of 32ms. 
+If your state or actions are very large, you may want to disable the middleware as it might cause too much of a slowdown in development mode. See https://redux-toolkit.js.org/api/getDefaultMiddleware for instructions.
+It is disabled in production builds, so you don't need to worry about that. @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-N52CPOJD.js?v=246095ff:1702
+[ 1838914ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:21608
+[ 1839669ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://216.48.184.249:6002/api/v1/users/me:0
+[ 2006518ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://216.48.184.249:6002/api/v1/users/me/permissions:0
+[ 2006520ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://216.48.184.249:6002/api/v1/auth/refresh-token:0
+[ 2006573ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
+[ 2006618ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://216.48.184.249:6002/api/v1/users/me/application-scale:0
+[ 2007680ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:21608
+[ 2007760ms] [LOG] PrivateRoute: Not authenticated, redirecting to /login. Current location: /quality/template-records/fd7b92c7-fb46-4ba8-8d24-1dee845901ce @ http://216.48.184.249:5274/src/routes/PrivateRoute.jsx:38
+[ 2007761ms] [LOG] PrivateRoute: Not authenticated, redirecting to /login. Current location: /quality/template-records/fd7b92c7-fb46-4ba8-8d24-1dee845901ce @ http://216.48.184.249:5274/src/routes/PrivateRoute.jsx:38
+[ 2008045ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://216.48.184.249:5274/login:0
+[ 2574425ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
+[ 2576859ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:21608
+[ 2577670ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://216.48.184.249:5274/login:0
+[ 9779319ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
+[19124260ms] [ERROR] WebSocket connection to 'ws://216.48.184.249:5274/' failed: Error in connection establishment: net::ERR_ADDRESS_UNREACHABLE @ http://216.48.184.249:5274/@vite/client:1034
+[19124534ms] [WARNING] ImmutableStateInvariantMiddleware took 68ms, which is more than the warning threshold of 32ms. 
+If your state or actions are very large, you may want to disable the middleware as it might cause too much of a slowdown in development mode. See https://redux-toolkit.js.org/api/getDefaultMiddleware for instructions.
+It is disabled in production builds, so you don't need to worry about that. @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-N52CPOJD.js?v=246095ff:1702
+[19609116ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=7adc7a0b:21608
+[19610862ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://216.48.184.249:5274/login:0
+[24996305ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
+[25020928ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=af15a9fa:21608
+[25022880ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://216.48.184.249:5274/login:0
+[25161703ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
+[25162889ms] [ERROR] WebSocket connection to 'ws://216.48.184.249:5274/' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED @ http://216.48.184.249:5274/@vite/client:1034
+[25164739ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=af15a9fa:21608
+[25165288ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://216.48.184.249:5274/login:0
+[31279494ms] [LOG] [vite] server connection lost. Polling for restart... @ http://216.48.184.249:5274/@vite/client:963
