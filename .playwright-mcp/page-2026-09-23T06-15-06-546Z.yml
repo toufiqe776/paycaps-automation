@@ -1,0 +1,273 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button "Toggle sidebar" [ref=e57] [cursor=pointer]
+        - generic [ref=e59]:
+          - navigation "Breadcrumb" [ref=e353]:
+            - list [ref=e354]:
+              - listitem [ref=e355]:
+                - link "Dashboard" [ref=e356] [cursor=pointer]:
+                  - /url: /dashboard
+              - listitem [aria-hidden] [ref=e357]: ">"
+              - listitem [ref=e358]:
+                - paragraph [ref=e972]: Pay By Link
+          - generic [ref=e61]:
+            - button "Toggle theme" [ref=e62] [cursor=pointer]
+            - button "User menu" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary "Main navigation" [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation "Overview" [ref=e76]:
+              - listitem [ref=e77]:
+                - button [ref=e78] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e85] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation "Payments" [ref=e96]:
+              - listitem [ref=e97]:
+                - button [ref=e98] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [expanded] [ref=e105] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+                - generic "Payment Reports submenu" [ref=e636]:
+                  - listitem [ref=e637]:
+                    - button [ref=e638] [cursor=pointer]:
+                      - paragraph [ref=e643]: Authorized
+                  - listitem [ref=e644]:
+                    - button [ref=e645] [cursor=pointer]:
+                      - paragraph [ref=e650]: Sale
+                  - listitem [ref=e651]:
+                    - button [ref=e652] [cursor=pointer]:
+                      - paragraph [ref=e657]: Merchant Visibility
+                  - listitem [ref=e658]:
+                    - button [ref=e659] [cursor=pointer]:
+                      - paragraph [ref=e664]: Failed
+                  - listitem [ref=e665]:
+                    - button [ref=e666] [cursor=pointer]:
+                      - paragraph [ref=e671]: Refund
+                  - listitem [ref=e672]:
+                    - button [ref=e673] [cursor=pointer]:
+                      - paragraph [ref=e679]: Risk
+                  - listitem [ref=e680]:
+                    - button [ref=e681] [cursor=pointer]:
+                      - paragraph [ref=e686]: Summary
+                  - listitem [ref=e687]:
+                    - button [ref=e688] [cursor=pointer]:
+                      - paragraph [ref=e693]: Settlements
+              - listitem [ref=e114]:
+                - button [expanded] [ref=e115] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+                - generic "Account & Finance submenu" [ref=e834]:
+                  - listitem [ref=e835]:
+                    - button [ref=e836] [cursor=pointer]:
+                      - paragraph [ref=e842]: MIS Reports
+                  - listitem [ref=e843]:
+                    - button [ref=e844] [cursor=pointer]:
+                      - paragraph [ref=e849]: Download reports
+              - listitem [ref=e125]:
+                - button [ref=e126] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e133] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [expanded] [ref=e140] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+                - generic "Analytics submenu" [ref=e371]:
+                  - listitem [ref=e372]:
+                    - button [ref=e373] [cursor=pointer]:
+                      - paragraph [ref=e378]: Performance Report
+                  - listitem [ref=e379]:
+                    - button [ref=e380] [cursor=pointer]:
+                      - paragraph [ref=e385]: Weekly Performance Report
+                  - listitem [ref=e386]:
+                    - button [ref=e387] [cursor=pointer]:
+                      - paragraph [ref=e392]: Hourly Performance Report
+              - listitem [ref=e149]:
+                - button [ref=e150] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [expanded] [ref=e157] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+                - generic "Payment Billing submenu" [ref=e398]:
+                  - listitem [ref=e399]:
+                    - button [ref=e400] [cursor=pointer]:
+                      - paragraph [ref=e405]: Acquirer Routing
+                  - listitem [ref=e406]:
+                    - button [ref=e407] [cursor=pointer]:
+                      - paragraph [ref=e412]: VAT / Service Tax
+                  - listitem [ref=e413]:
+                    - button [ref=e414] [cursor=pointer]:
+                      - paragraph [ref=e419]: MDR Setting
+                  - listitem [ref=e420]:
+                    - button [ref=e421] [cursor=pointer]:
+                      - paragraph [ref=e426]: MDR Surcharge Setting
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation "Account" [ref=e168]:
+              - listitem [ref=e169]:
+                - button [expanded] [ref=e170] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+                - generic "Merchants submenu" [ref=e432]:
+                  - listitem [ref=e433]:
+                    - button [ref=e434] [cursor=pointer]:
+                      - paragraph [ref=e439]: User Registration
+                  - listitem [ref=e440]:
+                    - button [ref=e441] [cursor=pointer]:
+                      - paragraph [ref=e446]: Merchant List
+                  - listitem [ref=e447]:
+                    - button [ref=e448] [cursor=pointer]:
+                      - paragraph [ref=e453]: Merchant Sub-Users
+              - listitem [ref=e179]:
+                - button [expanded] [ref=e180] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+                - generic "Reseller Setup submenu" [ref=e459]:
+                  - listitem [ref=e460]:
+                    - button [ref=e461] [cursor=pointer]:
+                      - paragraph [ref=e466]: Reseller Accounts
+                  - listitem [ref=e467]:
+                    - button [ref=e468] [cursor=pointer]:
+                      - paragraph [ref=e473]: Reseller Mapping
+              - listitem [ref=e189]:
+                - button [ref=e190] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e1113]:
+          - generic [ref=e1115]:
+            - heading "Create Pay By Link" [level=1] [ref=e1118]
+            - button [ref=e1120] [cursor=pointer]
+          - generic [ref=e1126]:
+            - generic [ref=e1130]:
+              - generic [ref=e1131]: Link type
+              - tablist "Link type" [ref=e1133]:
+                - tab "Single payment" [selected] [ref=e1134] [cursor=pointer]
+                - tab "Multi-payment" [ref=e1135] [cursor=pointer]
+              - generic [ref=e1136]: Payment
+              - generic [ref=e1137]:
+                - generic [ref=e1140]:
+                  - generic [ref=e1141]:
+                    - text: Merchant
+                    - generic [aria-hidden] [ref=e1142]: "*"
+                  - generic [ref=e1143]:
+                    - combobox "Merchant" [ref=e1144]
+                    - button "Open" [ref=e1146] [cursor=pointer]
+                    - group [aria-hidden]:
+                      - generic: Merchant *
+                - generic [ref=e1151]:
+                  - generic [ref=e1152]:
+                    - text: Currency
+                    - generic [aria-hidden] [ref=e1153]: "*"
+                  - generic [ref=e1154]:
+                    - combobox "Currency" [ref=e1155]: AED
+                    - button "Open" [ref=e1157] [cursor=pointer]
+                    - group [aria-hidden]:
+                      - generic: Currency *
+                - generic [ref=e1161]:
+                  - generic [ref=e1162]:
+                    - text: Amount
+                    - generic [aria-hidden] [ref=e1163]: "*"
+                  - generic [ref=e1164]:
+                    - textbox "Amount" [ref=e1165]:
+                      - /placeholder: "0.00"
+                    - group [aria-hidden]:
+                      - generic: Amount *
+              - generic [ref=e1168]:
+                - generic [ref=e1169]: Customer
+                - generic [ref=e1170]:
+                  - generic [ref=e1172]:
+                    - generic [ref=e1173]:
+                      - text: Customer Email
+                      - generic [aria-hidden] [ref=e1174]: "*"
+                    - generic [ref=e1175]:
+                      - textbox "Customer Email" [ref=e1176]:
+                        - /placeholder: customer@example.com
+                      - group [aria-hidden]:
+                        - generic: Customer Email *
+                  - generic [ref=e1178]:
+                    - generic [ref=e1179]: Customer Name
+                    - generic [ref=e1180]:
+                      - textbox "Customer Name" [ref=e1181]:
+                        - /placeholder: Customer name
+                      - group [aria-hidden]:
+                        - generic: Customer Name
+                  - generic [ref=e1183]:
+                    - generic [ref=e1186]:
+                      - generic [ref=e1187]: Code
+                      - generic [ref=e1188]:
+                        - combobox "Code" [ref=e1189]: "+971"
+                        - button "Open" [ref=e1191] [cursor=pointer]
+                        - group [aria-hidden]:
+                          - generic: Code
+                    - generic [ref=e1195]:
+                      - generic [ref=e1196]: Phone Number
+                      - generic [ref=e1197]:
+                        - textbox "Phone Number" [ref=e1198]:
+                          - /placeholder: e.g. 50 123 4567 (9 digits)
+                        - group [aria-hidden]:
+                          - generic: Phone Number
+                  - generic [ref=e1201] [cursor=pointer]:
+                    - checkbox "Allow customer to edit name, email & phone" [ref=e1203]
+                    - generic [ref=e1206]: Allow customer to edit name, email & phone
+              - generic [ref=e1208]: Expiry & purpose
+              - generic [ref=e1209]:
+                - generic [ref=e1212]:
+                  - generic [ref=e1213]: Expiry date
+                  - generic [ref=e1214] [cursor=pointer]:
+                    - textbox "Expiry date" [ref=e1215]:
+                      - /placeholder: DD/MM/YYYY
+                      - text: 24/09/2026
+                    - button "Choose Expiry date date" [ref=e1217]
+                    - group [aria-hidden]:
+                      - generic: Expiry date
+                - generic [ref=e1221]:
+                  - generic [ref=e1222]: Expiry time
+                  - generic [ref=e1223]:
+                    - textbox "Expiry time" [ref=e1224]: 11:45
+                    - group [aria-hidden]:
+                      - generic: Expiry time
+                - generic [ref=e1226]:
+                  - generic [ref=e1227]: Purpose (0/100)
+                  - generic [ref=e1228]:
+                    - textbox "Purpose (0/100)" [ref=e1229]:
+                      - /placeholder: "e.g. Invoice #12345"
+                    - group [aria-hidden]:
+                      - generic: Purpose (0/100)
+            - generic [ref=e1231]:
+              - generic [ref=e1232]: Link summary
+              - generic [ref=e1235]:
+                - generic [ref=e1236]:
+                  - paragraph [ref=e1237]: Amount
+                  - paragraph [ref=e1238]: AED
+                - generic [ref=e1239]:
+                  - generic [ref=e1240]: Type
+                  - paragraph [ref=e1241]: Single payment
+                - generic [ref=e1242]:
+                  - generic [ref=e1243]: Merchant
+                  - paragraph [ref=e1244]: —
+                - generic [ref=e1245]:
+                  - generic [ref=e1246]: Customer
+                  - paragraph [ref=e1247]: —
+                - generic [ref=e1248]:
+                  - generic [ref=e1249]: Email
+                  - paragraph [ref=e1250]: —
+                - generic [ref=e1251]:
+                  - generic [ref=e1252]: Phone
+                  - paragraph [ref=e1253]: —
+                - generic [ref=e1254]:
+                  - generic [ref=e1255]: Expiry
+                  - paragraph [ref=e1256]: 24-09-2026 · 11:45 AM
+                - generic [ref=e1257]:
+                  - generic [ref=e1258]: Purpose
+                  - paragraph [ref=e1259]: —
+              - button "Continue" [ref=e1262] [cursor=pointer]
+        - generic [ref=e348]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e350]: "0"

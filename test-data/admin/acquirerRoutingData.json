@@ -1,5 +1,5 @@
 {
-  "merchant": "Sb123 technology",
+  "merchant": "New technology",
   "acquirer": "SANDBOXSIMULATOR",
   "routes": [
     {
@@ -23,7 +23,7 @@
     }
   ],
   "expectedTableValues": [
-    "Sb123 technology",
+    "New technology",
     "SANDBOXSIMULATOR",
     "Visa,MasterCard",
     "ALL",

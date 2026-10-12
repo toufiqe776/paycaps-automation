@@ -1,0 +1,222 @@
+- generic [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button "Toggle sidebar" [ref=e57] [cursor=pointer]
+        - generic [ref=e59]:
+          - navigation "Breadcrumb" [ref=e353]:
+            - list [ref=e354]:
+              - listitem [ref=e355]:
+                - link "Dashboard" [ref=e356] [cursor=pointer]:
+                  - /url: /dashboard
+              - listitem [aria-hidden] [ref=e357]: ">"
+              - listitem [ref=e358]:
+                - paragraph [ref=e850]: MIS Reports
+          - generic [ref=e61]:
+            - button "Toggle theme" [ref=e62] [cursor=pointer]
+            - button "User menu" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary "Main navigation" [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation "Overview" [ref=e76]:
+              - listitem [ref=e77]:
+                - button [ref=e78] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e85] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation "Payments" [ref=e96]:
+              - listitem [ref=e97]:
+                - button [ref=e98] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [expanded] [ref=e105] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+                - generic "Payment Reports submenu" [ref=e636]:
+                  - listitem [ref=e637]:
+                    - button [ref=e638] [cursor=pointer]:
+                      - paragraph [ref=e643]: Authorized
+                  - listitem [ref=e644]:
+                    - button [ref=e645] [cursor=pointer]:
+                      - paragraph [ref=e650]: Sale
+                  - listitem [ref=e651]:
+                    - button [ref=e652] [cursor=pointer]:
+                      - paragraph [ref=e657]: Merchant Visibility
+                  - listitem [ref=e658]:
+                    - button [ref=e659] [cursor=pointer]:
+                      - paragraph [ref=e664]: Failed
+                  - listitem [ref=e665]:
+                    - button [ref=e666] [cursor=pointer]:
+                      - paragraph [ref=e671]: Refund
+                  - listitem [ref=e672]:
+                    - button [ref=e673] [cursor=pointer]:
+                      - paragraph [ref=e679]: Risk
+                  - listitem [ref=e680]:
+                    - button [ref=e681] [cursor=pointer]:
+                      - paragraph [ref=e686]: Summary
+                  - listitem [ref=e687]:
+                    - button [ref=e688] [cursor=pointer]:
+                      - paragraph [ref=e693]: Settlements
+              - listitem [ref=e114]:
+                - button [expanded] [ref=e115] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+                - generic "Account & Finance submenu" [ref=e834]:
+                  - listitem [ref=e835]:
+                    - button [active] [ref=e836] [cursor=pointer]:
+                      - paragraph [ref=e842]: MIS Reports
+                  - listitem [ref=e843]:
+                    - button [ref=e844] [cursor=pointer]:
+                      - paragraph [ref=e849]: Download reports
+              - listitem [ref=e125]:
+                - button [ref=e126] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e133] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [expanded] [ref=e140] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+                - generic "Analytics submenu" [ref=e371]:
+                  - listitem [ref=e372]:
+                    - button [ref=e373] [cursor=pointer]:
+                      - paragraph [ref=e378]: Performance Report
+                  - listitem [ref=e379]:
+                    - button [ref=e380] [cursor=pointer]:
+                      - paragraph [ref=e385]: Weekly Performance Report
+                  - listitem [ref=e386]:
+                    - button [ref=e387] [cursor=pointer]:
+                      - paragraph [ref=e392]: Hourly Performance Report
+              - listitem [ref=e149]:
+                - button [ref=e150] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [expanded] [ref=e157] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+                - generic "Payment Billing submenu" [ref=e398]:
+                  - listitem [ref=e399]:
+                    - button [ref=e400] [cursor=pointer]:
+                      - paragraph [ref=e405]: Acquirer Routing
+                  - listitem [ref=e406]:
+                    - button [ref=e407] [cursor=pointer]:
+                      - paragraph [ref=e412]: VAT / Service Tax
+                  - listitem [ref=e413]:
+                    - button [ref=e414] [cursor=pointer]:
+                      - paragraph [ref=e419]: MDR Setting
+                  - listitem [ref=e420]:
+                    - button [ref=e421] [cursor=pointer]:
+                      - paragraph [ref=e426]: MDR Surcharge Setting
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation "Account" [ref=e168]:
+              - listitem [ref=e169]:
+                - button [expanded] [ref=e170] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+                - generic "Merchants submenu" [ref=e432]:
+                  - listitem [ref=e433]:
+                    - button [ref=e434] [cursor=pointer]:
+                      - paragraph [ref=e439]: User Registration
+                  - listitem [ref=e440]:
+                    - button [ref=e441] [cursor=pointer]:
+                      - paragraph [ref=e446]: Merchant List
+                  - listitem [ref=e447]:
+                    - button [ref=e448] [cursor=pointer]:
+                      - paragraph [ref=e453]: Merchant Sub-Users
+              - listitem [ref=e179]:
+                - button [expanded] [ref=e180] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+                - generic "Reseller Setup submenu" [ref=e459]:
+                  - listitem [ref=e460]:
+                    - button [ref=e461] [cursor=pointer]:
+                      - paragraph [ref=e466]: Reseller Accounts
+                  - listitem [ref=e467]:
+                    - button [ref=e468] [cursor=pointer]:
+                      - paragraph [ref=e473]: Reseller Mapping
+              - listitem [ref=e189]:
+                - button [ref=e190] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e851]:
+          - generic [ref=e853]:
+            - generic [ref=e855]:
+              - generic [ref=e860]:
+                - heading "MIS Reports" [level=6] [ref=e861]
+                - generic [ref=e862]: Nodal settlement MIS for the selected merchant and acquirer.
+              - button "Date range" [ref=e866] [cursor=pointer]:
+                - paragraph [ref=e869]: Today
+              - generic [ref=e872]:
+                - button "Filters" [ref=e874] [cursor=pointer]
+                - button "Export report" [ref=e880] [cursor=pointer]:
+                  - generic [ref=e884]: Export
+                - button "More actions" [ref=e885] [cursor=pointer]
+            - generic [ref=e889]:
+              - table "data table" [ref=e891]:
+                - rowgroup [ref=e892]:
+                  - row [ref=e893]:
+                    - columnheader "S.No" [ref=e894]
+                    - columnheader [ref=e895]:
+                      - button "Merchant Name" [ref=e896] [cursor=pointer]
+                    - columnheader [ref=e899]:
+                      - button "Txn_Id" [ref=e900] [cursor=pointer]
+                    - columnheader [ref=e903]:
+                      - button "Aggregator Name" [ref=e904] [cursor=pointer]
+                    - columnheader [ref=e907]:
+                      - button "Nodal a/c No." [ref=e908] [cursor=pointer]
+                    - columnheader [ref=e911]:
+                      - button "Transaction Date" [ref=e912] [cursor=pointer]
+                    - columnheader [ref=e915]:
+                      - button "Bank from where funds to be received" [ref=e916] [cursor=pointer]
+                    - columnheader [ref=e919]:
+                      - button "Gross Transaction Amt" [ref=e920] [cursor=pointer]
+                    - columnheader [ref=e923]:
+                      - button "Total Aggregator Commission Amt Payable (Including Service Tax)" [ref=e924] [cursor=pointer]
+                    - columnheader [ref=e927]:
+                      - button "Total Amt Payable to Merchant A/c" [ref=e928] [cursor=pointer]
+                    - columnheader [ref=e931]:
+                      - button "Total Payout from Nodal Account" [ref=e932] [cursor=pointer]
+                - rowgroup [ref=e935]:
+                  - row [ref=e936]:
+                    - cell "1" [ref=e937]
+                    - cell "Super Merchant" [ref=e938]
+                    - cell "1028260923090524" [ref=e939]
+                    - cell "Paycaps" [ref=e940]
+                    - cell "'50200011639867" [ref=e941]
+                    - cell "23/09/2026" [ref=e942]
+                    - cell [ref=e943]
+                    - cell "12.00" [ref=e944]
+                    - cell "0.00" [ref=e945]
+                    - cell "0.00" [ref=e946]
+                    - cell "0.00" [ref=e947]
+                  - row [ref=e948]:
+                    - cell "2" [ref=e949]
+                    - cell "Super Merchant" [ref=e950]
+                    - cell "1035260923095806" [ref=e951]
+                    - cell "Paycaps" [ref=e952]
+                    - cell "'50200011639867" [ref=e953]
+                    - cell "23/09/2026" [ref=e954]
+                    - cell [ref=e955]
+                    - cell "12.60" [ref=e956]
+                    - cell "0.00" [ref=e957]
+                    - cell "0.00" [ref=e958]
+                    - cell "0.00" [ref=e959]
+              - generic [ref=e960]:
+                - generic [ref=e962]:
+                  - paragraph [ref=e963]: "Rows per page:"
+                  - generic [ref=e964]:
+                    - combobox "Rows per page:" [ref=e965] [cursor=pointer]: "10"
+                    - textbox [aria-hidden]: "10"
+                - navigation "pagination navigation" [ref=e966]:
+                  - list [ref=e967]:
+                    - listitem [ref=e968]:
+                      - button "Go to previous page" [disabled]
+                    - listitem [ref=e969]:
+                      - button "page 1" [ref=e970] [cursor=pointer]: "1"
+                    - listitem [ref=e971]:
+                      - button "Go to next page" [disabled]
+        - generic [ref=e348]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e350]: "0"

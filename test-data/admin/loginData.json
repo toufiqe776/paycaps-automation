@@ -1,7 +1,7 @@
 [
     {
-        "email": "sayed@paycaps.com",
-        "password": "Paycaps!@#22",
+        "email": "qaadmin@yopmail.com",
+        "password": "Admin@123",
         "expected": "success"
     }
     

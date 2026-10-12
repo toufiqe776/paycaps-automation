@@ -1,0 +1,6 @@
+[    3090ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=3cc8f4ca:21608
+[    3265ms] [LOG] PrivateRoute: Not authenticated, redirecting to /login. Current location: / @ http://216.48.184.249:5274/src/routes/PrivateRoute.jsx:38
+[    3265ms] [LOG] PrivateRoute: Not authenticated, redirecting to /login. Current location: / @ http://216.48.184.249:5274/src/routes/PrivateRoute.jsx:38
+[    3660ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://216.48.184.249:5274/login:0
+[   25543ms] [LOG] [authSlice] Login successful, state updated for user: undefined @ http://216.48.184.249:5274/src/store/slices/authSlice.js:203
+[   34317ms] [LOG] 🔄 Manual navigation detected from / to /quality. Resetting AI session. @ http://216.48.184.249:5274/src/components/layout/CommandIsland.jsx:828

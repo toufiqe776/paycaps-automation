@@ -1,0 +1,24 @@
+- generic [ref=e88]:
+  - generic [ref=e89]:
+    - img "QMS.AIVOA.AI Logo" [ref=e90]
+    - generic [ref=e91]: QMS.AIVOA.AI
+  - heading "Welcome back" [level=1] [ref=e92]
+  - paragraph [ref=e93]: Please enter your GxP credentials to access the secure environment.
+  - generic [ref=e95]:
+    - generic [ref=e96]:
+      - generic [ref=e97]: Work Email / User ID
+      - textbox "name@company.com" [ref=e102]
+    - generic [ref=e103]:
+      - generic [ref=e104]: Password
+      - generic [ref=e106]:
+        - textbox "••••••••" [ref=e110]
+        - button "Show password" [ref=e111]
+      - button "Forgot password?" [ref=e116] [cursor=pointer]
+    - button "Sign In to Workspace" [ref=e117]
+  - generic [ref=e120]:
+    - paragraph [ref=e121]: New to AIVOA?
+    - link "Start Pilot Program" [ref=e122] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=e128]:
+      - generic [ref=e129]: No credit card required. GxP compliant setup.
+      - paragraph [ref=e133]: Subject to the AIVOA Privacy Policy.

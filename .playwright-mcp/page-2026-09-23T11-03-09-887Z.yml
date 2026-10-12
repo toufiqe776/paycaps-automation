@@ -1,0 +1,125 @@
+- generic [ref=f7e53]:
+  - complementary [ref=f7e54]:
+    - generic "Expand Sidebar" [ref=f7e55] [cursor=pointer]
+    - generic "Expand Sidebar" [ref=f7e59] [cursor=pointer]:
+      - img "SME.QMS Logo" [ref=f7e61]
+    - generic [ref=f7e62]:
+      - generic [ref=f7e63]: Dashboard
+      - generic [ref=f7e71]:
+        - generic [ref=f7e72] [cursor=pointer]: Compliance Score
+        - generic [ref=f7e75] [cursor=pointer]: KPI Trending
+        - generic [ref=f7e79] [cursor=pointer]: APR / PQR Center
+      - generic [ref=f7e85]:
+        - generic [ref=f7e86] [cursor=pointer]: Deviations
+        - generic [ref=f7e89] [cursor=pointer]: Root Cause Analysis (RCA)
+        - generic [ref=f7e94] [cursor=pointer]: Out of Trend (OOT)
+        - generic [ref=f7e98] [cursor=pointer]: Change Control
+        - generic [ref=f7e103] [cursor=pointer]: Out of Specification (OOS)
+        - generic [ref=f7e106] [cursor=pointer]: CAPA Manager
+        - generic [ref=f7e110] [cursor=pointer]: Complaints
+        - generic [ref=f7e113] [cursor=pointer]: Product Recalls
+        - generic [ref=f7e118] [cursor=pointer]: Adverse Events
+        - generic [ref=f7e121] [cursor=pointer]: Effectiveness Checks
+        - generic [ref=f7e126] [cursor=pointer]: Audit
+      - generic [ref=f7e132]:
+        - generic [ref=f7e133] [cursor=pointer]: Sampling
+        - generic [ref=f7e136] [cursor=pointer]: Chemical QC
+        - generic [ref=f7e139] [cursor=pointer]: Microbiology QC
+        - generic [ref=f7e149] [cursor=pointer]: Packaging QC
+        - generic [ref=f7e156] [cursor=pointer]: CoA Management
+        - generic [ref=f7e162] [cursor=pointer]: Lab Incidents (OOS)
+        - generic [ref=f7e165] [cursor=pointer]: Out of Trend (OOT)
+        - generic [ref=f7e169] [cursor=pointer]: Stability Studies
+        - generic [ref=f7e173] [cursor=pointer]: Reference Standards
+        - generic [ref=f7e176] [cursor=pointer]: Env. & Utility Mon.
+        - generic [ref=f7e181] [cursor=pointer]: Instrument & Column Logs
+        - generic [ref=f7e184] [cursor=pointer]: Retention Samples
+      - generic [ref=f7e189]:
+        - generic [ref=f7e190] [cursor=pointer]: Inbound Receipts (RM/PM)
+        - generic [ref=f7e196] [cursor=pointer]: Material Registry
+        - generic [ref=f7e200] [cursor=pointer]: Distribution & Dispatch
+      - generic [ref=f7e206]:
+        - generic [ref=f7e207] [cursor=pointer]: Campaign Management
+        - generic [ref=f7e210] [cursor=pointer]: Active BMRs (Intermediates)
+        - generic [ref=f7e213] [cursor=pointer]: Active BMRs (Final API)
+        - generic [ref=f7e216] [cursor=pointer]: Active BMRs (Recovery)
+        - generic [ref=f7e221] [cursor=pointer]: QA Disposition (Release Log)
+      - generic [ref=f7e228]:
+        - generic [ref=f7e229] [cursor=pointer]: Supplier Master
+        - generic [ref=f7e235] [cursor=pointer]: Vendor Qualification
+        - generic [ref=f7e240] [cursor=pointer]: Supplier Audits
+        - generic [ref=f7e245] [cursor=pointer]: SCAR
+        - generic [ref=f7e250] [cursor=pointer]: Master ASL
+      - generic [ref=f7e254]:
+        - generic [ref=f7e255] [cursor=pointer]: Asset Master
+        - generic [ref=f7e259] [cursor=pointer]: Qualification (IQ/OQ/PQ)
+        - generic [ref=f7e263] [cursor=pointer]: Calibration Standards
+        - generic [ref=f7e266] [cursor=pointer]: Asset Logs
+        - generic [ref=f7e271] [cursor=pointer]: Preventive Maint.
+      - generic [ref=f7e275]:
+        - generic [ref=f7e276] [cursor=pointer]: Regulatory Affairs
+        - generic [ref=f7e280] [cursor=pointer]: Inspections & Mgmt Audits
+        - generic [ref=f7e284] [cursor=pointer]: Audit Command Center
+      - generic [ref=f7e289]:
+        - generic [ref=f7e290] [cursor=pointer]: Document Control
+        - generic [ref=f7e294] [cursor=pointer]: Training Matrix
+        - generic [ref=f7e298] [cursor=pointer]: Audit Trail
+      - generic [ref=f7e309]:
+        - generic [ref=f7e310] [cursor=pointer]: Site & Area Master
+        - generic [ref=f7e314] [cursor=pointer]: Master Library
+        - generic [ref=f7e317] [cursor=pointer]: Item Master
+        - generic [ref=f7e322] [cursor=pointer]: Regulatory & Compliance
+        - generic [ref=f7e325] [cursor=pointer]: MBR & BOM
+        - generic [ref=f7e328] [cursor=pointer]: Customer / Sponsor / IP
+        - generic [ref=f7e335] [cursor=pointer]: Workflow Policies
+        - generic [ref=f7e339] [cursor=pointer]: AI Data Migration
+        - generic [ref=f7e345] [cursor=pointer]: User Mgmt & System Admin
+      - generic [ref=f7e350]:
+        - generic [ref=f7e351] [cursor=pointer]: Templates Library
+        - generic [ref=f7e358] [cursor=pointer]: Create New Template
+  - main [ref=f7e361]:
+    - img "Loading..." [ref=f7e363]
+  - generic [ref=f7e365]:
+    - generic:
+      - generic:
+        - generic:
+          - button "History"
+          - button "interaction"
+          - button "reasoning"
+          - button "navigator"
+        - generic:
+          - button "Maximize"
+          - button "Close Island"
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - heading "History" [level=3]
+                - generic:
+                  - button
+                  - button "New"
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - paragraph: Quick Prompts
+                - generic:
+                  - button "Compare Schedule M vs ICH Q7"
+                  - button "Check 21 CFR Part 11 Scope"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Hello! I'm your GxP Regulatory Assistant.
+                        - generic:
+                          - button
+    - generic [ref=f7e371]:
+      - generic [ref=f7e373]:
+        - button "Attach files" [ref=f7e374]
+        - button "Open Navigator" [ref=f7e375]
+      - textbox "Type a message or drop files..." [ref=f7e377]
+      - generic [ref=f7e379]:
+        - button "Start Dictation" [ref=f7e380]
+        - button "Submit" [disabled]

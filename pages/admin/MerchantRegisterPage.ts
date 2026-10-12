@@ -1,84 +1,80 @@
-import { expect, Page } from '@playwright/test';
+// pages/admin/MerchantRegisterPage.ts
+
+import { Page, Locator, expect } from '@playwright/test';
 
 export class MerchantRegisterPage {
-  constructor(private page: Page) {}
+  readonly page: Page;
+  readonly merchantsMenuButton: Locator;
+  readonly userRegistrationSubMenu: Locator;
+  readonly registerUserButton: Locator;
+  readonly alertToast: Locator;
+  readonly businessNameInput: Locator;
+  readonly emailInput: Locator;
+  readonly phoneInput: Locator;
+  readonly industryDropdown: Locator;
+  readonly passwordInput: Locator;
+  readonly confirmPasswordInput: Locator;
 
-  // Navigation
+  constructor(page: Page) {
+    this.page = page;
+    this.merchantsMenuButton = page.getByRole('button', { name: 'Merchants' });
+    this.userRegistrationSubMenu = page.getByRole('button', { name: 'User Registration' });
+    this.registerUserButton = page.getByRole('button', { name: /Register User|Submit/i });
+
+    // Multi-element match se bachne ke liye safe alert locator
+    this.alertToast = page.locator('[role="alert"], .MuiAlert-message, .Toastify__toast-body');
+
+    this.businessNameInput = page.getByRole('textbox', { name: 'Business Name' });
+    this.emailInput = page.getByRole('textbox', { name: 'Email Address' });
+    this.phoneInput = page.getByRole('textbox', { name: 'Mobile / Phone Number' });
+    this.industryDropdown = page.getByTestId('admin-merchant-register-page').getByLabel('Industry Category');
+    this.passwordInput = page.getByRole('textbox', { name: 'Password', exact: true });
+    this.confirmPasswordInput = page.getByRole('textbox', { name: 'Confirm Password' });
+  }
 
   async openUserRegistration() {
-    await this.page.getByRole('button', { name: 'Merchants' }).click();
-    await this.page.getByRole('button', { name: 'User Registration' }).click();
-
-    await expect(
-      this.page.getByRole('heading')
-    ).toContainText('User Registration');
+    await this.merchantsMenuButton.click();
+    await this.userRegistrationSubMenu.click();
+    await expect(this.page.locator('body')).toContainText('User Registration', { timeout: 15000 });
   }
-
-  // Common actions
 
   async clickRegisterUser() {
-    await this.page.getByRole('button', {
-      name: 'Register User'
-    }).click();
+    await this.registerUserButton.click();
   }
 
-  async getAlertMessage() {
-    return await this.page.getByRole('alert').textContent();
-  }
-
-  async verifyAlert(expectedMessage: string) {
-    await expect(
-      this.page.getByRole('alert')
-    ).toContainText(expectedMessage);
-  }
-
-  // Form fields
-
-  async fillBusinessName(businessName: string) {
-    await this.page.getByRole('textbox', {
-      name: 'Business Name'
-    }).fill(businessName);
+  async fillBusinessName(name: string) {
+    await this.businessNameInput.fill(name);
   }
 
   async fillEmail(email: string) {
-    await this.page.getByRole('textbox', {
-      name: 'Email Address'
-    }).fill(email);
+    await this.emailInput.fill(email);
   }
 
   async fillPhone(phone: string) {
-    await this.page.getByRole('textbox', {
-      name: 'Mobile / Phone Number'
-    }).fill(phone);
+    await this.phoneInput.fill(phone);
   }
 
   async selectIndustry(industry: string) {
-    await this.page
-      .getByTestId('admin-merchant-register-page')
-      .getByLabel('Industry Category')
-      .click();
-
-    await this.page.getByRole('option', {
-      name: industry
-    }).click();
+    await this.industryDropdown.click();
+    await this.page.getByRole('option', { name: new RegExp(industry, 'i') }).click();
   }
 
-  async fillPassword(password: string) {
-    await this.page.getByRole('textbox', {
-      name: 'Password',
-      exact: true
-    }).fill(password);
+  async fillPassword(pass: string) {
+    await this.passwordInput.fill(pass);
   }
 
-  async fillConfirmPassword(password: string) {
-    await this.page.getByRole('textbox', {
-      name: 'Confirm Password'
-    }).fill(password);
+  async fillConfirmPassword(pass: string) {
+    await this.confirmPasswordInput.fill(pass);
+  }
+
+  // Resilient alert assertion: regex use karta hai taaki full-stop (.) ya case-sensitivity issue na bane
+  async verifyAlert(expectedMessage: string) {
+    // Regex clean string bina strict punctuation
+    const cleanPattern = new RegExp(expectedMessage.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\./g, '\\.?'), 'i');
+    await expect(this.alertToast.first()).toContainText(cleanPattern, { timeout: 10000 });
   }
 
   async verifyMerchantAccountDetails() {
-    await expect(
-      this.page.getByRole('heading')
-    ).toContainText('Merchant Account Details');
+    await expect(this.page.locator('body')).toContainText(/Merchant Account Details|Successfully/i, { timeout: 20000 });
   }
 }

@@ -1,133 +1,67 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class PayByLinkPage {
+  readonly page: Page;
+  readonly payByLinkNavButton: Locator;
+  readonly createButton: Locator;
+  readonly merchantSelect: Locator;
+  readonly amountInput: Locator;
+  readonly customerEmailInput: Locator;
+  readonly customerNameInput: Locator;
+  readonly phoneNumberInput: Locator;
+  readonly purposeInput: Locator;
+  readonly continueButton: Locator;
+  readonly generateLinkButton: Locator;
+  readonly openLinkButton: Locator;
 
-    readonly page: Page;
+  constructor(page: Page) {
+    this.page = page;
+    this.payByLinkNavButton = page.getByRole('button', { name: 'Pay By Link' });
+    this.createButton = page.getByRole('button', { name: 'Create' });
+    this.merchantSelect = page.getByRole('combobox', { name: /Merchant/i });
+    this.amountInput = page.getByRole('textbox', { name: /Amount/i });
+    this.customerEmailInput = page.getByRole('textbox', { name: /Customer Email/i });
+    this.customerNameInput = page.getByRole('textbox', { name: /Customer Name/i });
+    this.phoneNumberInput = page.getByRole('textbox', { name: /Phone Number/i });
+    this.purposeInput = page.getByRole('textbox', { name: /Purpose/i });
+    this.continueButton = page.getByRole('button', { name: 'Continue' });
+    this.generateLinkButton = page.getByRole('button', { name: /Generate link/i });
+    this.openLinkButton = page.getByRole('button', { name: 'Open' });
+  }
 
-    readonly payByLinkButton: Locator;
-    readonly createButton: Locator;
-    readonly merchant: Locator;
-    readonly amount: Locator;
-    readonly customerEmail: Locator;
-    readonly customerName: Locator;
-    readonly phoneNumber: Locator;
-    readonly purpose: Locator;
-    readonly continueButton: Locator;
-    readonly generateLinkButton: Locator;
-    readonly openButton: Locator;
+  async openPayByLink() {
+    await this.payByLinkNavButton.click();
+    await expect(this.createButton).toBeVisible({ timeout: 15000 });
+  }
 
-    constructor(page: Page) {
+  async generatePaymentLink(data: any) {
+    await this.createButton.click();
 
-        this.page = page;
+    await this.merchantSelect.click();
+    await this.merchantSelect.fill(data.merchantSearch || 'super');
+    const merchantOption = this.page.getByRole('option', { name: /Super Merchant/i }).first();
+    await expect(merchantOption).toBeVisible({ timeout: 10000 });
+    await merchantOption.click();
 
-        this.payByLinkButton = page.getByRole('button', {
-            name: 'Pay By Link'
-        });
+    await this.amountInput.fill(String(data.amount));
+    await this.customerEmailInput.fill(data.customerEmail);
+    await this.customerNameInput.fill(data.customerName);
+    await this.phoneNumberInput.fill(data.phoneNumber);
+    await this.purposeInput.fill(data.purpose);
 
-        this.createButton = page.getByRole('button', {
-            name: 'Create'
-        });
+    await this.continueButton.click();
+    await expect(this.generateLinkButton).toBeVisible({ timeout: 10000 });
+    await this.generateLinkButton.click();
 
-        this.merchant = page.getByRole('combobox', {
-            name: 'Merchant'
-        });
+    await expect(this.openLinkButton).toBeVisible({ timeout: 15000 });
+  }
 
-        this.amount = page.getByRole('textbox', {
-            name: 'Amount'
-        });
-
-        this.customerEmail = page.getByRole('textbox', {
-            name: 'Customer Email'
-        });
-
-        this.customerName = page.getByRole('textbox', {
-            name: 'Customer Name'
-        });
-
-        this.phoneNumber = page.getByRole('textbox', {
-            name: 'Phone Number'
-        });
-
-        this.purpose = page.getByRole('textbox', {
-            name: 'Purpose (0/100)'
-        });
-
-        this.continueButton = page.getByRole('button', {
-            name: 'Continue'
-        });
-
-        this.generateLinkButton = page.getByRole('button', {
-            name: 'Generate link'
-        });
-
-        this.openButton = page.getByRole('button', {
-            name: 'Open'
-        });
-    }
-
-    // Navigate to Pay By Link
-    async openPayByLink() {
-
-        await this.payByLinkButton.click();
-
-        await this.createButton.click();
-    }
-
-    // Select merchant
-    async selectMerchant(
-        merchantSearch: string,
-        merchantOption: string
-    ) {
-
-        await this.merchant.fill(merchantSearch);
-
-        await this.page.getByRole('option', {
-            name: merchantOption
-        }).click();
-    }
-
-    // Enter payment information
-    async enterPaymentDetails(data: any) {
-
-        await this.amount.fill(data.amount);
-
-        await this.customerEmail.fill(data.customerEmail);
-
-        await this.customerEmail.press('Tab');
-
-        await this.customerName.fill(data.customerName);
-
-        await this.phoneNumber.fill(data.phoneNumber);
-
-        await this.purpose.fill(data.purpose);
-    }
-
-    // Generate payment link
-    async generatePaymentLink(data: any) {
-
-        await this.selectMerchant(
-            data.merchantSearch,
-            data.merchantOption
-        );
-
-        await this.enterPaymentDetails(data);
-
-        await this.continueButton.click();
-
-        await this.generateLinkButton.click();
-    }
-
-    // Open payment page in new tab
-    async openPaymentPage(): Promise<Page> {
-
-        const popupPromise = this.page.waitForEvent('popup');
-
-        await this.openButton.click();
-
-        const paymentPage = await popupPromise;
-
-        await paymentPage.waitForLoadState();
-
-        return paymentPage;
-    }
+  async openPaymentPage(): Promise<Page> {
+    const popupPromise = this.page.waitForEvent('popup', { timeout: 20000 });
+    await this.openLinkButton.click();
+    const popup = await popupPromise;
+    await popup.waitForLoadState('domcontentloaded');
+    await popup.waitForLoadState('load');
+    return popup;
+  }
 }
