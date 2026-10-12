@@ -1,9 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
-import dotenv from 'dotenv';
-import path from 'path';
 
-// .env file load karein
-dotenv.config({ path: path.resolve(__dirname, '.env') });
+// Local ke liye dotenv agar installed ho toh load karega, CI par crash nahi hoga
+try {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  require('dotenv').config();
+} catch {
+  // CI runner par GitHub Secrets already injected rehte hain
+}
 
 export default defineConfig({
   testDir: './tests',
