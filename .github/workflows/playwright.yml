@@ -1,11 +1,15 @@
-name: PayCaps Playwright Regression Tests
+name: Playwright Tests CI
 
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch: # Manual run button trigger
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -13,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -23,24 +27,52 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install Playwright Browsers with OS Dependencies
         run: npx playwright install --with-deps chromium
 
-      - name: Run Playwright Tests
+      - name: Step 1 - Merchant Registration
         env:
+          BASE_URL: ${{ secrets.BASE_URL }}
           ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          TEST_MERCHANT_NAME: ${{ secrets.TEST_MERCHANT_NAME }}
-          TEST_ACQUIRER_NAME: ${{ secrets.TEST_ACQUIRER_NAME }}
+          CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
           CI: true
-        run: npx playwright test
+        run: npx playwright test tests/admin/merchantsRegister.spec.ts
 
-      - name: Upload Test Report Artifact
-        uses: actions/upload-artifact@v4
+      - name: Step 2 - Acquirer Routing
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
+          CI: true
+        run: npx playwright test tests/admin/acquirerRouting.spec.ts
+
+      - name: Step 3 - MDR Settings
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
+          CI: true
+        run: npx playwright test tests/admin/mdrSetting.spec.ts
+
+      - name: Upload Playwright HTML Report
         if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-${{ github.run_number }}
           path: playwright-report/
           retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Upload Test Failure Traces & Screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ github.run_number }}
+          path: test-results/
+          retention-days: 7
+          if-no-files-found: ignore

@@ -1,0 +1,30 @@
+[     749ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:21608
+[  163943ms] [LOG] 🔄 Manual navigation detected from /quality/deviations to /quality/template-records/d938c006-6e4a-447c-8831-6e1f00dea969. Resetting AI session. @ http://216.48.184.249:5274/src/components/layout/CommandIsland.jsx:828
+[  164452ms] [ERROR] Access to fetch at 'http://216.48.184.249:6002/api/v1/wfpolicy/dynamic-template/rework/d938c006-6e4a-447c-8831-6e1f00dea969?' from origin 'http://216.48.184.249:5274' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://216.48.184.249:5274/quality/template-records/d938c006-6e4a-447c-8831-6e1f00dea969:0
+[  164453ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://216.48.184.249:6002/api/v1/wfpolicy/dynamic-template/rework/d938c006-6e4a-447c-8831-6e1f00dea969?:0
+[  166104ms] [ERROR] Warning: %s: Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead.%s DynamicTemplateAuditPanel 
+    at DynamicTemplateAuditPanel (http://216.48.184.249:5274/src/features/dynamic_template/components/DynamicTemplateAuditPanel.jsx:582:3)
+    at div
+    at DynamicTemplateRecordViewer (http://216.48.184.249:5274/src/features/dynamic_template/core/DynamicTemplateRecordViewer.jsx:70:24)
+    at RenderedRoute (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:6301:26)
+    at Routes (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7150:3)
+    at Suspense
+    at QmsRoutes
+    at RenderedRoute (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:6301:26)
+    at Outlet (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7082:26)
+    at main
+    at div
+    at div
+    at AppLayout (http://216.48.184.249:5274/src/components/layout/AppLayout.jsx:32:20)
+    at PrivateRoute (http://216.48.184.249:5274/src/routes/PrivateRoute.jsx:25:58)
+    at RenderedRoute (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:6301:26)
+    at Routes (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7150:3)
+    at Suspense
+    at AppRoutes (http://216.48.184.249:5274/src/routes/index.jsx:146:20)
+    at div
+    at TourProvider (http://216.48.184.249:5274/src/components/context/TourContext.jsx:25:32)
+    at App (http://216.48.184.249:5274/src/App.jsx:34:20)
+    at Router (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:7091:13)
+    at BrowserRouter (http://216.48.184.249:5274/node_modules/.vite/deps/react-router-dom.js?v=246095ff:10287:3)
+    at PersistGate2 (http://216.48.184.249:5274/node_modules/.vite/deps/redux-persist_integration_react.js?v=246095ff:86:5)
+    at Provider (http://216.48.184.249:5274/node_modules/.vite/deps/chunk-APPCR2GX.js?v=246095ff:923:11) @ http://216.48.184.249:5274/node_modules/.vite/deps/chunk-IM75J4MN.js?v=246095ff:520

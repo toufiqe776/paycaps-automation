@@ -1,0 +1,247 @@
+- generic [ref=f13e7]:
+  - complementary [ref=f13e8]:
+    - generic "Expand Sidebar" [ref=f13e9] [cursor=pointer]
+    - generic "Expand Sidebar" [ref=f13e13] [cursor=pointer]:
+      - img "SME.QMS Logo" [ref=f13e15]
+    - generic [ref=f13e16]:
+      - generic [ref=f13e17]: Dashboard
+      - generic [ref=f13e25]:
+        - generic [ref=f13e26] [cursor=pointer]: Compliance Score
+        - generic [ref=f13e29] [cursor=pointer]: KPI Trending
+        - generic [ref=f13e33] [cursor=pointer]: APR / PQR Center
+      - generic [ref=f13e39]:
+        - generic [ref=f13e40] [cursor=pointer]: Deviations
+        - generic [ref=f13e43] [cursor=pointer]: Root Cause Analysis (RCA)
+        - generic [ref=f13e48] [cursor=pointer]: Out of Trend (OOT)
+        - generic [ref=f13e52] [cursor=pointer]: Change Control
+        - generic [ref=f13e57] [cursor=pointer]: Out of Specification (OOS)
+        - generic [ref=f13e60] [cursor=pointer]: CAPA Manager
+        - generic [ref=f13e64] [cursor=pointer]: Complaints
+        - generic [ref=f13e67] [cursor=pointer]: Product Recalls
+        - generic [ref=f13e72] [cursor=pointer]: Adverse Events
+        - generic [ref=f13e75] [cursor=pointer]: Effectiveness Checks
+        - generic [ref=f13e80] [cursor=pointer]: Audit
+      - generic [ref=f13e86]:
+        - generic [ref=f13e87] [cursor=pointer]: Sampling
+        - generic [ref=f13e90] [cursor=pointer]: Chemical QC
+        - generic [ref=f13e93] [cursor=pointer]: Microbiology QC
+        - generic [ref=f13e103] [cursor=pointer]: Packaging QC
+        - generic [ref=f13e110] [cursor=pointer]: CoA Management
+        - generic [ref=f13e116] [cursor=pointer]: Lab Incidents (OOS)
+        - generic [ref=f13e119] [cursor=pointer]: Out of Trend (OOT)
+        - generic [ref=f13e123] [cursor=pointer]: Stability Studies
+        - generic [ref=f13e127] [cursor=pointer]: Reference Standards
+        - generic [ref=f13e130] [cursor=pointer]: Env. & Utility Mon.
+        - generic [ref=f13e135] [cursor=pointer]: Instrument & Column Logs
+        - generic [ref=f13e138] [cursor=pointer]: Retention Samples
+      - generic [ref=f13e143]:
+        - generic [ref=f13e144] [cursor=pointer]: Inbound Receipts (RM/PM)
+        - generic [ref=f13e150] [cursor=pointer]: Material Registry
+        - generic [ref=f13e154] [cursor=pointer]: Distribution & Dispatch
+      - generic [ref=f13e160]:
+        - generic [ref=f13e161] [cursor=pointer]: Campaign Management
+        - generic [ref=f13e164] [cursor=pointer]: Active BMRs (Intermediates)
+        - generic [ref=f13e167] [cursor=pointer]: Active BMRs (Final API)
+        - generic [ref=f13e170] [cursor=pointer]: Active BMRs (Recovery)
+        - generic [ref=f13e175] [cursor=pointer]: QA Disposition (Release Log)
+      - generic [ref=f13e182]:
+        - generic [ref=f13e183] [cursor=pointer]: Supplier Master
+        - generic [ref=f13e189] [cursor=pointer]: Vendor Qualification
+        - generic [ref=f13e194] [cursor=pointer]: Supplier Audits
+        - generic [ref=f13e199] [cursor=pointer]: SCAR
+        - generic [ref=f13e204] [cursor=pointer]: Master ASL
+      - generic [ref=f13e208]:
+        - generic [ref=f13e209] [cursor=pointer]: Asset Master
+        - generic [ref=f13e213] [cursor=pointer]: Qualification (IQ/OQ/PQ)
+        - generic [ref=f13e217] [cursor=pointer]: Calibration Standards
+        - generic [ref=f13e220] [cursor=pointer]: Asset Logs
+        - generic [ref=f13e225] [cursor=pointer]: Preventive Maint.
+      - generic [ref=f13e229]:
+        - generic [ref=f13e230] [cursor=pointer]: Regulatory Affairs
+        - generic [ref=f13e234] [cursor=pointer]: Inspections & Mgmt Audits
+        - generic [ref=f13e238] [cursor=pointer]: Audit Command Center
+      - generic [ref=f13e243]:
+        - generic [ref=f13e244] [cursor=pointer]: Document Control
+        - generic [ref=f13e248] [cursor=pointer]: Training Matrix
+        - generic [ref=f13e252] [cursor=pointer]: Audit Trail
+      - generic [ref=f13e263]:
+        - generic [ref=f13e264] [cursor=pointer]: Site & Area Master
+        - generic [ref=f13e268] [cursor=pointer]: Master Library
+        - generic [ref=f13e271] [cursor=pointer]: Item Master
+        - generic [ref=f13e276] [cursor=pointer]: Regulatory & Compliance
+        - generic [ref=f13e279] [cursor=pointer]: MBR & BOM
+        - generic [ref=f13e282] [cursor=pointer]: Customer / Sponsor / IP
+        - generic [ref=f13e289] [cursor=pointer]: Workflow Policies
+        - generic [ref=f13e293] [cursor=pointer]: AI Data Migration
+        - generic [ref=f13e299] [cursor=pointer]: User Mgmt & System Admin
+      - generic [ref=f13e304]:
+        - generic [ref=f13e305] [cursor=pointer]: Templates Library
+        - generic [ref=f13e312] [cursor=pointer]: Create New Template
+        - generic [ref=f13e314] [cursor=pointer]: Incident
+        - generic [ref=f13e317] [cursor=pointer]: Laboratory / Analytical System IRA
+        - generic [ref=f13e320] [cursor=pointer]: Manufacturing / Process Control System IRA
+        - generic [ref=f13e323] [cursor=pointer]: IT Infrastructure / Platform IRA
+        - generic [ref=f13e326] [cursor=pointer]: End-User / Small Application IRA
+        - generic [ref=f13e329] [cursor=pointer]: Audit
+        - generic [ref=f13e332] [cursor=pointer]: Effectiveness Check
+        - generic [ref=f13e335] [cursor=pointer]: Risk Assessment
+        - generic [ref=f13e338] [cursor=pointer]: Deviation
+        - generic [ref=f13e341] [cursor=pointer]: CAPA
+        - generic [ref=f13e344] [cursor=pointer]: Product Recall
+        - generic [ref=f13e347] [cursor=pointer]: Adverse Events
+        - generic [ref=f13e350] [cursor=pointer]: Change Control
+        - generic [ref=f13e353] [cursor=pointer]: OOT
+        - generic [ref=f13e356] [cursor=pointer]: OOS
+        - generic [ref=f13e359] [cursor=pointer]: Root Cause Analysis
+        - generic [ref=f13e362] [cursor=pointer]: Annual Product Quality Review
+        - generic [ref=f13e365] [cursor=pointer]: Product Complaint
+        - generic [ref=f13e368] [cursor=pointer]: Enterprise / Business System IRA
+        - generic [ref=f13e371] [cursor=pointer]: Facility / Building System IRA
+        - generic [ref=f13e374] [cursor=pointer]: System Periodic Review
+  - main [ref=f13e378]:
+    - generic [ref=f13e379]:
+      - generic [ref=f13e381]:
+        - generic [ref=f13e382]:
+          - generic [ref=f13e383]:
+            - button "Back" [ref=f13e384]
+            - generic [ref=f13e391]:
+              - generic [ref=f13e392]:
+                - generic [ref=f13e393]: DEV-024
+                - generic [ref=f13e395]: Closed
+                - generic [ref=f13e397]: Testing Team
+              - heading "asdkjbad" [level=1] [ref=f13e398]
+              - paragraph [ref=f13e400]:
+                - generic [ref=f13e401]: Deviation
+          - generic [ref=f13e402]:
+            - generic [ref=f13e403]:
+              - generic [ref=f13e409]:
+                - generic [ref=f13e410]: SIT-001 -
+                - generic [ref=f13e411]: Moxifloxacin Plant 1
+              - button "View Audit Trail & Timeline" [ref=f13e413]
+            - button [ref=f13e418]
+        - navigation [ref=f13e423]:
+          - generic [ref=f13e425]:
+            - button "Initiation" [ref=f13e427] [cursor=pointer]
+            - button "QA Review" [ref=f13e434] [cursor=pointer]
+            - button "RCA & CAPA" [ref=f13e441] [cursor=pointer]
+            - button "Closure" [ref=f13e448]
+      - main [ref=f13e455]:
+        - generic [ref=f13e457]:
+          - generic [ref=f13e458]:
+            - heading "Closure & Batch Disposition" [level=2] [ref=f13e461]
+            - generic [ref=f13e463]:
+              - generic [ref=f13e464]:
+                - generic [ref=f13e465]: Closed By*
+                - button "Testing Team" [disabled] [ref=f13e470]
+              - generic [ref=f13e475]:
+                - generic [ref=f13e476]: Batch Disposition*
+                - generic [ref=f13e480]:
+                  - generic [ref=f13e481]:
+                    - generic [ref=f13e482]:
+                      - generic [ref=f13e483]: Batch Disposition
+                      - generic [ref=f13e484]: 1 row
+                    - generic [ref=f13e486]:
+                      - button "Grid" [ref=f13e487]
+                      - button "Form Cards" [ref=f13e494]
+                  - table [ref=f13e500]:
+                    - rowgroup [ref=f13e501]:
+                      - row [ref=f13e502]:
+                        - columnheader "#" [ref=f13e503]
+                        - columnheader "Item Category" [ref=f13e504]
+                        - columnheader "Item ID / Reference" [ref=f13e510]
+                        - columnheader "Impact Description" [ref=f13e516]
+                        - columnheader "Final Batch Disposition Decision" [ref=f13e522]
+                    - rowgroup [ref=f13e524]:
+                      - row [ref=f13e525]:
+                        - cell "1" [ref=f13e526]
+                        - cell [ref=f13e527]:
+                          - button "Batch / Lot" [disabled] [ref=f13e531]
+                        - cell "Internal LOT-MXF-2024-002 - Moxifloxacin Hydrochloride (Pure API)" [ref=f13e536]:
+                          - generic [ref=f13e541]:
+                            - generic [ref=f13e546]: Internal
+                            - generic [ref=f13e547] [cursor=pointer]: LOT-MXF-2024-002 - Moxifloxacin Hydrochloride (Pure API)
+                        - cell [ref=f13e548]:
+                          - textbox "Enter impact description..." [disabled] [ref=f13e549]
+                        - cell [ref=f13e550]:
+                          - button "Select..." [disabled] [ref=f13e554]
+              - generic [ref=f13e559]:
+                - generic [ref=f13e560]: QA Justification for Disposition
+                - paragraph [ref=f13e568]: Based on the minor classification with a potential quality impact, the batch remains in quarantine pending completion of the root cause analysis. The pending RCA will determine whether the material can be released, requires rework, or must be rejected. Until the investigation is finalized, no change to the current quarantine status is justified.
+              - generic [ref=f13e569]:
+                - generic [ref=f13e570]: Closure Comments*
+                - paragraph [ref=f13e578]: All required investigations and the draft CAPA have been linked to this deviation. The batch disposition is pending until the root cause analysis is completed.
+              - generic [ref=f13e579]:
+                - generic [ref=f13e580]: QA Final Sign-Off*
+                - paragraph [ref=f13e590]: I verify all investigations and CAPAs are linked and acceptable.
+          - generic [ref=f13e592]:
+            - heading "Stage Workflow" [level=3] [ref=f13e597]
+            - generic [ref=f13e599]:
+              - generic [ref=f13e600]:
+                - generic [ref=f13e601]:
+                  - generic [ref=f13e602]: Review Cycle 1 · Active Cycle
+                  - generic [ref=f13e604]: 23-Sept-26, 1:37 AM
+                - generic [ref=f13e608]: Under Review
+              - generic [ref=f13e613]:
+                - generic [ref=f13e614]:
+                  - generic [ref=f13e615]:
+                    - text: Submitter
+                    - heading "Testing Team" [level=4] [ref=f13e616]
+                  - generic [ref=f13e617]: Submitted
+                - generic [ref=f13e622]:
+                  - paragraph [ref=f13e623]:
+                    - strong [ref=f13e627]: "Submitter:"
+                    - generic [ref=f13e628]: Testing Team
+                  - paragraph [ref=f13e629]:
+                    - strong [ref=f13e633]: "Meaning:"
+                    - generic "I confirm the completion of Closure." [ref=f13e634]
+                  - paragraph [ref=f13e635]:
+                    - strong [ref=f13e638]: "Timestamp:"
+                    - generic [ref=f13e639]: 23-Sept-26, 1:37 AM
+  - generic [ref=f13e640]:
+    - generic:
+      - generic:
+        - generic:
+          - button "History"
+          - button "interaction"
+          - button "reasoning"
+          - button "navigator"
+        - generic:
+          - button "Maximize"
+          - button "Close Island"
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - heading "History" [level=3]
+                - generic:
+                  - button
+                  - button "New"
+              - generic:
+                - generic:
+                  - paragraph: No conversations yet
+                  - paragraph: Start a new chat or ask a question
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - paragraph: Quick Prompts
+                - generic:
+                  - button "Compare Schedule M vs ICH Q7"
+                  - button "Check 21 CFR Part 11 Scope"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Hello! I'm your GxP Regulatory Assistant.
+                        - generic:
+                          - button
+    - generic [ref=f13e646]:
+      - generic [ref=f13e648]:
+        - button "Attach files" [ref=f13e649]
+        - button "Open Navigator" [ref=f13e650]
+      - textbox "Type a message or drop files..." [ref=f13e652]
+      - generic [ref=f13e654]:
+        - button "Start Dictation" [ref=f13e655]
+        - button "Submit" [disabled]

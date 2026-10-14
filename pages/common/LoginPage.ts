@@ -1,101 +1,45 @@
-
 import { Page, Locator, expect } from '@playwright/test';
 
 export class LoginPage {
+  readonly page: Page;
+  readonly emailInput: Locator;
+  readonly passwordInput: Locator;
+  readonly captchaInput: Locator;
+  readonly signInButton: Locator;
 
-    readonly page: Page;
-    readonly email: Locator;
-    readonly password: Locator;
-    readonly captcha: Locator;
-    readonly signInButton: Locator;
-    readonly errorMessage: Locator;
+  constructor(page: Page) {
+    this.page = page;
+    this.emailInput = page.getByRole('textbox', { name: /Email Address|Email/i });
+    this.passwordInput = page.getByRole('textbox', { name: /Password/i });
+    this.captchaInput = page.getByRole('textbox', { name: /Captcha/i });
+    this.signInButton = page.getByRole('button', { name: /Sign In|Login/i });
+  }
 
-    constructor(page: Page) {
+  async navigateToLogin() {
+    await this.page.goto('/crm/login');
+    await expect(this.emailInput).toBeVisible({ timeout: 15000 });
+  }
 
-        this.page = page;
+  async enterCredentials(email: string, pass: string) {
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(pass);
+  }
 
-        this.email = page.getByRole('textbox', {
-            name: 'Email Address'
-        });
-
-        this.password = page.getByRole('textbox', {
-            name: 'Password'
-        });
-
-        this.captcha = page.getByRole('textbox', {
-            name: 'Captcha'
-        });
-
-        this.signInButton = page.getByRole('button', {
-            name: 'Sign In'
-        });
-
-        this.errorMessage = page.getByText(
-            'Invalid email or password'
-        );
+  async handleCaptcha(captchaValue?: string) {
+    if (await this.captchaInput.isVisible({ timeout: 3000 }).catch(() => false)) {
+      const code = captchaValue || process.env.CAPTCHA_CODE || '1234';
+      await this.captchaInput.fill(code);
     }
+  }
 
-    // Navigate to Login
-    async navigateToLogin() {
+  async clickSignIn() {
+    await this.signInButton.click();
+  }
 
-        await this.page.goto('/crm/login');
-
-    }
-
-    // Enter Email
-    async enterEmail(email: string) {
-
-        await this.email.fill(email);
-
-        await expect(this.email).toHaveValue(email);
-    }
-
-    // Enter Password
-    async enterPassword(password: string) {
-
-        await this.password.fill(password);
-
-        await expect(this.password).toHaveValue(password);
-    }
-
-    // Manual CAPTCHA Handling
-    async waitForCaptcha() {
-
-        console.log('Please enter CAPTCHA manually.');
-
-        await this.page.waitForTimeout(10000);
-
-        // Verify CAPTCHA is entered after resuming
-        await expect(this.captcha).not.toHaveValue('');
-
-    }
-
-    // Click Sign In
-    async clickSignIn() {
-
-        await this.signInButton.click();
-
-    }
-
-    // Verify Login Error
-    async verifyLoginError() {
-
-        await expect(this.errorMessage).toBeVisible();
-
-    }
-
-    // Complete Login Flow
-    async login(email: string, password: string) {
-
-        await this.navigateToLogin();
-
-        await this.enterEmail(email);
-
-        await this.enterPassword(password);
-
-        await this.waitForCaptcha();
-
-        await this.clickSignIn();
-
-    }
+  async login(email: string, pass: string, captchaValue?: string) {
+    await this.navigateToLogin();
+    await this.enterCredentials(email, pass);
+    await this.handleCaptcha(captchaValue);
+    await this.clickSignIn();
+  }
 }

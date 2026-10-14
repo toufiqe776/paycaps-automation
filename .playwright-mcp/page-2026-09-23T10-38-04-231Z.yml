@@ -1,0 +1,367 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e7]:
+    - complementary [ref=f3e8]:
+      - generic "Expand Sidebar" [ref=f3e9] [cursor=pointer]
+      - generic "Expand Sidebar" [ref=f3e13] [cursor=pointer]:
+        - img "SME.QMS Logo" [ref=f3e15]
+      - generic [ref=f3e16]:
+        - generic [ref=f3e17]: Dashboard
+        - generic [ref=f3e25]:
+          - generic [ref=f3e26] [cursor=pointer]: Compliance Score
+          - generic [ref=f3e29] [cursor=pointer]: KPI Trending
+          - generic [ref=f3e33] [cursor=pointer]: APR / PQR Center
+        - generic [ref=f3e39]:
+          - generic [ref=f3e40] [cursor=pointer]: Deviations
+          - generic [ref=f3e43] [cursor=pointer]: Root Cause Analysis (RCA)
+          - generic [ref=f3e48] [cursor=pointer]: Out of Trend (OOT)
+          - generic [ref=f3e52] [cursor=pointer]: Change Control
+          - generic [ref=f3e57] [cursor=pointer]: Out of Specification (OOS)
+          - generic [ref=f3e60] [cursor=pointer]: CAPA Manager
+          - generic [ref=f3e64] [cursor=pointer]: Complaints
+          - generic [ref=f3e67] [cursor=pointer]: Product Recalls
+          - generic [ref=f3e72] [cursor=pointer]: Adverse Events
+          - generic [ref=f3e75] [cursor=pointer]: Effectiveness Checks
+          - generic [ref=f3e80] [cursor=pointer]: Audit
+        - generic [ref=f3e86]:
+          - generic [ref=f3e87] [cursor=pointer]: Sampling
+          - generic [ref=f3e90] [cursor=pointer]: Chemical QC
+          - generic [ref=f3e93] [cursor=pointer]: Microbiology QC
+          - generic [ref=f3e103] [cursor=pointer]: Packaging QC
+          - generic [ref=f3e110] [cursor=pointer]: CoA Management
+          - generic [ref=f3e116] [cursor=pointer]: Lab Incidents (OOS)
+          - generic [ref=f3e119] [cursor=pointer]: Out of Trend (OOT)
+          - generic [ref=f3e123] [cursor=pointer]: Stability Studies
+          - generic [ref=f3e127] [cursor=pointer]: Reference Standards
+          - generic [ref=f3e130] [cursor=pointer]: Env. & Utility Mon.
+          - generic [ref=f3e135] [cursor=pointer]: Instrument & Column Logs
+          - generic [ref=f3e138] [cursor=pointer]: Retention Samples
+        - generic [ref=f3e143]:
+          - generic [ref=f3e144] [cursor=pointer]: Inbound Receipts (RM/PM)
+          - generic [ref=f3e150] [cursor=pointer]: Material Registry
+          - generic [ref=f3e154] [cursor=pointer]: Distribution & Dispatch
+        - generic [ref=f3e160]:
+          - generic [ref=f3e161] [cursor=pointer]: Campaign Management
+          - generic [ref=f3e164] [cursor=pointer]: Active BMRs (Intermediates)
+          - generic [ref=f3e167] [cursor=pointer]: Active BMRs (Final API)
+          - generic [ref=f3e170] [cursor=pointer]: Active BMRs (Recovery)
+          - generic [ref=f3e175] [cursor=pointer]: QA Disposition (Release Log)
+        - generic [ref=f3e182]:
+          - generic [ref=f3e183] [cursor=pointer]: Supplier Master
+          - generic [ref=f3e189] [cursor=pointer]: Vendor Qualification
+          - generic [ref=f3e194] [cursor=pointer]: Supplier Audits
+          - generic [ref=f3e199] [cursor=pointer]: SCAR
+          - generic [ref=f3e204] [cursor=pointer]: Master ASL
+        - generic [ref=f3e208]:
+          - generic [ref=f3e209] [cursor=pointer]: Asset Master
+          - generic [ref=f3e213] [cursor=pointer]: Qualification (IQ/OQ/PQ)
+          - generic [ref=f3e217] [cursor=pointer]: Calibration Standards
+          - generic [ref=f3e220] [cursor=pointer]: Asset Logs
+          - generic [ref=f3e225] [cursor=pointer]: Preventive Maint.
+        - generic [ref=f3e229]:
+          - generic [ref=f3e230] [cursor=pointer]: Regulatory Affairs
+          - generic [ref=f3e234] [cursor=pointer]: Inspections & Mgmt Audits
+          - generic [ref=f3e238] [cursor=pointer]: Audit Command Center
+        - generic [ref=f3e243]:
+          - generic [ref=f3e244] [cursor=pointer]: Document Control
+          - generic [ref=f3e248] [cursor=pointer]: Training Matrix
+          - generic [ref=f3e252] [cursor=pointer]: Audit Trail
+        - generic [ref=f3e263]:
+          - generic [ref=f3e264] [cursor=pointer]: Site & Area Master
+          - generic [ref=f3e268] [cursor=pointer]: Master Library
+          - generic [ref=f3e271] [cursor=pointer]: Item Master
+          - generic [ref=f3e276] [cursor=pointer]: Regulatory & Compliance
+          - generic [ref=f3e279] [cursor=pointer]: MBR & BOM
+          - generic [ref=f3e282] [cursor=pointer]: Customer / Sponsor / IP
+          - generic [ref=f3e289] [cursor=pointer]: Workflow Policies
+          - generic [ref=f3e293] [cursor=pointer]: AI Data Migration
+          - generic [ref=f3e299] [cursor=pointer]: User Mgmt & System Admin
+        - generic [ref=f3e304]:
+          - generic [ref=f3e305] [cursor=pointer]: Templates Library
+          - generic [ref=f3e312] [cursor=pointer]: Create New Template
+          - generic [ref=f3e314] [cursor=pointer]: Incident
+          - generic [ref=f3e317] [cursor=pointer]: Laboratory / Analytical System IRA
+          - generic [ref=f3e320] [cursor=pointer]: Manufacturing / Process Control System IRA
+          - generic [ref=f3e323] [cursor=pointer]: IT Infrastructure / Platform IRA
+          - generic [ref=f3e326] [cursor=pointer]: End-User / Small Application IRA
+          - generic [ref=f3e329] [cursor=pointer]: Audit
+          - generic [ref=f3e332] [cursor=pointer]: Effectiveness Check
+          - generic [ref=f3e335] [cursor=pointer]: Risk Assessment
+          - generic [ref=f3e338] [cursor=pointer]: Deviation
+          - generic [ref=f3e341] [cursor=pointer]: CAPA
+          - generic [ref=f3e344] [cursor=pointer]: Product Recall
+          - generic [ref=f3e347] [cursor=pointer]: Adverse Events
+          - generic [ref=f3e350] [cursor=pointer]: Change Control
+          - generic [ref=f3e353] [cursor=pointer]: OOT
+          - generic [ref=f3e356] [cursor=pointer]: OOS
+          - generic [ref=f3e359] [cursor=pointer]: Root Cause Analysis
+          - generic [ref=f3e362] [cursor=pointer]: Annual Product Quality Review
+          - generic [ref=f3e365] [cursor=pointer]: Product Complaint
+          - generic [ref=f3e368] [cursor=pointer]: Enterprise / Business System IRA
+          - generic [ref=f3e371] [cursor=pointer]: Facility / Building System IRA
+          - generic [ref=f3e374] [cursor=pointer]: System Periodic Review
+    - main [ref=f3e378]:
+      - generic [ref=f3e379]:
+        - generic [ref=f3e381]:
+          - generic [ref=f3e382]:
+            - generic [ref=f3e383]:
+              - button "Back" [ref=f3e384]
+              - generic [ref=f3e391]:
+                - generic [ref=f3e392]:
+                  - generic [ref=f3e393]: DEV-027
+                  - generic [ref=f3e395]: Draft
+                  - generic [ref=f3e397]: Testing Team
+                - heading "Temperature excursion during MFX-260923-001 manufacturing" [level=1] [ref=f3e398]
+                - paragraph [ref=f3e400]:
+                  - generic [ref=f3e401]: Deviation
+            - generic [ref=f3e402]:
+              - generic [ref=f3e403]:
+                - generic [ref=f3e409]:
+                  - generic [ref=f3e410]: SIT-001 -
+                  - generic [ref=f3e411]: Moxifloxacin Plant 1
+                - generic [ref=f3e412]:
+                  - button "View Audit Trail & Timeline" [ref=f3e413]
+                  - button "Save Changes" [ref=f3e418]
+              - button [ref=f3e424]
+          - navigation [ref=f3e429]:
+            - generic [ref=f3e431]:
+              - button "1 Initiation" [ref=f3e433]:
+                - generic [ref=f3e434]: "1"
+                - generic [ref=f3e436]: Initiation
+              - button "2 QA Review" [disabled] [ref=f3e440]:
+                - generic [ref=f3e441]: "2"
+                - generic [ref=f3e443]: QA Review
+              - button "3 RCA & CAPA" [disabled] [ref=f3e449]:
+                - generic [ref=f3e450]: "3"
+                - generic [ref=f3e452]: RCA & CAPA
+              - button "4 Closure" [disabled] [ref=f3e458]:
+                - generic [ref=f3e459]: "4"
+                - generic [ref=f3e461]: Closure
+        - main [ref=f3e467]:
+          - generic [ref=f3e469]:
+            - generic [ref=f3e470]:
+              - heading "Event Details & Initiation" [level=2] [ref=f3e473]
+              - generic [ref=f3e475]:
+                - generic [ref=f3e476]:
+                  - generic [ref=f3e477]: Title*
+                  - textbox "Title" [ref=f3e481]: Temperature excursion during MFX-260923-001 manufacturing - QA reviewed
+                - generic [ref=f3e482]:
+                  - generic [ref=f3e483]: Initiated By*
+                  - button "Testing Team" [ref=f3e488]:
+                    - button [ref=f3e491] [cursor=pointer]
+                - generic [ref=f3e497]:
+                  - generic [ref=f3e498]: Date of Event*
+                  - textbox [ref=f3e504] [cursor=pointer]:
+                    - /placeholder: Date of Event
+                    - text: 2026-09-23T10:15
+                - generic [ref=f3e505]:
+                  - generic [ref=f3e506]: Shift
+                  - button "Shift B" [ref=f3e511]:
+                    - button [ref=f3e514] [cursor=pointer]
+                - generic [ref=f3e520]:
+                  - generic [ref=f3e521]: Deviation Category*
+                  - button "Unplanned Deviation (Unexpected Event)" [ref=f3e526]:
+                    - button [ref=f3e529] [cursor=pointer]
+                - generic [ref=f3e535]:
+                  - generic [ref=f3e536]: Department Owner*
+                  - button "Production / Manufacturing (PM)" [ref=f3e541]:
+                    - button [ref=f3e544] [cursor=pointer]
+                - generic [ref=f3e550]:
+                  - generic [ref=f3e551]: Stage of Event
+                  - button "Manufacturing" [ref=f3e556]:
+                    - button [ref=f3e559] [cursor=pointer]
+                - generic [ref=f3e565]:
+                  - generic [ref=f3e566]: Initial Risk Assessment*
+                  - button "Major" [ref=f3e571]:
+                    - button [ref=f3e574] [cursor=pointer]
+                - generic [ref=f3e580]:
+                  - generic [ref=f3e581]: Immediate / Containment Action Taken
+                  - generic [ref=f3e585]:
+                    - generic [ref=f3e586]:
+                      - button "Bold" [ref=f3e587]
+                      - button "Italic" [ref=f3e590]
+                      - button "Underline" [ref=f3e593]
+                      - button "Strikethrough" [ref=f3e596]
+                      - button "Heading 1" [ref=f3e601]
+                      - button "Heading 2" [ref=f3e604]
+                      - button "Bullet List" [ref=f3e608]
+                      - button "Ordered List" [ref=f3e610]
+                      - button "Undo" [disabled] [ref=f3e615]
+                      - button "Redo" [disabled] [ref=f3e619]
+                    - paragraph [ref=f3e626]: Heating stopped and batch isolated. QA notified; no further processing until disposition.
+                - generic [ref=f3e627]:
+                  - generic [ref=f3e628]: Impacted Items & References*
+                  - generic [ref=f3e632]:
+                    - generic [ref=f3e633]:
+                      - generic [ref=f3e634]:
+                        - generic [ref=f3e635]: Impacted Items & References
+                        - generic [ref=f3e636]: 1 row
+                      - generic [ref=f3e637]:
+                        - generic [ref=f3e638]:
+                          - button "Grid" [ref=f3e639]
+                          - button "Form Cards" [ref=f3e646]
+                        - button "Add Entry" [ref=f3e651] [cursor=pointer]
+                    - table [ref=f3e655]:
+                      - rowgroup [ref=f3e656]:
+                        - row [ref=f3e657]:
+                          - columnheader "#" [ref=f3e658]
+                          - columnheader "Item Category" [ref=f3e659]
+                          - columnheader "Item ID / Reference" [ref=f3e661]
+                          - columnheader "Impact Description" [ref=f3e663]
+                          - columnheader "Act" [ref=f3e665]
+                      - rowgroup [ref=f3e666]:
+                        - row [ref=f3e667]:
+                          - cell "1" [ref=f3e668]
+                          - cell [ref=f3e669]:
+                            - button "Select..." [ref=f3e673]
+                          - cell [ref=f3e678]:
+                            - textbox "Enter reference manually..." [ref=f3e679]: MFX-260923-001 / Reactor R-204
+                          - cell [ref=f3e680]:
+                            - textbox "Enter impact description..." [ref=f3e681]: Temperature reached 78°C versus approved range 70-75°C for 12 minutes. Batch placed on hold pending QA assessment.
+                          - cell [ref=f3e682]:
+                            - button "Remove Entry" [ref=f3e683] [cursor=pointer]
+                    - button "Add New Row" [ref=f3e688]
+                - generic [ref=f3e690]:
+                  - generic [ref=f3e691]: Prescribed Parameter/Specification
+                  - generic [ref=f3e695]:
+                    - generic [ref=f3e696]:
+                      - button "Bold" [ref=f3e697]
+                      - button "Italic" [ref=f3e700]
+                      - button "Underline" [ref=f3e703]
+                      - button "Strikethrough" [ref=f3e706]
+                      - button "Heading 1" [ref=f3e711]
+                      - button "Heading 2" [ref=f3e714]
+                      - button "Bullet List" [ref=f3e718]
+                      - button "Ordered List" [ref=f3e720]
+                      - button "Undo" [disabled] [ref=f3e725]
+                      - button "Redo" [disabled] [ref=f3e729]
+                    - paragraph [ref=f3e736]: "Approved temperature range: 70-75°C; actual peak: 78°C."
+                - generic [ref=f3e737]:
+                  - generic [ref=f3e738]: Deviated Parameter/Condition
+                  - generic [ref=f3e742]:
+                    - generic [ref=f3e743]:
+                      - button "Bold" [ref=f3e744]
+                      - button "Italic" [ref=f3e747]
+                      - button "Underline" [ref=f3e750]
+                      - button "Strikethrough" [ref=f3e753]
+                      - button "Heading 1" [ref=f3e758]
+                      - button "Heading 2" [ref=f3e761]
+                      - button "Bullet List" [ref=f3e765]
+                      - button "Ordered List" [ref=f3e767]
+                      - button "Undo" [disabled] [ref=f3e772]
+                      - button "Redo" [disabled] [ref=f3e776]
+                    - paragraph [ref=f3e783]: Potential impact to impurity profile and yield requires investigation and testing.
+                - generic [ref=f3e784]:
+                  - generic [ref=f3e785]: Evidence & Attachments
+                  - generic [ref=f3e789] [cursor=pointer]:
+                    - button "Choose File" [ref=f3e790]
+                    - generic [ref=f3e795]:
+                      - paragraph [ref=f3e796]: Drop files here or click to upload
+                      - paragraph [ref=f3e797]: "Supported formats: PDF, DOC, XLS, JPG, PNG"
+                    - generic [ref=f3e798]: Browse
+                - generic [ref=f3e799]:
+                  - generic [ref=f3e800]: Link Event if any
+                  - generic [ref=f3e806]:
+                    - textbox "Search module..." [ref=f3e807]
+                    - button [ref=f3e809]
+            - generic [ref=f3e812]:
+              - heading "Department Head (HOD) Review" [level=2] [ref=f3e815]
+              - generic [ref=f3e817]:
+                - generic [ref=f3e818]:
+                  - generic [ref=f3e819]: Department Head Reviewer*
+                  - button "Testing Team" [ref=f3e824]:
+                    - button [ref=f3e827] [cursor=pointer]
+                - generic [ref=f3e833]:
+                  - generic [ref=f3e834]: Department Head (HOD) Initial Review Remarks
+                  - generic [ref=f3e838]:
+                    - generic [ref=f3e839]:
+                      - button "Bold" [ref=f3e840]
+                      - button "Italic" [ref=f3e843]
+                      - button "Underline" [ref=f3e846]
+                      - button "Strikethrough" [ref=f3e849]
+                      - button "Heading 1" [ref=f3e854]
+                      - button "Heading 2" [ref=f3e857]
+                      - button "Bullet List" [ref=f3e861]
+                      - button "Ordered List" [ref=f3e863]
+                      - button "Undo" [disabled] [ref=f3e868]
+                      - button "Redo" [disabled] [ref=f3e872]
+                    - paragraph [ref=f3e879]: Alarm trend export and batch record review to be attached.
+            - button "Save & Proceed" [ref=f3e881]
+    - generic [ref=f3e885]:
+      - generic:
+        - generic:
+          - generic:
+            - button "History"
+            - button "interaction"
+            - button "reasoning"
+            - button "navigator"
+          - generic:
+            - button "Maximize"
+            - button "Close Island"
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - heading "History" [level=3]
+                  - generic:
+                    - button
+                    - button "New"
+                - generic:
+                  - generic:
+                    - paragraph: No conversations yet
+                    - paragraph: Start a new chat or ask a question
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Quick Prompts
+                  - generic:
+                    - button "Compare Schedule M vs ICH Q7"
+                    - button "Check 21 CFR Part 11 Scope"
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: Hello! I'm your GxP Regulatory Assistant.
+                          - generic:
+                            - button
+      - generic [ref=f3e891]:
+        - generic [ref=f3e893]:
+          - button "Attach files" [ref=f3e894]
+          - button "Open Navigator" [ref=f3e895]
+        - textbox "Type a message or drop files..." [ref=f3e897]
+        - generic [ref=f3e899]:
+          - button "Start Dictation" [ref=f3e900]
+          - button "Submit" [disabled]
+  - dialog [ref=f3e901]:
+    - generic [ref=f3e902]:
+      - generic [ref=f3e903]:
+        - heading "Electronic Signature" [level=3] [ref=f3e904]
+        - button "Close modal" [ref=f3e905]
+      - generic [ref=f3e910]:
+        - generic [ref=f3e911]:
+          - generic [ref=f3e917]:
+            - heading "21 CFR Part 11 Acknowledgment" [level=4] [ref=f3e918]
+            - paragraph [ref=f3e919]:
+              - text: You,
+              - strong [ref=f3e920]: Testing Team
+              - text: ", are electronically signing this record. This is equivalent to a legally binding handwritten signature."
+          - generic [ref=f3e921]:
+            - generic [ref=f3e922]:
+              - generic [ref=f3e923]: Username
+              - textbox "Username" [disabled] [ref=f3e925]: Testing Team
+            - generic [ref=f3e926]:
+              - generic [ref=f3e927]:
+                - text: Password
+                - generic [ref=f3e928]: "*"
+              - textbox "Password *" [ref=f3e930]:
+                - /placeholder: Enter your login password
+            - generic [ref=f3e931]:
+              - generic [ref=f3e932]:
+                - text: Comment
+                - generic [ref=f3e935]: "*"
+              - textbox "Comment *" [ref=f3e937]: I confirm the completion of Initiation.
+        - generic [ref=f3e938]:
+          - button "Cancel" [ref=f3e939]
+          - button "Sign & Submit Stage" [disabled] [ref=f3e940]
