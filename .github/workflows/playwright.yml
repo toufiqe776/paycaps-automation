@@ -16,7 +16,6 @@ jobs:
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
-    # Job level environment variables (har step me repeat karne ki zaroorat nahi)
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
       ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
@@ -43,14 +42,14 @@ jobs:
       - name: Step 1 - Merchant Registration
         run: npx playwright test tests/admin/merchantsRegister.spec.ts
 
-      - name: Step 2 - Merchant Activation
-        run: npx playwright test tests/admin/merchantActivation.spec.ts
-
-      - name: Step 3 - Acquirer Routing
+      - name: Step 2 - Acquirer Routing
         run: npx playwright test tests/admin/acquirerRouting.spec.ts
 
-      - name: Step 4 - MDR Settings
+      - name: Step 3 - MDR Settings
         run: npx playwright test tests/admin/mdrSetting.spec.ts
+
+      - name: Step 4 - Merchant Activation
+        run: npx playwright test tests/admin/merchantActivation.spec.ts
 
       - name: Step 5 - Pay By Link & 3DS Checkout
         run: npx playwright test tests/admin/payByLink.spec.ts
