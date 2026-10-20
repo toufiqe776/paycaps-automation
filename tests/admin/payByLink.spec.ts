@@ -3,17 +3,24 @@ import { LoginPage } from '../../pages/common/LoginPage';
 import { PayByLinkPage } from '../../pages/admin/PayByLinkPage';
 import { PayByLinkPaymentPage } from '../../pages/admin/PayByLinkPaymentPage';
 import { StateHelper } from '../../utils/stateHelper';
-import cardData from '../../test-data/cardDetails.json';
+
+// Standard 3DS Test Card Data (Zero-dependency for CI/CD)
+const TEST_CARD = {
+  cardNumber: '4111110000000211',
+  expiryDate: '12/32',
+  cvv: '123',
+  cardHolderName: 'Automation Test User'
+};
 
 test.describe('Admin - Pay By Link Flow', () => {
   test('Create dynamic payment link and complete 3DS simulation', { tag: ['@smoke', '@regression'] }, async ({ page }) => {
     const loginPage = new LoginPage(page);
     const payByLinkPage = new PayByLinkPage(page);
 
-    // 1. Newly created merchant fetch
+    // 1. Newly created merchant fetch (fallback: Super Merchant)
     const dynamicMerchant = StateHelper.getCreatedMerchant();
     
-    // 2. Dynamic amount generate  (e.g. 15.00, 45.00 AED)
+    // 2. Dynamic amount generate (10 se 160 AED ke beech)
     const dynamicAmount = Math.floor(Math.random() * 150) + 10;
 
     await test.step('Step 1: Admin Login', async () => {
@@ -43,7 +50,7 @@ test.describe('Admin - Pay By Link Flow', () => {
     await test.step('Step 5: Complete Card Payment & 3DS Simulation', async () => {
       const pblPayment = new PayByLinkPaymentPage(paymentPage);
       await pblPayment.acceptTermsAndPayNow();
-      await pblPayment.enterCardDetails(cardData.validMasterCard || cardData.validVisaCard);
+      await pblPayment.enterCardDetails(TEST_CARD);
       await pblPayment.submitPayment();
       await pblPayment.enterOTP('123456');
       await pblPayment.simulateSuccess();
