@@ -1,9 +1,9 @@
 [
   {
     "scenarioId": "MDR_TC01",
-    "scenarioName": "Configure Rates for Sb123 Technology with SANDBOXSIMULATOR",
-    "merchantSearch": "sb",
-    "merchantName": "Sb123 technology",
+    "scenarioName": "Configure Rates for New Technology with SANDBOXSIMULATOR",
+    "merchantSearch": "New",
+    "merchantName": "New technology",
     "acquirerName": "SANDBOXSIMULATOR",
     "rates": [
       {

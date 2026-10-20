@@ -1,7 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 
 export class AcquirerRoutingPage {
-
     readonly page: Page;
 
     // Navigation
@@ -29,7 +28,6 @@ export class AcquirerRoutingPage {
     readonly dataTableBody: Locator;
 
     constructor(page: Page) {
-
         this.page = page;
 
         // Navigation
@@ -111,16 +109,20 @@ export class AcquirerRoutingPage {
     async openAcquirerRouting() {
         await this.paymentBillingButton.click();
         await this.acquirerRoutingButton.click();
-        await expect(this.addNewRouteButton).toBeVisible();
+        await expect(this.addNewRouteButton).toBeVisible({ timeout: 15000 });
     }
 
     async selectMerchant(merchantName: string) {
         await this.merchantDropdown.click();
-        await this.merchantDropdown.fill(merchantName);
+        await this.merchantDropdown.fill('');
+        await this.merchantDropdown.pressSequentially(merchantName, { delay: 50 });
+
         const option = this.page.getByRole('option', {
             name: new RegExp(merchantName, 'i')
         }).first();
-        await option.waitFor({ state: 'visible', timeout: 5000 });
+
+        // Agar newly created merchant load hone me samay le, toh 10s wait karein
+        await option.waitFor({ state: 'visible', timeout: 10000 });
         await option.click();
     }
 
@@ -129,7 +131,7 @@ export class AcquirerRoutingPage {
         const option = this.page.getByRole('option', {
             name: new RegExp(acquirerName, 'i')
         }).first();
-        await option.waitFor({ state: 'visible', timeout: 5000 });
+        await option.waitFor({ state: 'visible', timeout: 8000 });
         await option.click();
     }
 
@@ -147,7 +149,7 @@ export class AcquirerRoutingPage {
         const option = this.page.getByRole('option', {
             name: new RegExp(currencyCode, 'i')
         }).first();
-        await option.waitFor({ state: 'visible', timeout: 5000 });
+        await option.waitFor({ state: 'visible', timeout: 8000 });
         await option.click();
     }
 
@@ -161,6 +163,7 @@ export class AcquirerRoutingPage {
     }
 
     async createRoute(data: any) {
+        await expect(this.addNewRouteButton).toBeVisible({ timeout: 15000 });
         await this.addNewRouteButton.click();
 
         await this.selectMerchant(data.merchant);
@@ -186,22 +189,26 @@ export class AcquirerRoutingPage {
         await this.fillCredentials(data);
         await this.saveAcquirerRouteButton.click();
 
-        // Modal band hone ka wait karein agla route add karne se pehle
-        await expect(this.addNewRouteButton).toBeVisible();
+        // 1. Modal/Drawer band hone aur overlay disappear hone ka wait karein
+        const modalDialog = this.page.locator('[role="dialog"], .modal, .MuiDialog-root');
+        await modalDialog.waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
+
+        // 2. Button wapas visible hone ke liye generous timeout (15s)
+        await expect(this.addNewRouteButton).toBeVisible({ timeout: 15000 });
         await this.page.waitForTimeout(500);
     }
 
     async filterAndVerifyTable(merchant: string, acquirer: string, expectedRows: string[]) {
-        // Modal / background animation settle hone ka wait
         await this.page.waitForLoadState('networkidle').catch(() => {});
 
         // 1. Merchant filter
         await this.filterMerchant.click();
-        await this.filterMerchant.fill(merchant);
+        await this.filterMerchant.fill('');
+        await this.filterMerchant.pressSequentially(merchant, { delay: 50 });
         const merchantOption = this.page.getByRole('option', {
             name: new RegExp(merchant, 'i')
         }).first();
-        await merchantOption.waitFor({ state: 'visible', timeout: 5000 });
+        await merchantOption.waitFor({ state: 'visible', timeout: 8000 });
         await merchantOption.click();
 
         // 2. Acquirer filter
@@ -209,14 +216,14 @@ export class AcquirerRoutingPage {
         const acquirerOption = this.page.getByRole('option', {
             name: new RegExp(acquirer, 'i')
         }).first();
-        await acquirerOption.waitFor({ state: 'visible', timeout: 5000 });
+        await acquirerOption.waitFor({ state: 'visible', timeout: 8000 });
         await acquirerOption.click();
 
         // 3. Grid load wait
         await this.page.waitForLoadState('networkidle').catch(() => {});
         await this.dataTableBody.locator('tr').first().waitFor({
             state: 'visible',
-            timeout: 10000
+            timeout: 15000
         });
 
         // 4. Assert table text

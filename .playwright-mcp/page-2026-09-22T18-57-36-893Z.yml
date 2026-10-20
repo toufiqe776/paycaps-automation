@@ -1,0 +1,173 @@
+- generic [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button [ref=e529] [cursor=pointer]
+        - generic [ref=e59]:
+          - navigation [ref=e530]:
+            - list [ref=e448]:
+              - listitem [ref=e449]:
+                - link [ref=e531] [cursor=pointer]:
+                  - /url: /dashboard
+                  - text: Dashboard
+              - listitem [aria-hidden] [ref=e451]: ">"
+              - listitem [ref=e452]:
+                - paragraph [ref=e453]: Transactions
+          - generic [ref=e61]:
+            - button [ref=e532] [cursor=pointer]
+            - button [ref=e533] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary [ref=e534]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation [ref=e535]:
+              - listitem [ref=e77]:
+                - button [ref=e536] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e537] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation [ref=e538]:
+              - listitem [ref=e97]:
+                - button [ref=e539] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [ref=e540] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+              - listitem [ref=e114]:
+                - button [ref=e541] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+              - listitem [ref=e125]:
+                - button [ref=e542] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e543] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [ref=e544] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+              - listitem [ref=e149]:
+                - button [ref=e545] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [ref=e546] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation [ref=e547]:
+              - listitem [ref=e169]:
+                - button [ref=e548] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+              - listitem [ref=e179]:
+                - button [ref=e549] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+              - listitem [ref=e189]:
+                - button [ref=e550] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e454]:
+          - generic [ref=e456]:
+            - generic [ref=e458]:
+              - generic [ref=e463]:
+                - heading [level=6] [ref=e551]: Transactions
+                - generic [ref=e465]: Search and review payment transactions
+              - button [ref=e552] [cursor=pointer]:
+                - paragraph [ref=e472]: Today
+              - generic [ref=e475]:
+                - button [ref=e553] [cursor=pointer]:
+                  - generic [ref=e481]: Filters
+                - button [ref=e554] [cursor=pointer]
+            - table [ref=e555]:
+              - rowgroup [ref=e490]:
+                - row [ref=e556]:
+                  - columnheader [ref=e557]:
+                    - button [ref=e558] [cursor=pointer]: Txn ID
+                  - columnheader [ref=e559]:
+                    - button [ref=e560] [cursor=pointer]: Txn Date
+                  - columnheader [ref=e561]:
+                    - button [ref=e562] [cursor=pointer]: Order ID
+                  - columnheader [ref=e563]:
+                    - button [ref=e564] [cursor=pointer]: Payment Method
+                  - columnheader [ref=e565]:
+                    - button [ref=e566] [cursor=pointer]: Txn Type
+                  - columnheader [ref=e567]:
+                    - button [ref=e568] [cursor=pointer]: Status
+                  - columnheader [ref=e569]:
+                    - button [ref=e570] [cursor=pointer]: Currency
+                  - columnheader [ref=e571]:
+                    - button [ref=e572] [cursor=pointer]: Amount
+              - rowgroup [ref=e517]:
+                - row [ref=e573]:
+                  - cell [ref=e574]:
+                    - generic [ref=e526]:
+                      - heading [level=6] [ref=e575]: No matching transaction records found.
+                      - paragraph [ref=e528]: Try a different date range or filters.
+        - generic [ref=e342]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e344]: "0"
+  - generic [ref=e580]:
+    - generic [ref=e581]:
+      - generic [ref=e582]:
+        - generic [ref=e583]: Transaction ID
+        - generic [ref=e584]:
+          - textbox "Transaction ID" [ref=e585]:
+            - /placeholder: Numeric ID
+          - group [aria-hidden]:
+            - generic: Transaction ID
+      - generic [ref=e586]:
+        - generic [ref=e587]: Order ID
+        - generic [ref=e588]:
+          - textbox "Order ID" [ref=e589]:
+            - /placeholder: Merchant order ID
+          - group [aria-hidden]:
+            - generic: Order ID
+      - generic [ref=e590]:
+        - generic [ref=e591]: Link ID
+        - generic [ref=e592]:
+          - textbox "Link ID" [ref=e593]:
+            - /placeholder: Pay by Link ID
+          - group [aria-hidden]:
+            - generic: Link ID
+      - generic [ref=e594]:
+        - generic [ref=e595]: Customer email
+        - generic [ref=e596]:
+          - textbox "Customer email" [ref=e597]:
+            - /placeholder: name@example.com
+          - group [aria-hidden]:
+            - generic: Customer email
+      - generic [ref=e599]:
+        - generic [ref=e600]: Merchant
+        - generic [ref=e601]:
+          - combobox "Merchant" [ref=e602]: All Merchants
+          - button "Open" [ref=e604] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Merchant
+      - generic [ref=e608]:
+        - generic [ref=e609]: Payment method
+        - generic [ref=e610]:
+          - combobox "Payment method" [ref=e611]: ALL
+          - button "Open" [ref=e613] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Payment method
+      - generic [ref=e617]:
+        - generic [ref=e618]: Status
+        - generic [ref=e619]:
+          - combobox "Status" [ref=e620]: ALL
+          - button "Open" [ref=e622] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e626]:
+        - generic [ref=e627]: Currency
+        - generic [ref=e628]:
+          - combobox "Currency" [ref=e629]: ALL
+          - button "Open" [ref=e631] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Currency
+    - generic [ref=e634]:
+      - button "Reset" [ref=e635] [cursor=pointer]
+      - button "Cancel" [ref=e636] [cursor=pointer]
+      - button "Apply" [ref=e637] [cursor=pointer]

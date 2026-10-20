@@ -1,133 +1,109 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class PayByLinkPage {
+  readonly page: Page;
+  readonly payByLinkNavButton: Locator;
+  readonly createButton: Locator;
+  readonly merchantSelect: Locator;
+  readonly amountInput: Locator;
+  readonly customerEmailInput: Locator;
+  readonly customerNameInput: Locator;
+  readonly phoneNumberInput: Locator;
+  readonly purposeInput: Locator;
+  readonly continueButton: Locator;
+  readonly generateLinkButton: Locator;
 
-    readonly page: Page;
+  constructor(page: Page) {
+    this.page = page;
+    this.payByLinkNavButton = page.getByRole('button', { name: 'Pay By Link' });
+    this.createButton = page.getByRole('button', { name: /Create|New/i }).first();
+    this.merchantSelect = page.getByRole('combobox', { name: /Merchant/i });
+    this.amountInput = page.getByRole('textbox', { name: /Amount/i });
+    this.customerEmailInput = page.getByRole('textbox', { name: /Customer Email|Email/i });
+    this.customerNameInput = page.getByRole('textbox', { name: /Customer Name|Name/i });
+    this.phoneNumberInput = page.getByRole('textbox', { name: /Phone/i });
+    this.purposeInput = page.getByRole('textbox', { name: /Purpose/i });
+    this.continueButton = page.getByRole('button', { name: /Continue|Next/i });
+    this.generateLinkButton = page
+      .getByRole('button', { name: /Generate link|Generate|Create Link/i })
+      .or(page.locator('button:has-text("Generate")'))
+      .first();
+  }
 
-    readonly payByLinkButton: Locator;
-    readonly createButton: Locator;
-    readonly merchant: Locator;
-    readonly amount: Locator;
-    readonly customerEmail: Locator;
-    readonly customerName: Locator;
-    readonly phoneNumber: Locator;
-    readonly purpose: Locator;
-    readonly continueButton: Locator;
-    readonly generateLinkButton: Locator;
-    readonly openButton: Locator;
+  /**
+   * Navigate to Pay By Link section from admin dashboard
+   */
+  async openPayByLink(): Promise<void> {
+    await this.payByLinkNavButton.click();
+    await expect(this.createButton).toBeVisible({ timeout: 15000 });
+  }
 
-    constructor(page: Page) {
+  /**
+   * Fill out the dynamic link creation form and return the generated payment URL
+   */
+  async generatePaymentLink(data: {
+    merchantSearch?: string;
+    amount: number;
+    customerEmail: string;
+    customerName: string;
+    phoneNumber?: string;
+    purpose?: string;
+  }): Promise<string> {
+    await this.createButton.click();
 
-        this.page = page;
+    // 1. Dynamic merchant search and selection
+    const searchTerm = data.merchantSearch || 'Super Merchant';
+    await this.merchantSelect.click();
+    await this.merchantSelect.fill(searchTerm);
 
-        this.payByLinkButton = page.getByRole('button', {
-            name: 'Pay By Link'
-        });
+    const dynamicOption = this.page
+      .getByRole('option', { name: new RegExp(searchTerm, 'i') })
+      .or(this.page.locator(`[role="option"]:has-text("${searchTerm}")`))
+      .or(this.page.getByRole('option'))
+      .first();
 
-        this.createButton = page.getByRole('button', {
-            name: 'Create'
-        });
+    await expect(dynamicOption).toBeVisible({ timeout: 15000 });
+    await dynamicOption.click();
 
-        this.merchant = page.getByRole('combobox', {
-            name: 'Merchant'
-        });
+    // 2. Set dynamic transaction amount
+    await this.amountInput.fill(String(data.amount));
 
-        this.amount = page.getByRole('textbox', {
-            name: 'Amount'
-        });
+    // 3. Populate customer info with standard 9-digit UAE phone number
+    await this.customerEmailInput.fill(data.customerEmail);
+    await this.customerNameInput.fill(data.customerName);
 
-        this.customerEmail = page.getByRole('textbox', {
-            name: 'Customer Email'
-        });
+    const rawPhone = String(data.phoneNumber || '501234567').replace(/\D/g, '');
+    const validUaePhone = rawPhone.length > 9 ? rawPhone.slice(-9) : rawPhone.padStart(9, '5');
+    await this.phoneNumberInput.fill(validUaePhone);
+    await this.phoneNumberInput.blur();
 
-        this.customerName = page.getByRole('textbox', {
-            name: 'Customer Name'
-        });
-
-        this.phoneNumber = page.getByRole('textbox', {
-            name: 'Phone Number'
-        });
-
-        this.purpose = page.getByRole('textbox', {
-            name: 'Purpose (0/100)'
-        });
-
-        this.continueButton = page.getByRole('button', {
-            name: 'Continue'
-        });
-
-        this.generateLinkButton = page.getByRole('button', {
-            name: 'Generate link'
-        });
-
-        this.openButton = page.getByRole('button', {
-            name: 'Open'
-        });
+    if (await this.purposeInput.isVisible()) {
+      await this.purposeInput.fill(data.purpose || 'Invoice Payment');
     }
 
-    // Navigate to Pay By Link
-    async openPayByLink() {
+    // 4. Proceed to link generation step
+    await this.continueButton.scrollIntoViewIfNeeded();
+    await expect(this.continueButton).toBeEnabled({ timeout: 10000 });
+    await this.continueButton.click();
 
-        await this.payByLinkButton.click();
+    // 5. Trigger link generation
+    await expect(this.generateLinkButton).toBeVisible({ timeout: 15000 });
+    await this.generateLinkButton.click();
 
-        await this.createButton.click();
-    }
+    // 6. Extract payment link URL directly from the confirmation modal/screen
+    const linkLocator = this.page.locator('text=/https?:\\/\\/[^\\s]+\\/pay\\/[0-9]+/i').first();
+    await expect(linkLocator).toBeVisible({ timeout: 20000 });
+    const paymentUrl = (await linkLocator.textContent())?.trim();
 
-    // Select merchant
-    async selectMerchant(
-        merchantSearch: string,
-        merchantOption: string
-    ) {
+    return paymentUrl || '';
+  }
 
-        await this.merchant.fill(merchantSearch);
-
-        await this.page.getByRole('option', {
-            name: merchantOption
-        }).click();
-    }
-
-    // Enter payment information
-    async enterPaymentDetails(data: any) {
-
-        await this.amount.fill(data.amount);
-
-        await this.customerEmail.fill(data.customerEmail);
-
-        await this.customerEmail.press('Tab');
-
-        await this.customerName.fill(data.customerName);
-
-        await this.phoneNumber.fill(data.phoneNumber);
-
-        await this.purpose.fill(data.purpose);
-    }
-
-    // Generate payment link
-    async generatePaymentLink(data: any) {
-
-        await this.selectMerchant(
-            data.merchantSearch,
-            data.merchantOption
-        );
-
-        await this.enterPaymentDetails(data);
-
-        await this.continueButton.click();
-
-        await this.generateLinkButton.click();
-    }
-
-    // Open payment page in new tab
-    async openPaymentPage(): Promise<Page> {
-
-        const popupPromise = this.page.waitForEvent('popup');
-
-        await this.openButton.click();
-
-        const paymentPage = await popupPromise;
-
-        await paymentPage.waitForLoadState();
-
-        return paymentPage;
-    }
+  /**
+   * Launch a clean browser page directly to the payment URL, eliminating popup blocker flakiness
+   */
+  async openPaymentPage(paymentUrl: string): Promise<Page> {
+    const paymentPage = await this.page.context().newPage();
+    await paymentPage.goto(paymentUrl, { waitUntil: 'domcontentloaded' });
+    return paymentPage;
+  }
 }

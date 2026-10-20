@@ -1,0 +1,315 @@
+- generic [ref=e1]:
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic [ref=e54]:
+        - button "Toggle sidebar" [ref=e57] [cursor=pointer]
+        - generic [ref=e59]:
+          - navigation "Breadcrumb" [ref=e353]:
+            - list [ref=e354]:
+              - listitem [ref=e355]:
+                - link "Dashboard" [ref=e356] [cursor=pointer]:
+                  - /url: /dashboard
+              - listitem [aria-hidden] [ref=e357]: ">"
+              - listitem [ref=e358]:
+                - paragraph [ref=e1263]: Invoices
+          - generic [ref=e61]:
+            - button "Toggle theme" [ref=e62] [cursor=pointer]
+            - button "User menu" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: PP
+              - paragraph [ref=e67]: Paycaps Payments
+    - generic [ref=e70]:
+      - complementary "Main navigation" [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Overview
+            - navigation "Overview" [ref=e76]:
+              - listitem [ref=e77]:
+                - button [ref=e78] [cursor=pointer]:
+                  - paragraph [ref=e83]: Dashboard
+              - listitem [ref=e84]:
+                - button [ref=e85] [cursor=pointer]:
+                  - paragraph [ref=e90]: POI
+          - generic [ref=e94]:
+            - generic [ref=e95]: Payments
+            - navigation "Payments" [ref=e96]:
+              - listitem [ref=e97]:
+                - button [ref=e98] [cursor=pointer]:
+                  - paragraph [ref=e103]: Transactions
+              - listitem [ref=e104]:
+                - button [expanded] [ref=e105] [cursor=pointer]:
+                  - paragraph [ref=e110]: Payment Reports
+                - generic "Payment Reports submenu" [ref=e636]:
+                  - listitem [ref=e637]:
+                    - button [ref=e638] [cursor=pointer]:
+                      - paragraph [ref=e643]: Authorized
+                  - listitem [ref=e644]:
+                    - button [ref=e645] [cursor=pointer]:
+                      - paragraph [ref=e650]: Sale
+                  - listitem [ref=e651]:
+                    - button [ref=e652] [cursor=pointer]:
+                      - paragraph [ref=e657]: Merchant Visibility
+                  - listitem [ref=e658]:
+                    - button [ref=e659] [cursor=pointer]:
+                      - paragraph [ref=e664]: Failed
+                  - listitem [ref=e665]:
+                    - button [ref=e666] [cursor=pointer]:
+                      - paragraph [ref=e671]: Refund
+                  - listitem [ref=e672]:
+                    - button [ref=e673] [cursor=pointer]:
+                      - paragraph [ref=e679]: Risk
+                  - listitem [ref=e680]:
+                    - button [ref=e681] [cursor=pointer]:
+                      - paragraph [ref=e686]: Summary
+                  - listitem [ref=e687]:
+                    - button [ref=e688] [cursor=pointer]:
+                      - paragraph [ref=e693]: Settlements
+              - listitem [ref=e114]:
+                - button [expanded] [ref=e115] [cursor=pointer]:
+                  - paragraph [ref=e121]: Account & Finance
+                - generic "Account & Finance submenu" [ref=e834]:
+                  - listitem [ref=e835]:
+                    - button [ref=e836] [cursor=pointer]:
+                      - paragraph [ref=e842]: MIS Reports
+                  - listitem [ref=e843]:
+                    - button [ref=e844] [cursor=pointer]:
+                      - paragraph [ref=e849]: Download reports
+              - listitem [ref=e125]:
+                - button [ref=e126] [cursor=pointer]:
+                  - paragraph [ref=e131]: Pay By Link
+              - listitem [ref=e132]:
+                - button [ref=e133] [cursor=pointer]:
+                  - paragraph [ref=e138]: Invoice
+              - listitem [ref=e139]:
+                - button [expanded] [ref=e140] [cursor=pointer]:
+                  - paragraph [ref=e145]: Analytics
+                - generic "Analytics submenu" [ref=e371]:
+                  - listitem [ref=e372]:
+                    - button [ref=e373] [cursor=pointer]:
+                      - paragraph [ref=e378]: Performance Report
+                  - listitem [ref=e379]:
+                    - button [ref=e380] [cursor=pointer]:
+                      - paragraph [ref=e385]: Weekly Performance Report
+                  - listitem [ref=e386]:
+                    - button [ref=e387] [cursor=pointer]:
+                      - paragraph [ref=e392]: Hourly Performance Report
+              - listitem [ref=e149]:
+                - button [ref=e150] [cursor=pointer]:
+                  - paragraph [ref=e155]: View Chargeback
+              - listitem [ref=e156]:
+                - button [expanded] [ref=e157] [cursor=pointer]:
+                  - paragraph [ref=e162]: Payment Billing
+                - generic "Payment Billing submenu" [ref=e398]:
+                  - listitem [ref=e399]:
+                    - button [ref=e400] [cursor=pointer]:
+                      - paragraph [ref=e405]: Acquirer Routing
+                  - listitem [ref=e406]:
+                    - button [ref=e407] [cursor=pointer]:
+                      - paragraph [ref=e412]: VAT / Service Tax
+                  - listitem [ref=e413]:
+                    - button [ref=e414] [cursor=pointer]:
+                      - paragraph [ref=e419]: MDR Setting
+                  - listitem [ref=e420]:
+                    - button [ref=e421] [cursor=pointer]:
+                      - paragraph [ref=e426]: MDR Surcharge Setting
+          - generic [ref=e166]:
+            - generic [ref=e167]: Account
+            - navigation "Account" [ref=e168]:
+              - listitem [ref=e169]:
+                - button [expanded] [active] [ref=e170] [cursor=pointer]:
+                  - paragraph [ref=e175]: Merchants
+                - generic "Merchants submenu" [ref=e432]:
+                  - listitem [ref=e433]:
+                    - button [ref=e434] [cursor=pointer]:
+                      - paragraph [ref=e439]: User Registration
+                  - listitem [ref=e440]:
+                    - button [ref=e441] [cursor=pointer]:
+                      - paragraph [ref=e446]: Merchant List
+                  - listitem [ref=e447]:
+                    - button [ref=e448] [cursor=pointer]:
+                      - paragraph [ref=e453]: Merchant Sub-Users
+              - listitem [ref=e179]:
+                - button [expanded] [ref=e180] [cursor=pointer]:
+                  - paragraph [ref=e185]: Reseller Setup
+                - generic "Reseller Setup submenu" [ref=e459]:
+                  - listitem [ref=e460]:
+                    - button [ref=e461] [cursor=pointer]:
+                      - paragraph [ref=e466]: Reseller Accounts
+                  - listitem [ref=e467]:
+                    - button [ref=e468] [cursor=pointer]:
+                      - paragraph [ref=e473]: Reseller Mapping
+              - listitem [ref=e189]:
+                - button [ref=e190] [cursor=pointer]:
+                  - paragraph [ref=e198]: Sub-Admins
+      - main [ref=e202]:
+        - main [ref=e1735]:
+          - generic [ref=e1737]:
+            - generic [ref=e1739]:
+              - generic [ref=e1744]:
+                - heading "Invoice" [level=6] [ref=e1745]
+                - generic [ref=e1746]: Create and manage invoices
+              - button "Date range" [ref=e1750] [cursor=pointer]:
+                - paragraph [ref=e1753]: 24 Aug - 23 Sep
+              - generic [ref=e1756]:
+                - button "Filters" [ref=e1758] [cursor=pointer]
+                - button "Create" [ref=e1763] [cursor=pointer]
+                - button "More actions" [ref=e1768] [cursor=pointer]
+            - generic [ref=e1773]:
+              - table "data table" [ref=e1775]:
+                - rowgroup [ref=e1776]:
+                  - row [ref=e1777]:
+                    - columnheader [ref=e1778]:
+                      - button "Invoice Id" [ref=e1779] [cursor=pointer]
+                    - columnheader [ref=e1781]:
+                      - button "Date" [ref=e1782] [cursor=pointer]
+                    - columnheader [ref=e1785]:
+                      - button "Merchant" [ref=e1786] [cursor=pointer]
+                    - columnheader [ref=e1788]:
+                      - button "Name" [ref=e1789] [cursor=pointer]
+                    - columnheader [ref=e1791]:
+                      - button "Email" [ref=e1792] [cursor=pointer]
+                    - columnheader [ref=e1794]:
+                      - button "Invoice No." [ref=e1795] [cursor=pointer]
+                    - columnheader [ref=e1797]:
+                      - button "Currency" [ref=e1798] [cursor=pointer]
+                    - columnheader [ref=e1800]:
+                      - button "Amount" [ref=e1801] [cursor=pointer]
+                    - columnheader "Action" [ref=e1803]
+                - rowgroup [ref=e1804]:
+                  - row [ref=e1805] [cursor=pointer]:
+                    - cell "1094260923095724" [ref=e1806]
+                    - cell "23-09-2026" [ref=e1807]
+                    - cell "Super Merchant" [ref=e1808]
+                    - cell "Test test" [ref=e1809]
+                    - cell "local1@yopmail.com" [ref=e1810]
+                    - cell "INV1228" [ref=e1811]
+                    - cell "AED" [ref=e1812]
+                    - cell "12.60" [ref=e1813]
+                    - cell [ref=e1814]:
+                      - button "Row actions" [ref=e1816]
+                  - row [ref=e1819] [cursor=pointer]:
+                    - cell "1032260923093959" [ref=e1820]
+                    - cell "23-09-2026" [ref=e1821]
+                    - cell "PayCaps Tech LLC" [ref=e1822]
+                    - cell "Jyoti Rai" [ref=e1823]
+                    - cell "jotu.rai1992@gmail.com" [ref=e1824]
+                    - cell "INV20262309" [ref=e1825]
+                    - cell "AED" [ref=e1826]
+                    - cell "10.50" [ref=e1827]
+                    - cell [ref=e1828]:
+                      - button "Row actions" [ref=e1830]
+                  - row [ref=e1833] [cursor=pointer]:
+                    - cell "1085260922144457" [ref=e1834]
+                    - cell "22-09-2026" [ref=e1835]
+                    - cell "New Business Merchants" [ref=e1836]
+                    - cell "sb tech" [ref=e1837]
+                    - cell "sbtech@yopmail.com" [ref=e1838]
+                    - cell "877777777" [ref=e1839]
+                    - cell "AED" [ref=e1840]
+                    - cell "9.45" [ref=e1841]
+                    - cell [ref=e1842]:
+                      - button "Row actions" [ref=e1844]
+                  - row [ref=e1847] [cursor=pointer]:
+                    - cell "1081260922143223" [ref=e1848]
+                    - cell "22-09-2026" [ref=e1849]
+                    - cell "Merchants New Bussiness" [ref=e1850]
+                    - cell "sb TEch" [ref=e1851]
+                    - cell "testsb@yopmail.com" [ref=e1852]
+                    - cell "1234567890" [ref=e1853]
+                    - cell "USD" [ref=e1854]
+                    - cell "10.50" [ref=e1855]
+                    - cell [ref=e1856]:
+                      - button "Row actions" [ref=e1858]
+                  - row [ref=e1861] [cursor=pointer]:
+                    - cell "1054260921143116" [ref=e1862]
+                    - cell "21-09-2026" [ref=e1863]
+                    - cell "New Business Merchants" [ref=e1864]
+                    - cell "test user" [ref=e1865]
+                    - cell "test@yopmail.com" [ref=e1866]
+                    - cell "1234567" [ref=e1867]
+                    - cell "AED" [ref=e1868]
+                    - cell "11.55" [ref=e1869]
+                    - cell [ref=e1870]:
+                      - button "Row actions" [ref=e1872]
+                  - row [ref=e1875] [cursor=pointer]:
+                    - cell "1042260921103604" [ref=e1876]
+                    - cell "21-09-2026" [ref=e1877]
+                    - cell "New Business Merchants" [ref=e1878]
+                    - cell "test yser" [ref=e1879]
+                    - cell "test@yopmail.com" [ref=e1880]
+                    - cell "7675757676" [ref=e1881]
+                    - cell "AED" [ref=e1882]
+                    - cell "12.60" [ref=e1883]
+                    - cell [ref=e1884]:
+                      - button "Row actions" [ref=e1886]
+                  - row [ref=e1889] [cursor=pointer]:
+                    - cell "1041260921103129" [ref=e1890]
+                    - cell "21-09-2026" [ref=e1891]
+                    - cell "Super Merchant" [ref=e1892]
+                    - cell "test yser" [ref=e1893]
+                    - cell "test@yopmail.com" [ref=e1894]
+                    - cell "13133111" [ref=e1895]
+                    - cell "AED" [ref=e1896]
+                    - cell "11.55" [ref=e1897]
+                    - cell [ref=e1898]:
+                      - button "Row actions" [ref=e1900]
+                  - row [ref=e1903] [cursor=pointer]:
+                    - cell "1037260921102628" [ref=e1904]
+                    - cell "21-09-2026" [ref=e1905]
+                    - cell "Payment Flow" [ref=e1906]
+                    - cell "test yser" [ref=e1907]
+                    - cell "test@yopmail.com" [ref=e1908]
+                    - cell "64gfdt5" [ref=e1909]
+                    - cell "AED" [ref=e1910]
+                    - cell "11.55" [ref=e1911]
+                    - cell [ref=e1912]:
+                      - button "Row actions" [ref=e1914]
+                  - row [ref=e1917] [cursor=pointer]:
+                    - cell "1032260921095215" [ref=e1918]
+                    - cell "21-09-2026" [ref=e1919]
+                    - cell "Super Merchant" [ref=e1920]
+                    - cell "Test Test" [ref=e1921]
+                    - cell "invtest@yopmail.com" [ref=e1922]
+                    - cell "INV1239" [ref=e1923]
+                    - cell "AED" [ref=e1924]
+                    - cell "12.60" [ref=e1925]
+                    - cell [ref=e1926]:
+                      - button "Row actions" [ref=e1928]
+                  - row [ref=e1931] [cursor=pointer]:
+                    - cell "1029260921094436" [ref=e1932]
+                    - cell "21-09-2026" [ref=e1933]
+                    - cell "Payment Flow" [ref=e1934]
+                    - cell "test test" [ref=e1935]
+                    - cell "inv@yopmail.com" [ref=e1936]
+                    - cell "INV889989" [ref=e1937]
+                    - cell "AED" [ref=e1938]
+                    - cell "12.60" [ref=e1939]
+                    - cell [ref=e1940]:
+                      - button "Row actions" [ref=e1942]
+              - generic [ref=e1945]:
+                - generic [ref=e1947]:
+                  - paragraph [ref=e1948]: "Rows per page:"
+                  - generic [ref=e1949]:
+                    - combobox "Rows per page:" [ref=e1950] [cursor=pointer]: "10"
+                    - textbox [aria-hidden]: "10"
+                - navigation "pagination navigation" [ref=e1951]:
+                  - list [ref=e1952]:
+                    - listitem [ref=e1953]:
+                      - button "Go to previous page" [disabled]
+                    - listitem [ref=e1954]:
+                      - button "page 1" [ref=e1955] [cursor=pointer]: "1"
+                    - listitem [ref=e1956]:
+                      - button "Go to page 2" [ref=e1957] [cursor=pointer]: "2"
+                    - listitem [ref=e1958]:
+                      - button "Go to page 3" [ref=e1959] [cursor=pointer]: "3"
+                    - listitem [ref=e1960]:
+                      - button "Go to page 4" [ref=e1961] [cursor=pointer]: "4"
+                    - listitem [ref=e1962]:
+                      - button "Go to page 5" [ref=e1963] [cursor=pointer]: "5"
+                    - listitem [ref=e1964]:
+                      - button "Go to page 6" [ref=e1965] [cursor=pointer]: "6"
+                    - listitem [ref=e1966]:
+                      - button "Go to page 7" [ref=e1967] [cursor=pointer]: "7"
+                    - listitem [ref=e1968]:
+                      - button "Go to next page" [ref=e1969] [cursor=pointer]
+        - generic [ref=e348]: © 2026 PayCaps CRM
+  - generic [aria-hidden] [ref=e350]: "0"
