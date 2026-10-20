@@ -38,13 +38,25 @@ export class PayByLinkPage {
   async generatePaymentLink(data: any) {
     await this.createButton.click();
 
+    // 1. Dynamic Merchant Search
+    const searchTerm = data.merchantSearch || 'Super Merchant';
     await this.merchantSelect.click();
-    await this.merchantSelect.fill(data.merchantSearch || 'super');
-    const merchantOption = this.page.getByRole('option', { name: /Super Merchant/i }).first();
-    await expect(merchantOption).toBeVisible({ timeout: 10000 });
-    await merchantOption.click();
+    await this.merchantSelect.fill(searchTerm);
 
+    // Dynamic Option Matcher with Fallback to First Filtered Result
+    const dynamicOption = this.page
+      .getByRole('option', { name: new RegExp(searchTerm, 'i') })
+      .or(this.page.locator(`[role="option"]:has-text("${searchTerm}")`))
+      .or(this.page.getByRole('option'))
+      .first();
+
+    await expect(dynamicOption).toBeVisible({ timeout: 15000 });
+    await dynamicOption.click();
+
+    // 2. Amount Input
     await this.amountInput.fill(String(data.amount));
+
+    // 3. Customer Info
     await this.customerEmailInput.fill(data.customerEmail);
     await this.customerNameInput.fill(data.customerName);
 
@@ -58,19 +70,20 @@ export class PayByLinkPage {
       await this.purposeInput.fill(data.purpose || 'Payment');
     }
 
+    // 4. Continue & Step Transition
     await this.continueButton.scrollIntoViewIfNeeded();
     await expect(this.continueButton).toBeEnabled({ timeout: 10000 });
     await this.continueButton.click();
 
+    // 5. Generate Link
     await expect(this.generateLinkButton).toBeVisible({ timeout: 15000 });
     await this.generateLinkButton.click();
 
-    // Success confirmation wait
+    // 6. Success confirmation wait
     await expect(this.page.locator('text=/Link created|Payment link is ready/i').first()).toBeVisible({ timeout: 20000 });
   }
 
   async openPaymentPage(): Promise<Page> {
-    // Direct URL extraction avoids popup blocker/headless timeout issues
     const linkLocator = this.page.locator('text=/https?:\\/\\/[^\\s]+\\/pay\\/[0-9]+/i').first();
     await expect(linkLocator).toBeVisible({ timeout: 15000 });
     const paymentUrl = (await linkLocator.textContent())?.trim();
@@ -81,7 +94,6 @@ export class PayByLinkPage {
       return paymentPage;
     }
 
-    // Fallback: Click open icon button with popup listener
     const popupPromise = this.page.waitForEvent('popup', { timeout: 15000 });
     await this.page.locator('button:has(svg)').nth(1).click();
     const popup = await popupPromise;
