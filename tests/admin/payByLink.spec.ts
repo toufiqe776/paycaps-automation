@@ -13,6 +13,9 @@ const TEST_CARD = {
 };
 
 test.describe('Admin - Pay By Link Creation and Payment Flow', () => {
+  // Extend timeout to 60s for full multi-step 3DS checkout cycle
+  test.setTimeout(60000);
+
   test('Generate dynamic link and complete 3DS card payment', { tag: ['@smoke', '@regression'] }, async ({ page }) => {
     const loginPage = new LoginPage(page);
     const payByLinkPage = new PayByLinkPage(page);
