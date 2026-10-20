@@ -20,8 +20,16 @@ export class PayByLinkPaymentPage {
     this.expiryDate = page.getByRole('textbox', { name: /MM\/YY|Expiry/i });
     this.cvv = page.getByRole('textbox', { name: /CVV|CVC/i });
     this.cardHolderName = page.getByRole('textbox', { name: /Name on Card|Cardholder Name/i });
-    this.payButton = page.getByRole('button', { name: /^Pay\b/i });
-    this.otp = page.locator('#otp, input[name="otp"]');
+
+    // Strict mode fix: Target credit card submit button (#ccSubmit) directly
+    this.payButton = page
+      .locator('#ccSubmit')
+      .or(page.locator('input[name="ccSubmit"]'))
+      .or(page.getByRole('button', { name: /^Pay\s+[A-Z]{3}/i }))
+      .first();
+
+    // OTP text input (exclude hidden fields)
+    this.otp = page.locator('input#otp').filter({ hasNot: page.locator('[type="hidden"]') }).first();
     this.simulateSuccessButton = page.getByRole('button', { name: /Simulate Success/i });
   }
 
@@ -41,6 +49,7 @@ export class PayByLinkPaymentPage {
   }
 
   async submitPayment() {
+    await expect(this.payButton).toBeVisible({ timeout: 10000 });
     await expect(this.payButton).toBeEnabled({ timeout: 10000 });
     await this.payButton.click();
   }
