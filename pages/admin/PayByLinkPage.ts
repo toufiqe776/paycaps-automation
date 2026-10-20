@@ -12,7 +12,6 @@ export class PayByLinkPage {
   readonly purposeInput: Locator;
   readonly continueButton: Locator;
   readonly generateLinkButton: Locator;
-  readonly openLinkButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -29,7 +28,6 @@ export class PayByLinkPage {
       .getByRole('button', { name: /Generate link|Generate|Create Link/i })
       .or(page.locator('button:has-text("Generate")'))
       .first();
-    this.openLinkButton = page.getByRole('button', { name: /Open|Copy/i }).first();
   }
 
   async openPayByLink() {
@@ -67,15 +65,27 @@ export class PayByLinkPage {
     await expect(this.generateLinkButton).toBeVisible({ timeout: 15000 });
     await this.generateLinkButton.click();
 
-    await expect(this.openLinkButton).toBeVisible({ timeout: 20000 });
+    // Success confirmation wait
+    await expect(this.page.locator('text=/Link created|Payment link is ready/i').first()).toBeVisible({ timeout: 20000 });
   }
 
   async openPaymentPage(): Promise<Page> {
-    const popupPromise = this.page.waitForEvent('popup', { timeout: 20000 });
-    await this.openLinkButton.click();
+    // Direct URL extraction avoids popup blocker/headless timeout issues
+    const linkLocator = this.page.locator('text=/https?:\\/\\/[^\\s]+\\/pay\\/[0-9]+/i').first();
+    await expect(linkLocator).toBeVisible({ timeout: 15000 });
+    const paymentUrl = (await linkLocator.textContent())?.trim();
+
+    if (paymentUrl) {
+      const paymentPage = await this.page.context().newPage();
+      await paymentPage.goto(paymentUrl, { waitUntil: 'domcontentloaded' });
+      return paymentPage;
+    }
+
+    // Fallback: Click open icon button with popup listener
+    const popupPromise = this.page.waitForEvent('popup', { timeout: 15000 });
+    await this.page.locator('button:has(svg)').nth(1).click();
     const popup = await popupPromise;
     await popup.waitForLoadState('domcontentloaded');
-    await popup.waitForLoadState('load');
     return popup;
   }
 }
