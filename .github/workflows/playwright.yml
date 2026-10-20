@@ -16,6 +16,14 @@ jobs:
     timeout-minutes: 30
     runs-on: ubuntu-latest
 
+    # Job level environment variables (har step me repeat karne ki zaroorat nahi)
+    env:
+      BASE_URL: ${{ secrets.BASE_URL }}
+      ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+      ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+      CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
+      CI: true
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -33,37 +41,25 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Step 1 - Merchant Registration
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
-          CI: true
         run: npx playwright test tests/admin/merchantsRegister.spec.ts
 
-      - name: Step 2 - Acquirer Routing
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
-          CI: true
+      - name: Step 2 - Merchant Activation
+        run: npx playwright test tests/admin/merchantActivation.spec.ts
+
+      - name: Step 3 - Acquirer Routing
         run: npx playwright test tests/admin/acquirerRouting.spec.ts
 
-      - name: Step 3 - MDR Settings
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          CAPTCHA_CODE: ${{ secrets.CAPTCHA_CODE || '1234' }}
-          CI: true
+      - name: Step 4 - MDR Settings
         run: npx playwright test tests/admin/mdrSetting.spec.ts
+
+      - name: Step 5 - Pay By Link & 3DS Checkout
+        run: npx playwright test tests/admin/payByLink.spec.ts
 
       - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-${{ github.run_number }}
+          name: playwright-report-${{ github.run_number }}-${{ github.run_attempt }}
           path: playwright-report/
           retention-days: 14
           if-no-files-found: ignore
@@ -72,7 +68,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results-${{ github.run_number }}
+          name: test-results-${{ github.run_number }}-${{ github.run_attempt }}
           path: test-results/
           retention-days: 7
           if-no-files-found: ignore
