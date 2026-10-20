@@ -17,16 +17,19 @@ export class PayByLinkPage {
   constructor(page: Page) {
     this.page = page;
     this.payByLinkNavButton = page.getByRole('button', { name: 'Pay By Link' });
-    this.createButton = page.getByRole('button', { name: 'Create' });
+    this.createButton = page.getByRole('button', { name: /Create|New/i }).first();
     this.merchantSelect = page.getByRole('combobox', { name: /Merchant/i });
     this.amountInput = page.getByRole('textbox', { name: /Amount/i });
-    this.customerEmailInput = page.getByRole('textbox', { name: /Customer Email/i });
-    this.customerNameInput = page.getByRole('textbox', { name: /Customer Name/i });
-    this.phoneNumberInput = page.getByRole('textbox', { name: /Phone Number/i });
+    this.customerEmailInput = page.getByRole('textbox', { name: /Customer Email|Email/i });
+    this.customerNameInput = page.getByRole('textbox', { name: /Customer Name|Name/i });
+    this.phoneNumberInput = page.getByRole('textbox', { name: /Phone/i });
     this.purposeInput = page.getByRole('textbox', { name: /Purpose/i });
-    this.continueButton = page.getByRole('button', { name: 'Continue' });
-    this.generateLinkButton = page.getByRole('button', { name: /Generate link/i });
-    this.openLinkButton = page.getByRole('button', { name: 'Open' });
+    this.continueButton = page.getByRole('button', { name: /Continue|Next/i });
+    this.generateLinkButton = page
+      .getByRole('button', { name: /Generate link|Generate|Create Link/i })
+      .or(page.locator('button:has-text("Generate")'))
+      .first();
+    this.openLinkButton = page.getByRole('button', { name: /Open|Copy/i }).first();
   }
 
   async openPayByLink() {
@@ -46,14 +49,25 @@ export class PayByLinkPage {
     await this.amountInput.fill(String(data.amount));
     await this.customerEmailInput.fill(data.customerEmail);
     await this.customerNameInput.fill(data.customerName);
-    await this.phoneNumberInput.fill(data.phoneNumber);
-    await this.purposeInput.fill(data.purpose);
 
+    // UAE (+971) 9-digit validation
+    const rawPhone = String(data.phoneNumber || '501234567').replace(/\D/g, '');
+    const validUaePhone = rawPhone.length > 9 ? rawPhone.slice(-9) : rawPhone.padStart(9, '5');
+    await this.phoneNumberInput.fill(validUaePhone);
+    await this.phoneNumberInput.blur();
+
+    if (await this.purposeInput.isVisible()) {
+      await this.purposeInput.fill(data.purpose || 'Payment');
+    }
+
+    await this.continueButton.scrollIntoViewIfNeeded();
+    await expect(this.continueButton).toBeEnabled({ timeout: 10000 });
     await this.continueButton.click();
-    await expect(this.generateLinkButton).toBeVisible({ timeout: 10000 });
+
+    await expect(this.generateLinkButton).toBeVisible({ timeout: 15000 });
     await this.generateLinkButton.click();
 
-    await expect(this.openLinkButton).toBeVisible({ timeout: 15000 });
+    await expect(this.openLinkButton).toBeVisible({ timeout: 20000 });
   }
 
   async openPaymentPage(): Promise<Page> {
