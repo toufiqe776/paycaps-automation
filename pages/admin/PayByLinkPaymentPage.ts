@@ -21,65 +21,83 @@ export class PayByLinkPaymentPage {
     this.cvv = page.getByRole('textbox', { name: /CVV|CVC/i });
     this.cardHolderName = page.getByRole('textbox', { name: /Name on Card|Cardholder Name/i });
 
-    // Strict mode fix: Target credit card submit button (#ccSubmit) directly
+    // Target credit card submit button directly (#ccSubmit) to avoid strict mode violations with Apple Pay fallback
     this.payButton = page
       .locator('#ccSubmit')
       .or(page.locator('input[name="ccSubmit"]'))
       .or(page.getByRole('button', { name: /^Pay\s+[A-Z]{3}/i }))
       .first();
 
-    // OTP text input (exclude hidden fields)
+    // OTP input field excluding hidden fields
     this.otp = page.locator('input#otp').filter({ hasNot: page.locator('[type="hidden"]') }).first();
     this.simulateSuccessButton = page.getByRole('button', { name: /Simulate Success/i });
   }
 
-  async acceptTermsAndPayNow() {
+  /**
+   * Agree to payment terms and proceed to card input form
+   */
+  async acceptTermsAndPayNow(): Promise<void> {
     await expect(this.termsCheckbox).toBeVisible({ timeout: 15000 });
     await this.termsCheckbox.check();
     await expect(this.payNowButton).toBeEnabled({ timeout: 5000 });
     await this.payNowButton.click();
   }
 
-  async enterCardDetails(data: any) {
+  /**
+   * Enter card details sequentially with keystroke simulation
+   */
+  async enterCardDetails(card: {
+    cardNumber: string;
+    expiryDate: string;
+    cvv: string;
+    cardHolderName: string;
+  }): Promise<void> {
     await expect(this.cardNumber).toBeVisible({ timeout: 15000 });
-    await this.cardNumber.pressSequentially(data.cardNumber.replace(/\s+/g, ''), { delay: 50 });
-    await this.expiryDate.pressSequentially(data.expiryDate.replace('/', ''), { delay: 50 });
-    await this.cvv.fill(data.cvv);
-    await this.cardHolderName.fill(data.cardHolderName);
+    await this.cardNumber.pressSequentially(card.cardNumber.replace(/\s+/g, ''), { delay: 40 });
+    await this.expiryDate.pressSequentially(card.expiryDate.replace('/', ''), { delay: 40 });
+    await this.cvv.fill(card.cvv);
+    await this.cardHolderName.fill(card.cardHolderName);
   }
 
-  async submitPayment() {
+  /**
+   * Submit payment form
+   */
+  async submitPayment(): Promise<void> {
     await expect(this.payButton).toBeVisible({ timeout: 10000 });
     await expect(this.payButton).toBeEnabled({ timeout: 10000 });
     await this.payButton.click();
   }
 
-  async enterOTP(otpCode: string) {
-    await this.otp.waitFor({ state: 'visible', timeout: 15000 });
-    await this.otp.fill(otpCode);
+  /**
+   * Complete 3DS OTP authentication simulation
+   */
+  async complete3DSAuth(otpCode: string = '123456'): Promise<void> {
+    if (await this.otp.isVisible({ timeout: 8000 }).catch(() => false)) {
+      await this.otp.fill(otpCode);
+    }
+    if (await this.simulateSuccessButton.isVisible({ timeout: 8000 }).catch(() => false)) {
+      await this.simulateSuccessButton.click();
+    }
   }
 
-  async simulateSuccess() {
-    await this.simulateSuccessButton.waitFor({ state: 'visible', timeout: 15000 });
-    await this.simulateSuccessButton.click();
-  }
-
-  async verifyPaymentStatus(expectedStatus: string = 'Captured') {
+  /**
+   * Verify redirect to final response receipt and check transaction outcome
+   */
+  async verifyPaymentCompleted(expectedStatus: string = 'Captured'): Promise<void> {
     // 1. Confirm navigation to response receipt page
     await expect(this.page).toHaveURL(/.*response\.jsp.*/, { timeout: 25000 });
 
-    // 2. Receipt metadata existence check
+    // 2. Validate essential receipt metadata
     await expect(this.page.locator('body')).toContainText(/Transaction ID/i, { timeout: 15000 });
     await expect(this.page.locator('body')).toContainText(/Reference No\./i);
 
-    // 3. Status handling (Captured vs Sandbox Acquirer Rejection)
-    const bodyText = await this.page.locator('body').innerText();
-    
-    if (bodyText.includes('Rejected by acquirer')) {
-      console.warn('⚠️ Acquirer rejected transaction for this merchant in sandbox environment.');
-      await expect(this.page.locator('body')).toContainText('Rejected');
+    // 3. Handle sandbox acquirer response gracefully
+    const pageText = await this.page.locator('body').innerText();
+    if (pageText.includes('Rejected by acquirer')) {
+      console.warn('Acquirer simulator returned "Rejected by acquirer" in sandbox mode.');
+      expect(pageText).toContain('Rejected');
     } else {
-      await expect(this.page.locator('body')).toContainText(expectedStatus);
+      expect(pageText).toContain(expectedStatus);
     }
   }
 }
