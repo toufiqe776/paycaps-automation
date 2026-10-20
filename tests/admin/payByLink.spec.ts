@@ -1,15 +1,20 @@
-// tests/admin/payByLink.spec.ts
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/common/LoginPage';
 import { PayByLinkPage } from '../../pages/admin/PayByLinkPage';
 import { PayByLinkPaymentPage } from '../../pages/admin/PayByLinkPaymentPage';
-import { TestDataGenerator } from '../../utils/testDataHelper';
+import { StateHelper } from '../../utils/stateHelper';
+import cardData from '../../test-data/cardDetails.json';
 
 test.describe('Admin - Pay By Link Flow', () => {
-  test('Create dynamic payment link and complete 3DS simulation', async ({ page }) => {
+  test('Create dynamic payment link and complete 3DS simulation', { tag: ['@smoke', '@regression'] }, async ({ page }) => {
     const loginPage = new LoginPage(page);
     const payByLinkPage = new PayByLinkPage(page);
-    const data = TestDataGenerator.getPayByLinkData();
+
+    // 1. Newly created merchant fetch
+    const dynamicMerchant = StateHelper.getCreatedMerchant();
+    
+    // 2. Dynamic amount generate  (e.g. 15.00, 45.00 AED)
+    const dynamicAmount = Math.floor(Math.random() * 150) + 10;
 
     await test.step('Step 1: Admin Login', async () => {
       await loginPage.login(process.env.ADMIN_EMAIL!, process.env.ADMIN_PASSWORD!);
@@ -19,27 +24,30 @@ test.describe('Admin - Pay By Link Flow', () => {
       await payByLinkPage.openPayByLink();
     });
 
-    await test.step('Step 3: Generate Dynamic Link', async () => {
-      await payByLinkPage.generatePaymentLink(data);
+    await test.step(`Step 3: Generate Dynamic Link for "${dynamicMerchant}" (AED ${dynamicAmount})`, async () => {
+      await payByLinkPage.generatePaymentLink({
+        merchantSearch: dynamicMerchant,
+        amount: dynamicAmount,
+        customerEmail: `customer_${Date.now()}@yopmail.com`,
+        customerName: 'Automation Customer',
+        phoneNumber: '501234567',
+        purpose: `Invoice Ref #${Date.now().toString().slice(-5)}`
+      });
     });
 
-    let popupWindow: any;
+    let paymentPage: any;
     await test.step('Step 4: Open Payment Window', async () => {
-      popupWindow = await payByLinkPage.openPaymentPage();
+      paymentPage = await payByLinkPage.openPaymentPage();
     });
 
-    const paymentPage = new PayByLinkPaymentPage(popupWindow);
-
-    await test.step('Step 5: Accept Terms and Enter Card Details', async () => {
-      await paymentPage.acceptTermsAndPayNow();
-      await paymentPage.enterCardDetails(data);
-      await paymentPage.submitPayment();
-    });
-
-    await test.step('Step 6: Submit OTP and Verify Captured Status', async () => {
-      await paymentPage.enterOTP(data.otp);
-      await paymentPage.simulateSuccess();
-      await paymentPage.verifyPaymentStatus(data.expectedStatus);
+    await test.step('Step 5: Complete Card Payment & 3DS Simulation', async () => {
+      const pblPayment = new PayByLinkPaymentPage(paymentPage);
+      await pblPayment.acceptTermsAndPayNow();
+      await pblPayment.enterCardDetails(cardData.validMasterCard || cardData.validVisaCard);
+      await pblPayment.submitPayment();
+      await pblPayment.enterOTP('123456');
+      await pblPayment.simulateSuccess();
+      await pblPayment.verifyPaymentStatus('Captured');
     });
   });
 });
